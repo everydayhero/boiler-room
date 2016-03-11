@@ -26,7 +26,16 @@ const BROWSERIFY_OPTS = {
 const CSS_MODULES_OPTS = {
   output: path.join(DEV_DIR, 'main.css'),
   generateScopedName: require('../css-modules-scope-generator'),
-  after: [cssNext]
+  after: ['postcss-cssnext'],
+  'postcss-cssnext': {
+    features: {
+      customProperties: {
+        variables: {
+          'primaryColor': 'blue'
+        }
+      }
+    }
+  }
 }
 
 const clientBundler = browserifyinc(Object.assign({}, BROWSERIFY_OPTS, {
