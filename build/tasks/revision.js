@@ -10,7 +10,7 @@ const JS = config.JS
 const IMAGES = config.IMAGES
 
 const REVABLE = [].concat(JS, CSS, IMAGES).map(
-  asset => path.join(DEV_DIR, asset)
+  (asset) => path.join(DEV_DIR, asset)
 )
 
 module.exports = () => {

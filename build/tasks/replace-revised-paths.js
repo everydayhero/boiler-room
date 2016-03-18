@@ -18,7 +18,7 @@ const revReplaceOptions = (manifest) => ({
 })
 
 const REV_REPLACEABLE_ASSETS = [].concat(JS, CSS, DATA).map(
-  asset => path.join(DEST_DIR, asset)
+  (asset) => path.join(DEST_DIR, asset)
 )
 
 const replaceInAssets = () => {
@@ -30,7 +30,7 @@ const replaceInAssets = () => {
 }
 
 const REV_REPLACEABLE_SERVER_APP = [].concat(JS, CSS).map(
-  asset => path.join(SERVER_APP_DIR, asset)
+  (asset) => path.join(SERVER_APP_DIR, asset)
 )
 
 const replaceInServerBundle = () => {
