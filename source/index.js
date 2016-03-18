@@ -12,7 +12,7 @@ import store from './store'
 
 if (typeof document !== 'undefined') {
   match(
-    { routes: Routes, location },
+    { routes: Routes, location: window.location },
     (error, redirectLocation, renderProps) => {
       render(
         <Provider store={ store }>

@@ -11,7 +11,7 @@ const DEST_DIR = config.DEST_DIR
 const contentDev = () => {
   return gulp.src(path.join(SOURCE_DIR, 'content/**/*.md'))
     .pipe(markdown())
-    .on('error', function (e) {
+    .on('error', function (err) {
       gutil.log(gutil.colors.red(err))
       this.emit('end')
     })

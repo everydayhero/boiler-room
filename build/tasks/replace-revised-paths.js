@@ -4,8 +4,6 @@ const path = require('path')
 
 const environment = require('../../config/environment')
 const config = require('./config')
-const SOURCE_DIR = config.SOURCE_DIR
-const DEV_DIR = config.DEV_DIR
 const DEST_DIR = config.DEST_DIR
 const SERVER_APP_DIR = config.SERVER_APP_DIR
 const CSS = config.CSS
