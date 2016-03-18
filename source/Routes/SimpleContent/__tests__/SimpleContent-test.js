@@ -76,7 +76,7 @@ describe('SimpleContent', () => {
 
     context('is absent', () => {
       it('renders a 404 message', () => {
-        const { section, header } = setUp({ pages: {}}, { params: { splat: '' }})
+        const { section, header } = setUp({ pages: {} }, { params: { splat: '' } })
 
         expect(header.find('h1')).to.contain.text('404')
         expect(section.find('div')).to.contain.text('Whoops!')
