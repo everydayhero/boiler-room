@@ -9,6 +9,5 @@ const DEV_DIR = config.DEV_DIR
 module.exports = () => {
   return gulp.src(path.join(SOURCE_DIR, '**/*.scss'))
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(DEV_DIR));
+    .pipe(gulp.dest(DEV_DIR))
 }
-
