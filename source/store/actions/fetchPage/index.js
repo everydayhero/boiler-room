@@ -21,9 +21,9 @@ const isClientDev = (
 let host = isClientDev ? location.origin : context.host
 
 export default (route = '/') => {
-  const contentPath = `/${ route.replace(/^\/|\/$/g, '')}`
+  const contentPath = `/${route.replace(/^\/|\/$/g, '')}`
 
-  fetch(`${ host }${context.basePath}/content${ contentPath }/index.json`)
+  fetch(`${host}${context.basePath}/content${contentPath}/index.json`)
     .then((response) => {
       return response.json()
     })

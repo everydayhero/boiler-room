@@ -39,7 +39,7 @@ module.exports = function buildStatic (destDir, routes, reactApp) {
             'index.html'
           )
 
-          reactApp(`${ config.server.basePath }${ route }`, (err, content) => {
+          reactApp(`${config.server.basePath}${route}`, (err, content) => {
             if (err) {
               return handleError(err, reject, server)
             }

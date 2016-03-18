@@ -7,6 +7,6 @@ const { client: { basePath }} = config
 export default (props) => (
   <Link
     { ...props }
-    to={ `${ basePath }${ props.to }` }
+    to={`${basePath}${props.to}`}
   />
 )

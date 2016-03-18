@@ -7,7 +7,7 @@ import SimpleContent, { fetchContent } from './SimpleContent'
 
 export default (
   <Route
-    path={ `${ context.basePath }/` }
+    path={`${context.basePath}/`}
     component={ ({ children }) => children }>
     <IndexRoute
       component={ SimpleContent }
