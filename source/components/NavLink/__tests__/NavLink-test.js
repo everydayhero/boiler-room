@@ -19,6 +19,8 @@ const setUp = (props = { to: '/', children: 'Home' }, callback) => {
     />
   )
   match({ routes: Routes, location: props.to }, (err, _r, rprops) => {
+    if (err) throw new Error(err)
+
     const component = <RoutingContext { ...rprops } />
     const wrapper = mount(component)
     callback({

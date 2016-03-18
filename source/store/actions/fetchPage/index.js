@@ -31,7 +31,10 @@ export default (route = '/') => {
       receivePageSuccess(route, json)
     })
     .catch((err) => {
-      receivePageFailure(route, error)
+      if (err && process.env.NODE_ENV === 'development') {
+        console.error(err)
+      }
+      receivePageFailure(route, err)
     })
 
   store.dispatch({

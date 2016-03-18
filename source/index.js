@@ -14,6 +14,8 @@ if (typeof document !== 'undefined') {
   match(
     { routes: Routes, location: window.location },
     (error, redirectLocation, renderProps) => {
+      if (error) throw new Error(error)
+
       render(
         <Provider store={store}>
           <Router {...renderProps} history={createHistory()} />
