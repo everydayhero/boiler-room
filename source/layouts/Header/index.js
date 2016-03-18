@@ -3,7 +3,7 @@ import NavLink from '../../components/NavLink'
 
 export default (props) => (
   <header>
-    <h1>{ props.title }</h1>
+    <h1>{props.title}</h1>
     <div>
       <ul>
         <li>

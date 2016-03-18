@@ -8,15 +8,15 @@ import SimpleContent, { fetchContent } from './SimpleContent'
 export default (
   <Route
     path={`${context.basePath}/`}
-    component={ ({ children }) => children }>
+    component={({ children }) => children}>
     <IndexRoute
-      component={ SimpleContent }
-      onEnter={ fetchContent }
+      component={SimpleContent}
+      onEnter={fetchContent}
     />
     <Route
       path="*"
-      component={ SimpleContent }
-      onEnter={ fetchContent }
+      component={SimpleContent}
+      onEnter={fetchContent}
     />
   </Route>
 )

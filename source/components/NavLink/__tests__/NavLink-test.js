@@ -12,7 +12,7 @@ chai.use(chaiEnzyme())
 
 const setUp = (props = { to: '/', children: 'Home' }, callback) => {
   const Routes = (
-    <Route path={ props.to }
+    <Route path={props.to}
       component={() => (
         <NavLink { ...props } />
       )}

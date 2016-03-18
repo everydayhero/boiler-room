@@ -24,7 +24,7 @@ const createPage = (path, title = '', body = '') => ({
 const setUp = (initialState = { pages: {} }, props = { params: { splat: '' } }) => {
   const store = configureStore(initialState)
   const component = (
-    <Provider store={ store }>
+    <Provider store={store}>
       <SimpleContent { ...props } />
     </Provider>
   )

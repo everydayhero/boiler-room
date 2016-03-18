@@ -15,8 +15,8 @@ if (typeof document !== 'undefined') {
     { routes: Routes, location: window.location },
     (error, redirectLocation, renderProps) => {
       render(
-        <Provider store={ store }>
-          <Router { ...renderProps } history={ createHistory() } />
+        <Provider store={store}>
+          <Router {...renderProps} history={createHistory()} />
         </Provider>,
         document.getElementById('mount')
       )
@@ -38,7 +38,7 @@ export default function staticRender (route, callback) {
           </Provider>
         )
         const document = '<!DOCTYPE html>' + renderToStaticMarkup(
-          <Document title={ DocumentTitle.rewind() } content={ content } />
+          <Document title={DocumentTitle.rewind()} content={content} />
         )
         callback(null, document)
       }

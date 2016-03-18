@@ -40,6 +40,5 @@ export default connect(
 
   const { title, body } = content
 
-  return <SimplePage title ={ title } body={ body } />
+  return <SimplePage title={title} body={body} />
 })
-

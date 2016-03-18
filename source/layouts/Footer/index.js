@@ -2,7 +2,6 @@ import React from 'react'
 
 export default (props) => (
   <footer>
-    <small>{ props.title }</small>
+    <small>{props.title}</small>
   </footer>
 )
-
