@@ -42,7 +42,7 @@ describe('SimpleContent', () => {
 
   describe('props.params.splat', () => {
     context('is absent', () => {
-      it('renders the \'/\' page content', () => {
+      it("renders the '/' page content", () => {
         const state = createPage('/', 'HOME!')
         const props = {
           params: { splat: '' }

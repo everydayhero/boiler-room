@@ -7,16 +7,16 @@ export default (props) => (
     <div>
       <ul>
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to='/'>Home</NavLink>
         </li>
         <li>
-          <NavLink to="/deploying">Deploying</NavLink>
+          <NavLink to='/deploying'>Deploying</NavLink>
         </li>
         <li>
-          <NavLink to="/build">Building</NavLink>
+          <NavLink to='/build'>Building</NavLink>
           <ul>
             <li>
-              <NavLink to="/build/assets">Assets</NavLink>
+              <NavLink to='/build/assets'>Assets</NavLink>
             </li>
           </ul>
         </li>

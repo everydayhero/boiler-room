@@ -14,7 +14,7 @@ export default (
       onEnter={fetchContent}
     />
     <Route
-      path="*"
+      path='*'
       component={SimpleContent}
       onEnter={fetchContent}
     />
