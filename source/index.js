@@ -12,11 +12,13 @@ import store from './store'
 
 if (typeof document !== 'undefined') {
   match(
-    { routes: Routes, location },
+    { routes: Routes, location: window.location },
     (error, redirectLocation, renderProps) => {
+      if (error) throw new Error(error)
+
       render(
-        <Provider store={ store }>
-          <Router { ...renderProps } history={ createHistory() } />
+        <Provider store={store}>
+          <Router {...renderProps} history={createHistory()} />
         </Provider>,
         document.getElementById('mount')
       )
@@ -38,7 +40,7 @@ export default function staticRender (route, callback) {
           </Provider>
         )
         const document = '<!DOCTYPE html>' + renderToStaticMarkup(
-          <Document title={ DocumentTitle.rewind() } content={ content } />
+          <Document title={DocumentTitle.rewind()} content={content} />
         )
         callback(null, document)
       }

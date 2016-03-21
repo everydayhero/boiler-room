@@ -1,13 +1,13 @@
 'use strict'
 
 const express = require('express')
-const fs      = require('fs')
-const http    = require('http')
-const mkdirp  = require('mkdirp')
-const path    = require('path')
-const app     = express()
+const fs = require('fs')
+const http = require('http')
+const mkdirp = require('mkdirp')
+const path = require('path')
+const app = express()
 
-const BASE  = path.resolve(__dirname, '../dist')
+const BASE = path.resolve(__dirname, '../dist')
 app.use(express.static(BASE))
 
 const config = require('../config/environment')
@@ -39,7 +39,7 @@ module.exports = function buildStatic (destDir, routes, reactApp) {
             'index.html'
           )
 
-          reactApp(`${ config.server.basePath }${ route }`, (err, content) => {
+          reactApp(`${config.server.basePath}${route}`, (err, content) => {
             if (err) {
               return handleError(err, reject, server)
             }

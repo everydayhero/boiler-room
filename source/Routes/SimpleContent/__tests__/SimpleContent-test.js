@@ -24,7 +24,7 @@ const createPage = (path, title = '', body = '') => ({
 const setUp = (initialState = { pages: {} }, props = { params: { splat: '' } }) => {
   const store = configureStore(initialState)
   const component = (
-    <Provider store={ store }>
+    <Provider store={store}>
       <SimpleContent { ...props } />
     </Provider>
   )
@@ -42,7 +42,7 @@ describe('SimpleContent', () => {
 
   describe('props.params.splat', () => {
     context('is absent', () => {
-      it('renders the \'/\' page content', () => {
+      it("renders the '/' page content", () => {
         const state = createPage('/', 'HOME!')
         const props = {
           params: { splat: '' }
@@ -76,7 +76,7 @@ describe('SimpleContent', () => {
 
     context('is absent', () => {
       it('renders a 404 message', () => {
-        const { section, header } = setUp({ pages: {}}, { params: { splat: '' }})
+        const { section, header } = setUp({ pages: {} }, { params: { splat: '' } })
 
         expect(header.find('h1')).to.contain.text('404')
         expect(section.find('div')).to.contain.text('Whoops!')

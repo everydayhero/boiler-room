@@ -15,7 +15,8 @@
     "build:prod": "npm run build:setup && NODE_ENV=production gulp build",
     "build:staging": "npm run build:setup && NODE_ENV=staging gulp build",
     "dev": "gulp dev",
-    "test": "mocha --compilers js:babel-register,css:css-modules-require-hook --recursive source/**/__tests__/*-test.js",
+    "lint": "standard",
+    "test": "npm run lint && mocha --compilers js:babel-register,css:css-modules-require-hook --recursive source/**/__tests__/*-test.js",
     "deploy:staging": "npm run build:staging && gh-pages -d dist"
   },
   "babel": {
@@ -28,24 +29,12 @@
   "dependencies": {
     "react-dom": "^0.14.6"
   },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true
-    },
-    "ecmaFeatures": {
-      "arrowFunctions": true,
-      "blockBindings": true,
-      "classes": true,
-      "destructuring": true,
-      "experimentalObjectRestSpread": true,
-      "jsx": true,
-      "modules": true,
-      "objectLiteralComputedProperties": true,
-      "objectLiteralShorthandMethods": true,
-      "objectLiteralShorthandProperties": true,
-      "templateStrings": true
-    }
+  "standard": {
+    "globals": [
+      "context",
+      "describe",
+      "it"
+    ]
   },
   "devDependencies": {
     "autoprefixer": "^6.2.3",
@@ -95,6 +84,7 @@
     "recursive-readdir": "^1.3.0",
     "redux": "^3.0.5",
     "serve-static": "^1.10.0",
+    "standard": "^6.0.8",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
   }

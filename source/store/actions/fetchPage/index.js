@@ -18,12 +18,12 @@ const isClientDev = (
   typeof window !== 'undefined' &&
   (!process.env.NODE_ENV || (process.env.NODE_ENV === 'development'))
 )
-let host = isClientDev ? location.origin : context.host
+let host = isClientDev ? window.location.origin : context.host
 
 export default (route = '/') => {
-  const contentPath = `/${ route.replace(/^\/|\/$/g, '')}`
+  const contentPath = `/${route.replace(/^\/|\/$/g, '')}`
 
-  fetch(`${ host }${context.basePath}/content${ contentPath }/index.json`)
+  global.fetch(`${host}${context.basePath}/content${contentPath}/index.json`)
     .then((response) => {
       return response.json()
     })
@@ -31,7 +31,10 @@ export default (route = '/') => {
       receivePageSuccess(route, json)
     })
     .catch((err) => {
-      receivePageFailure(route, error)
+      if (err && process.env.NODE_ENV === 'development') {
+        console.error(err)
+      }
+      receivePageFailure(route, err)
     })
 
   store.dispatch({
