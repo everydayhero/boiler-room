@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
 import NavLink from '../NavLink'
 import styles from './styles.css'
 
-import nav from '../../content/nav.json'
-
-export default () => (
+const PageNav = ({
+  nav
+}) => (
   <ul className={styles.root}>
     {Object.keys(nav).map((item, key) => (
       <li className={styles.item} key={key}>
@@ -14,3 +14,9 @@ export default () => (
     ))}
   </ul>
 )
+
+PageNav.propTypes = {
+  nav: PropTypes.object
+}
+
+export default PageNav

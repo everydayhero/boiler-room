@@ -35,3 +35,11 @@
 .scale-xxxxl {
   font-size: 2.986rem;
 }
+
+.max-length {
+  max-width: 32em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

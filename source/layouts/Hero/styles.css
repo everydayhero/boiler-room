@@ -1,5 +1,6 @@
 .root {
   composes: on-dark from '../../traits/colors.css';
+  composes: text-over-image from '../../traits/shadows.css';
 }
 
 .image {
@@ -12,7 +13,7 @@
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50%;
+  background-position: left center;
   z-index: 0;
 }
 
@@ -21,22 +22,31 @@
 }
 
 .bottom {
-  composes: px-contain from "../../traits/spacing.css";
+  composes: px-contain pb-1 from "../../traits/spacing.css";
   position: relative;
   z-index: 10;
+}
+
+.heroText {
+  composes: scale-sm max-length from '../../traits/type.css';
+  composes: mb-1 from "../../traits/spacing.css";
 }
 
 @media screen and (max-width: 31.25em) {
   .top {
     position: relative;
+    padding-bottom: 1.5rem;
   }
   .bottom {
+    padding-top: 1.5rem;
     background-color: #fff;
+    text-shadow: none;
   }
 }
 
 @media screen and (min-width: 31.25em) {
   .root {
+    padding-top: .75rem;
     position: relative;
   }
   .bottom {

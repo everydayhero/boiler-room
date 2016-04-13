@@ -1,0 +1,9 @@
+/* There Should be a scale of about 5 shadow levels */
+
+.shadow-3 {
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+.text-over-image {
+  text-shadow: 0 0 10px rgba(0,0,0,.3);
+}

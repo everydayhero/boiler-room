@@ -1,12 +1,10 @@
 import React from 'react'
 
 import PageNav from '../../components/PageNav'
-import Hero from '../Hero'
-import styles from './styles.css'
+import nav from '../../content/nav.json'
 
 export default () => (
-  <header className={styles.root}>
-    <PageNav />
-    <Hero />
+  <header>
+    <PageNav nav={nav}/>
   </header>
 )
