@@ -1,0 +1,42 @@
+.root {
+  composes: uppercase scale-lg from '../../traits/type.css';
+  position: relative;
+  composes: mb-1 from '../../traits/spacing.css';
+}
+
+.heading {
+  opacity: 0;
+  animation-name: fade-in-out;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.heading-1 {
+  composes: heading;
+}
+
+.heading-2,
+.heading-3 {
+  position: absolute;
+  top: 0;
+}
+
+.heading-2 {
+  composes: heading;
+  animation-delay: 3s;
+}
+
+.heading-3 {
+  composes: heading;
+  animation-delay: 6s;
+}
+
+@keyframes fade-in-out {
+  0%, 50% {
+    opacity: 0;
+  }
+  16.66%, 33.33% {
+    opacity: 1;
+  }
+}
