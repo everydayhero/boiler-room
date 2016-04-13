@@ -4,10 +4,13 @@ import Footer from '../Footer'
 
 import styles from './styles.css'
 
-export default (props) => (
-  <article className={styles.Main}>
+export default ({
+  children,
+  ...props
+}) => (
+  <div className={styles.root}>
     <Header { ...props } />
-    {props.children}
+      {children}
     <Footer { ...props } />
-  </article>
+  </div>
 )

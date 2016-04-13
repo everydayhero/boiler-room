@@ -1,0 +1,45 @@
+.root {
+  composes: on-dark from '../../traits/colors.css';
+}
+
+.image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/layouts/Hero/running-girl.jpg');
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  z-index: 0;
+}
+
+.top {
+  composes: px-contain pt-1half from "../../traits/spacing.css";
+}
+
+.bottom {
+  composes: px-contain from "../../traits/spacing.css";
+  position: relative;
+  z-index: 10;
+}
+
+@media screen and (max-width: 31.25em) {
+  .top {
+    position: relative;
+  }
+  .bottom {
+    background-color: #fff;
+  }
+}
+
+@media screen and (min-width: 31.25em) {
+  .root {
+    position: relative;
+  }
+  .bottom {
+    color: #fff;
+  }
+}

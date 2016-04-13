@@ -1,0 +1,23 @@
+.primary {
+  color: #F0177B;
+}
+
+.light {
+  color: #fff;
+}
+
+.dark {
+  color: #333333;
+}
+
+.on-primary {
+  background-color: #F0177B;
+}
+
+.on-light {
+  background-color: #fff;
+}
+
+.on-dark {
+  background-color: #333;
+}

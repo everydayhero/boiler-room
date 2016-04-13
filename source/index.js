@@ -11,6 +11,13 @@ import Routes from './Routes'
 import store from './store'
 
 if (typeof document !== 'undefined') {
+  const WebFont = require('webfontloader')
+  WebFont.load({
+    google: {
+      families: ['Montserrat']
+    },
+    timeout: 2000
+  })
   match(
     { routes: Routes, location: window.location },
     (error, redirectLocation, renderProps) => {

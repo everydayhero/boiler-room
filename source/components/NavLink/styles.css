@@ -1,0 +1,9 @@
+.root {
+  composes: light from "../../traits/colors.css";
+  composes: p-half from "../../traits/spacing.css";
+  composes: scale-sm from "../../traits/type.css";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+}

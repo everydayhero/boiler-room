@@ -2,21 +2,19 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
 import { context } from '../config'
-
-import SimpleContent, { fetchContent } from './SimpleContent'
+import Home from './Home'
+import FourOhFour from './FourOhFour'
 
 export default (
   <Route
     path={`${context.basePath}/`}
     component={({ children }) => children}>
     <IndexRoute
-      component={SimpleContent}
-      onEnter={fetchContent}
+      component={Home}
     />
     <Route
       path='*'
-      component={SimpleContent}
-      onEnter={fetchContent}
+      component={FourOhFour}
     />
   </Route>
 )

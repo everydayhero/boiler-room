@@ -2,6 +2,6 @@ import React from 'react'
 
 export default (props) => (
   <footer>
-    <small>{props.title}</small>
+    <div>TODO: Footer - Logo and links</div>
   </footer>
 )

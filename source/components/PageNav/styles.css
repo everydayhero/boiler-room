@@ -1,0 +1,25 @@
+.root {
+  composes: px-contain mx-nhalf from "../../traits/spacing.css";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.item {
+  display: inline-block;
+}
+
+
+@media screen and (min-width: 31.25em) {
+  .root {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 31.25em) {
+  .root {
+    background-color: rgba(0,0,0,.5);
+  }
+}

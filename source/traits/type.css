@@ -1,0 +1,37 @@
+/* Based on a minor-third modular scale. i.e. 1.2 */
+
+.scale-xs {
+  font-size: 0.694rem;
+}
+
+.scale-sm {
+  font-size: 0.833rem;
+}
+
+.scale-md {
+  font-size: 1rem;
+}
+
+.scale-lg {
+  font-size: 1.2rem;
+}
+
+.scale-xl {
+  font-size: 1.44rem;
+}
+
+.scale-xxl {
+  font-size: 1.728rem;
+}
+
+.scale-xxxl {
+  font-size: 2.074rem;
+}
+
+.scale-xxxxl {
+  font-size: 2.488rem;
+}
+
+.scale-xxxxl {
+  font-size: 2.986rem;
+}

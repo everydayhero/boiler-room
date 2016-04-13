@@ -1,0 +1,14 @@
+{
+  about: {
+    link: '#about',
+    title: 'About'
+  },
+  theImpact: {
+    link: '#the-impact',
+    title: 'The Impact'
+  },
+  sponsors: {
+    link: '#sponsors',
+    title: 'Sponsors'
+  }
+}

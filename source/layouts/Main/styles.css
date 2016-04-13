@@ -1,7 +1,5 @@
-:global(body) {
-  margin: 0;
-}
-
-.Main {
-  font-family: Helvetica Nueue, Helvetica, sans-serif;
+.root {
+  max-width: 87.5em;
+  margin: 0 auto;
+  position: relative;
 }
