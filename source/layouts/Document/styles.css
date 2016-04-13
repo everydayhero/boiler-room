@@ -9,4 +9,17 @@
   font-weight: 400;
   overflow-x: hidden;
   min-width: 20em;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 31.25em) {
+  .html {
+    font-size: 120%; /* Scale lg */
+  }
+}
+
+@media screen and (min-width: 62.5em) {
+  .html {
+    font-size: 144%; /* Scale xl */
+  }
 }
