@@ -1,9 +1,17 @@
 import React from 'react'
-
 import styles from './styles.css'
 
-export default ({
+const Icon = ({
+  name,
   ...props
-}) => (
-  <div {...props} className={styles.root}></div>
-)
+}) => {
+  const svgIcon = `<use xlink:href="#${name}" />`
+  return (
+    <div className={styles.root} {...props}>
+      <svg dangerouslySetInnerHTML={{ __html: svgIcon }}
+        className={styles.svg} />
+    </div>
+  )
+}
+
+export default Icon

@@ -14,11 +14,12 @@ const Home = ({
   title,
   hero = {},
   email = {},
+  hiw = {},
   bff = {}
 }) => (
   <Main title={title}>
     <Hero {...hero} email={email} />
-    <HowItWorks />
+    <HowItWorks {...hiw} />
     <About />
     <BringYourBff {...bff}/>
     <TheImpact />
@@ -32,6 +33,7 @@ Home.propTypes = {
   title: PropTypes.string,
   hero: PropTypes.object,
   email: PropTypes.object,
+  hiw: PropTypes.object,
   bff: PropTypes.object,
   about: PropTypes.object
 }

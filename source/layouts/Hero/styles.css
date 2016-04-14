@@ -51,10 +51,16 @@
 @media screen and (min-width: 31.25em) {
   .root {
     padding-top: .75rem;
-    padding-bottom: 4.5rem;
+    padding-bottom: 1.5rem;
     position: relative;
   }
   .bottom {
     color: #fff;
+  }
+}
+
+@media screen and (min-width: 62.5em) {
+  .root {
+    padding-bottom: 5rem;
   }
 }

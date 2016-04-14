@@ -1,31 +1,72 @@
 .root {
-
-}
-
-.hiwSlider {
-  composes: on-grey from '../../traits/colors.css';
-  composes: px-contain from '../../traits/spacing.css';
-  composes: pb-1 from '../../traits/spacing.css';
-}
-
-img {
-  max-width: 100%;
+  position: relative;
 }
 
 .title {
-  composes: scale-xxxl from '../../traits/type.css';
-  composes: pt-1half from '../../traits/spacing.css';
+  composes: px-contain mb-half from '../../traits/spacing.css';
+  composes: scale-xl uppercase from '../../traits/type.css';
   composes: light from '../../traits/colors.css';
 }
 
-.hiwSubHeading {
-  composes: strong from '../../traits/type.css';
+.content {
+  composes: pb-1 pt-1half from '../../traits/spacing.css';
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-.hiwBold {
-  composes: strong from '../../traits/type.css';
+.panels {
+  composes: px-contain from '../../traits/spacing.css';
+  display: flex;
+  align-items: stretch;
 }
 
-.hiwIcons, .hiwSubHeading, .hiwContent {
-  composes: p-half from '../../traits/spacing.css';
+.item {
+  width: 25%;
+}
+
+@media screen and (max-width: 31.25em) {
+  .root {
+    background-image: url(/layouts/Hero/running-girl.jpg);
+    background-position: left center;
+  }
+  .panels {
+    width: 360%;
+  }
+}
+
+@media screen and (min-width: 31.25em) and (max-width: 62.5em) {
+  .panels {
+    width: 180%;
+  }
+}
+
+@media screen and (max-width: 62.5em) {
+  .root {
+    background-color: #333;
+  }
+  .title {
+    padding-top: 1.5rem;
+  }
+  .panels {
+    padding-right: 1.5rem;
+  }
+  .item {
+    background-color: #fff;
+  }
+  .content {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 62.5em) {
+  .root {
+    margin-top: -5rem;
+  }
+  .panels {
+    background-color: #f4f4f4;
+  }
+  .panels {
+    margin-left: -.75rem;
+    margin-right: -.75rem;
+  }
 }

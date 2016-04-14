@@ -2,12 +2,12 @@
   title: 'How It Works',
   panels: [
     {
-      icon: 'checkbox',
+      icon: 'check',
       title: 'Register',
       content: 'Choose a cause and commit to a running and fundraising goal. Receive your World Famous welcome kit. Smile and get ready for your adventure.'
     },
     {
-      icon: 'connect',
+      icon: 'sync',
       title: 'Connect',
       content: 'Connect your fitness app so you can see all that you’re giving. Track your distance, time, and calories burned. And, know that your individual effort adds to our collective progress.'
     },

@@ -1,4 +1,6 @@
 import React from 'react'
+
+import Icons from '../../components/Icons'
 import Header from '../Header'
 import Footer from '../Footer'
 
@@ -9,6 +11,7 @@ export default ({
   ...props
 }) => (
   <div className={styles.root}>
+    <Icons />
     <Header { ...props } />
       {children}
     <Footer { ...props } />

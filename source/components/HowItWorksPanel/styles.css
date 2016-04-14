@@ -1,3 +1,35 @@
 .root {
-  
+  composes: pt-2 pb-1 px-half from '../../traits/spacing.css';
+  position: relative;
+}
+
+.iconDefault {
+  composes: shadow-3 from '../../traits/shadows.css';
+  composes: mb-half mt-n1half from '../../traits/spacing.css';
+  composes: scale-xxl from '../../traits/type.css';
+  padding: .75em;
+  line-height: 0;
+  display: inline-block;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+}
+
+.icon {
+  composes: iconDefault;
+  composes: light on-primary from '../../traits/colors.css';
+}
+
+.iconInverted {
+  composes: iconDefault;
+  composes: primary on-light from '../../traits/colors.css';
+}
+
+.title {
+  composes: uppercase bold from '../../traits/type.css';
+  composes: mb-half from '../../traits/spacing.css';
+}
+
+.content {
+  composes: scale-sm from '../../traits/type.css';
 }

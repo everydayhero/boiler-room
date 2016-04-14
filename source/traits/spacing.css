@@ -2,6 +2,20 @@
   --rhythm: 1.5;
 }
 
+.mx-nhalf {
+  margin-left: calc(var(--rhythm) * -.5rem);
+  margin-right: calc(var(--rhythm) * -.5rem);
+}
+
+.mx-n1 {
+  margin-left: calc(var(--rhythm) * -1rem);
+  margin-right: calc(var(--rhythm) * -1rem);
+}
+
+.mt-n1half {
+  margin-top: calc(var(--rhythm) * -1.5rem);
+}
+
 .ml-quarter {
   margin-left: calc(var(--rhythm) * .25rem);
 }
@@ -22,19 +36,17 @@
   margin-bottom: calc(var(--rhythm) * 1rem);
 }
 
-.my-2 {
-  margin-top: calc(var(--rhythm) * 2rem);
+.mb-1half {
+  margin-bottom: calc(var(--rhythm) * 1.5rem);
+}
+
+.mb-2 {
   margin-bottom: calc(var(--rhythm) * 2rem);
 }
 
-.mx-nhalf {
-  margin-left: calc(var(--rhythm) * -.5rem);
-  margin-right: calc(var(--rhythm) * -.5rem);
-}
-
-.mx-n1 {
-  margin-left: calc(var(--rhythm) * -1rem);
-  margin-right: calc(var(--rhythm) * -1rem);
+.my-2 {
+  margin-top: calc(var(--rhythm) * 2rem);
+  margin-bottom: calc(var(--rhythm) * 2rem);
 }
 
 .px-contain {
@@ -81,12 +93,21 @@
   padding-bottom: calc(var(--rhythm) * 1rem);
 }
 
+.px-1 {
+  padding-left: calc(var(--rhythm) * 1rem);
+  padding-right: calc(var(--rhythm) * 1rem);
+}
+
 .pt-1 {
   padding-top: calc(var(--rhythm) * 1rem);
 }
 
 .pb-1 {
   padding-bottom: calc(var(--rhythm) * 1rem);
+}
+
+.pr-1 {
+  padding-right: calc(var(--rhythm) * 1rem);
 }
 
 .pt-1half {
