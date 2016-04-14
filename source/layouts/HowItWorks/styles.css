@@ -1,3 +1,31 @@
 .root {
-  
+
+}
+
+.hiwSlider {
+  composes: on-grey from '../../traits/colors.css';
+  composes: px-contain from '../../traits/spacing.css';
+  composes: pb-1 from '../../traits/spacing.css';
+}
+
+img {
+  max-width: 100%;
+}
+
+.title {
+  composes: scale-xxxl from '../../traits/type.css';
+  composes: pt-1half from '../../traits/spacing.css';
+  composes: light from '../../traits/colors.css';
+}
+
+.hiwSubHeading {
+  composes: strong from '../../traits/type.css';
+}
+
+.hiwBold {
+  composes: strong from '../../traits/type.css';
+}
+
+.hiwIcons, .hiwSubHeading, .hiwContent {
+  composes: p-half from '../../traits/spacing.css';
 }

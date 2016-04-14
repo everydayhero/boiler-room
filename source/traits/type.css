@@ -43,3 +43,7 @@
 .uppercase {
   text-transform: uppercase;
 }
+
+.strong {
+  font-weight: 900;
+}

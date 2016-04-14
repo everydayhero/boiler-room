@@ -1,3 +1,8 @@
 .root {
-  
+
+}
+
+.byff {
+  composes: px-contain from '../../traits/spacing.css';
+  overflow: auto;
 }
