@@ -14,12 +14,12 @@
 
 @media screen and (min-width: 31.25em) {
   .html {
-    font-size: 120%; /* Scale lg */
+    font-size: 110%;
   }
 }
 
 @media screen and (min-width: 62.5em) {
   .html {
-    font-size: 144%; /* Scale xl */
+    font-size: 120%;
   }
 }
