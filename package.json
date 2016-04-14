@@ -29,6 +29,7 @@
   "dependencies": {
     "cheerio": "^0.20.0",
     "react-dom": "^0.14.6",
+    "react-textarea-autosize": "^4.0.0",
     "webfontloader": "^1.6.24"
   },
   "standard": {

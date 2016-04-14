@@ -2,6 +2,14 @@
   --rhythm: 1.5;
 }
 
+.ml-quarter {
+  margin-left: calc(var(--rhythm) * .25rem);
+}
+
+.mb-half {
+  margin-bottom: calc(var(--rhythm) * .5rem);
+}
+
 .mb-1 {
   margin-bottom: calc(var(--rhythm) * 1rem);
 }

@@ -1,3 +1,58 @@
 .root {
-  
+  composes: px-contain py-2 from '../../traits/spacing.css';
+  composes: light on-dark from '../../traits/colors.css';
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  background-image: url('/layouts/BringYourBff/background.jpg');
+  background-size: cover;
+  background-position: right center;
+}
+
+.title {
+  composes: scale-lg uppercase bold from '../../traits/type.css';
+}
+
+.subtitle {
+  composes: mb-half from '../../traits/spacing.css';
+}
+
+.share {
+  composes: max-length from '../../traits/type.css';
+}
+
+.input {
+  composes: p-half mb-half from '../../traits/spacing.css';
+  background-color: rgba(0,0,0,.8);
+  display: block;
+  resize: none;
+  border: 2px solid;
+  width: 100%;
+  opacity: .8;
+  transition: all .25s ease-out;
+}
+
+.input:hover,
+.input:focus {
+  opacity: 1;
+}
+
+.input:focus {
+  border-color: #F0177B;
+}
+
+.buttons {
+  composes: align-right from '../../traits/type.css';
+}
+
+.button {
+  composes: py-quarter px-half ml-quarter from '../../traits/spacing.css';
+  border: 2px solid;
+  text-decoration: none;
+  transition: all .25s ease-out;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  border-color: transparent;
+  background-color: #F0177B;
 }

@@ -19,8 +19,10 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  color: inherit;
   font: inherit;
   vertical-align: baseline;
+  line-height: inherit;
   margin: 0; /* Remove margins too */
 }
 /* HTML5 display-role reset for older browsers */
@@ -49,10 +51,41 @@ table {
  * Nothing that needs to be overridden
  */
 
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 strong {
   font-weight: 700;
 }
 
 em {
   font-style: italic;
+}
+
+button {
+  border: none;
+  color: inherit;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  background-color: transparent;
+  font-family: inherit;
+  cursor: pointer;
+  font-size: inherit;
+}
+
+input,
+textarea {
+  font-size: inherit;
+  font-family: inherit;
+  color: inherit;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  line-height: inherit;
 }
