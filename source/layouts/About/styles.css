@@ -1,25 +1,24 @@
 .root {
-
-}
-
-.about {
-  composes: px-contain from '../../traits/spacing.css';
-  composes: my-2 from '../../traits/spacing.css';
-  overflow: auto;
-}
-
-.aboutLeft {
-  width: 70%;
-  float: left;
-}
-
-.aboutRight {
-  width: 30%;
-  float: left;
+  composes: px-contain my-2 from '../../traits/spacing.css';
 }
 
 .title {
-  composes: scale-xxxl from '../../traits/type.css';
+  composes: scale-xxl uppercase from '../../traits/type.css';
+  composes: mb-1 from '../../traits/spacing.css';
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  composes: max-length from '../../traits/type.css';
+}
+
+.image {
+  max-width: 12.5rem;
+  margin: 0 auto;
 }
 
 .aboutBold {
@@ -27,6 +26,18 @@
 }
 
 .text {
-  composes: scale-md from '../../traits/type.css';
-  composes: pt-1half from '../../traits/spacing.css';
+  composes: mb-1 from '../../traits/spacing.css';
+}
+
+@media screen and (min-width: 46.875em) {
+  .root {
+    flex-wrap: nowrap;
+  }
+  .content {
+    padding-right: 1.5rem;
+    width: 65%;
+  }
+  .image {
+    margin-right: 0;
+  }
 }
