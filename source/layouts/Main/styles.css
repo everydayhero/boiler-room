@@ -1,5 +1,7 @@
 .root {
-  max-width: 87.5em;
+  composes: shadow-3 from '../../traits/shadows.css';
+  composes: on-light from '../../traits/colors.css';
+  max-width: 70em;
   margin: 0 auto;
   position: relative;
 }

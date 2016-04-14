@@ -3,6 +3,7 @@
 }
 
 .body {
+  composes: on-grey from '../../traits/colors.css';
   line-height: 1.5;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
   margin: 0;
