@@ -6,6 +6,10 @@
   margin-left: calc(var(--rhythm) * .25rem);
 }
 
+.mb-quarter {
+  margin-bottom: calc(var(--rhythm) * .25rem);
+}
+
 .mb-half {
   margin-bottom: calc(var(--rhythm) * .5rem);
 }
@@ -45,9 +49,18 @@
   }
 }
 
+.p-quarter {
+  padding: calc(var(--rhythm) * .25rem);
+}
+
 .py-quarter {
   padding-top: calc(var(--rhythm) * .25rem);
   padding-bottom: calc(var(--rhythm) * .25rem);
+}
+
+.px-quarter {
+  padding-left: calc(var(--rhythm) * .25rem);
+  padding-right: calc(var(--rhythm) * .25rem);
 }
 
 .p-half {
@@ -61,6 +74,11 @@
 
 .p-1 {
   padding: calc(var(--rhythm) * 1rem);
+}
+
+.py-1 {
+  padding-top: calc(var(--rhythm) * 1rem);
+  padding-bottom: calc(var(--rhythm) * 1rem);
 }
 
 .pt-1 {

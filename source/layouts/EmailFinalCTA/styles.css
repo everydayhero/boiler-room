@@ -1,3 +1,11 @@
 .root {
-  
+  composes: py-2 px-contain from '../../traits/spacing.css';
+  composes: on-grey from '../../traits/colors.css';
+  display: flex;
+  justify-content: center;
+}
+
+.email {
+  flex: 1;
+  composes: max-length from '../../traits/type.css';
 }

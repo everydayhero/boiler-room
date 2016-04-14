@@ -66,6 +66,10 @@ em {
   font-style: italic;
 }
 
+img {
+  max-width: 100%;
+}
+
 button {
   border: none;
   color: inherit;
@@ -90,4 +94,17 @@ textarea {
   background-color: transparent;
   line-height: inherit;
   -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #aaa;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #aaa;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #aaa;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #aaa;
 }

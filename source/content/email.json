@@ -1,6 +1,7 @@
 {
   title: 'Join the movement',
-  placeholder: 'Your email',
+  label: 'Email',
+  placeholder: 'Enter your email',
   buttonText: 'Notify Me',
   desctiption: 'Sign up to get early access'
 }

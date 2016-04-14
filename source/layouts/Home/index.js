@@ -13,15 +13,16 @@ import Contact from '../Contact'
 const Home = ({
   title,
   hero = {},
+  email = {},
   bff = {}
 }) => (
   <Main title={title}>
-    <Hero {...hero} />
+    <Hero {...hero} email={email} />
     <HowItWorks />
     <About />
     <BringYourBff {...bff}/>
     <TheImpact />
-    <EmailFinalCTA />
+    <EmailFinalCTA email={email} />
     <QuoteHero />
     <Contact />
   </Main>
@@ -30,6 +31,7 @@ const Home = ({
 Home.propTypes = {
   title: PropTypes.string,
   hero: PropTypes.object,
+  email: PropTypes.object,
   bff: PropTypes.object,
   about: PropTypes.object
 }

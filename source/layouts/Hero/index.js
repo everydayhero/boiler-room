@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'
 
 import Logo from '../../components/Logo'
 import ScrollingHeading from '../../components/ScrollingHeading'
+import EmailCTA from '../../components/EmailCTA'
 import styles from './styles.css'
 
 const Hero = ({
@@ -17,7 +18,9 @@ const Hero = ({
     <div className={styles.bottom}>
       <ScrollingHeading headings={scrollingHeadings}/>
       <div className={styles.heroText}>{leadText}</div>
-      <div>TODO: EmailSubscribe</div>
+      <div className={styles.email}>
+        <EmailCTA {...email} />
+      </div>
     </div>
   </div>
 )

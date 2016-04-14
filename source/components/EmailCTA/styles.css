@@ -1,3 +1,36 @@
 .root {
-  
+
+}
+
+.title {
+  composes: uppercase bold from '../../traits/type.css';
+  composes: primary from '../../traits/colors.css';
+  composes: mb-quarter from '../../traits/spacing.css';
+}
+
+.label {
+  composes: hidden from '../../traits/layout.css';
+}
+
+.form {
+  composes: mb-quarter from '../../traits/spacing.css';
+  display: flex;
+}
+
+.input {
+  composes: solid-2 from '../../traits/borders.css';
+  composes: border-primary from '../../traits/colors.css';
+  composes: p-quarter from '../../traits/spacing.css';
+  flex: 1;
+}
+
+.submit {
+  composes: uppercase bold from '../../traits/type.css';
+  composes: light on-primary from '../../traits/colors.css';
+  composes: px-half from '../../traits/spacing.css';
+}
+
+.description {
+  composes: scale-sm from '../../traits/type.css';
+  composes: primary from '../../traits/colors.css';
 }
