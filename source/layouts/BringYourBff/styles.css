@@ -44,10 +44,11 @@
 }
 
 .button {
-  composes: py-quarter px-half ml-quarter from '../../traits/spacing.css';
+  composes: py-quarter px-half ml-half from '../../traits/spacing.css';
   border: 2px solid;
   text-decoration: none;
   transition: all .25s ease-out;
+  display: inline-block;
 }
 
 .button:hover,

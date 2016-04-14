@@ -10,6 +10,10 @@
   margin-bottom: calc(var(--rhythm) * .5rem);
 }
 
+.ml-half {
+  margin-left: calc(var(--rhythm) * .5rem);
+}
+
 .mb-1 {
   margin-bottom: calc(var(--rhythm) * 1rem);
 }
