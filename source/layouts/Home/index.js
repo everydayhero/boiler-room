@@ -2,8 +2,13 @@ import React, { PropTypes } from 'react'
 
 import Main from '../Main'
 import Hero from '../Hero'
+import HowItWorks from '../HowItWorks'
+import About from '../About'
 import BringYourBff from '../BringYourBff'
-// TODO: Import other home "layouts"
+import TheImpact from '../TheImpact'
+import EmailFinalCTA from '../EmailFinalCTA'
+import QuoteHero from '../QuoteHero'
+import Contact from '../Contact'
 
 const Home = ({
   title,
@@ -12,13 +17,13 @@ const Home = ({
 }) => (
   <Main title={title}>
     <Hero {...hero} />
-    <div>TODO: HowItWorks</div>
-    <div>TODO: About</div>
+    <HowItWorks />
+    <About />
     <BringYourBff {...bff}/>
-    <div>TODO: The Impact</div>
-    <div>TODO: EmailFinalCTA</div>
-    <div>TODO: QuoteHero</div>
-    <div>TODO: Sponsors</div>
+    <TheImpact />
+    <EmailFinalCTA />
+    <QuoteHero />
+    <Contact />
   </Main>
 )
 

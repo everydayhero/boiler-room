@@ -1,3 +1,32 @@
 .root {
-  
+
+}
+
+.about {
+  composes: px-contain from '../../traits/spacing.css';
+  composes: my-2 from '../../traits/spacing.css';
+  overflow: auto;
+}
+
+.aboutLeft {
+  width: 70%;
+  float: left;
+}
+
+.aboutRight {
+  width: 30%;
+  float: left;
+}
+
+.title {
+  composes: scale-xxxl from '../../traits/type.css';
+}
+
+.aboutBold {
+  composes: bold from '../../traits/type.css';
+}
+
+.text {
+  composes: scale-md from '../../traits/type.css';
+  composes: pt-1half from '../../traits/spacing.css';
 }

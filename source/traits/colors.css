@@ -24,6 +24,10 @@
   background-color: var(--light);
 }
 
+.on-grey {
+  background-color: #D8D8D8;
+}
+
 .on-dark {
   background-color: var(--dark);
 }

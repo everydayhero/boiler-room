@@ -1,3 +1,92 @@
 .root {
-  
+
+}
+
+.impact {
+  overflow: auto;
+}
+
+.title {
+  composes: scale-xl from '../../traits/type.css';
+}
+
+.subTitle {
+
+}
+
+.title, .subTitle, .impactSmContent, .impactLgContent {
+  composes: p-half from '../../traits/spacing.css';
+}
+
+.impactList {
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 60px 0;
+  overflow: hidden;
+  line-height: 0;
+  display: table;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.impactItems {
+  line-height: 1.5;
+  float: left;
+  width: 33.33%;
+  padding-bottom: 33.33%;
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  overflow: hidden;
+}
+
+.impactSquare {
+  position:absolute;
+  height:80%;
+  width:90%;
+  padding: 10% 5%;
+}
+
+.table {
+  display:table;
+  height:100%;
+  width:100%;
+}
+
+.tableCell {
+  display:table-cell;
+  vertical-align:middle;
+  height:100%;
+  width:100%;
+}
+
+.pinkList {
+  composes: on-primary from '../../traits/colors.css';
+}
+
+.image1, .image2, .image3, .image4 {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image1 {
+  background-image: url(/layouts/TheImpact/Water-pexels-photo-27559.jpg);
+}
+
+.image2 {
+  background-image: url(/layouts/TheImpact/1-girl-schoolgirl-learn-schulem-afghanistan-muslims.jpg);
+}
+
+.image3 {
+  background-image: url(/layouts/TheImpact/push-ups-exercise-fitness-workout-people-sport.jpg);
+}
+
+.image4 {
+  background-image: url(/layouts/TheImpact/watermelon-summer-little-girl-eating-watermelon-food.jpg);
 }
