@@ -15,13 +15,19 @@
 .form {
   composes: mb-quarter from '../../traits/spacing.css';
   display: table;
-  table-layout: fixed;
+  width: 100%;
+}
+
+.input,
+.button {
+  transition: all .25s ease-out;
 }
 
 .input {
   composes: solid-2 from '../../traits/borders.css';
   composes: border-primary from '../../traits/colors.css';
   composes: p-quarter from '../../traits/spacing.css';
+  height: 2.25rem;
   display: table-cell;
   width: 100%;
 }
@@ -33,7 +39,6 @@
 
 .formButton {
   display: table-cell;
-  widows: 100%;
 }
 
 .button {
@@ -41,7 +46,18 @@
   composes: light on-primary from '../../traits/colors.css';
   composes: px-half from '../../traits/spacing.css';
   height: 100%;
+  width: 100%;
+  text-align: center;
   white-space: nowrap;
+}
+
+.button:hover,
+.button:focus {
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.2)
+}
+
+.button:active {
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4)
 }
 
 .description {

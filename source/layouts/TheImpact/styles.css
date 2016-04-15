@@ -16,8 +16,8 @@
 }
 
 .tabItem {
-  display: inline-block;
   composes: mr-half from '../../traits/spacing.css';
+  display: inline-block;
 }
 
 .tabButton {
@@ -37,13 +37,13 @@
 }
 
 .quoteText {
-  composes: scale-xl my-1 from '../../traits/type.css';
+  composes: scale-xl from '../../traits/type.css';
   composes: mb-half from '../../traits/spacing.css';
   composes: primary from '../../traits/colors.css';
 }
 
 .quoteCite {
-  composes: uppercase scale-sm from '../../traits/type.css';
+  /*composes: uppercase scale-sm from '../../traits/type.css';*/
 }
 
 @media screen and (max-width: 44em) {
