@@ -2,91 +2,84 @@
 
 }
 
-.impact {
-  overflow: auto;
+.header {
+  composes: px-contain mb-1 from '../../traits/spacing.css';
 }
 
 .title {
-  composes: scale-xl from '../../traits/type.css';
+  composes: scale-xl uppercase from '../../traits/type.css';
+  composes: mb-1 from '../../traits/spacing.css';
 }
 
-.subTitle {
-
+.tabs {
+  composes: px-contain mb-1 from '../../traits/spacing.css';
 }
 
-.title, .subTitle, .impactSmContent, .impactLgContent {
-  composes: p-half from '../../traits/spacing.css';
+.tabItem {
+  display: inline-block;
+  composes: mr-half from '../../traits/spacing.css';
 }
 
-.impactList {
-  list-style: none;
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 60px 0;
-  overflow: hidden;
-  line-height: 0;
-  display: table;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+.tabButton {
+  composes: p-quarter from '../../traits/spacing.css';
+  composes: primary from '../../traits/colors.css';
+  composes: bold from '../../traits/type.css';
+  cursor: pointer;
 }
 
-.impactItems {
-  line-height: 1.5;
-  float: left;
-  width: 33.33%;
-  padding-bottom: 33.33%;
-  display: table-cell;
-  position: relative;
-  vertical-align: middle;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  overflow: hidden;
+.tabButtonActive {
+  composes: tabButton;
+  composes: light on-primary from '../../traits/colors.css';
 }
 
-.impactSquare {
-  position:absolute;
-  height:80%;
-  width:90%;
-  padding: 10% 5%;
+.quote {
+  composes: px-contain py-2 from '../../traits/spacing.css';
 }
 
-.table {
-  display:table;
-  height:100%;
-  width:100%;
+.quoteText {
+  composes: scale-xl my-1 from '../../traits/type.css';
+  composes: mb-half from '../../traits/spacing.css';
+  composes: primary from '../../traits/colors.css';
 }
 
-.tableCell {
-  display:table-cell;
-  vertical-align:middle;
-  height:100%;
-  width:100%;
+.quoteCite {
+  composes: uppercase scale-sm from '../../traits/type.css';
 }
 
-.pinkList {
-  composes: on-primary from '../../traits/colors.css';
+@media screen and (max-width: 44em) {
+  .root {
+    padding-top: 3rem;
+  }
 }
 
-.image1, .image2, .image3, .image4 {
-  background-repeat: no-repeat;
-  background-size: cover;
+@media screen and (min-width: 44em) {
+  .root {
+    margin: 0;
+  }
+  .header {
+    padding: 3rem 1.5rem 1.5rem;
+    margin: 0;
+  }
+  .tabs {
+    display: none;
+  }
 }
 
-.image1 {
-  background-image: url(/layouts/TheImpact/Water-pexels-photo-27559.jpg);
-}
-
-.image2 {
-  background-image: url(/layouts/TheImpact/1-girl-schoolgirl-learn-schulem-afghanistan-muslims.jpg);
-}
-
-.image3 {
-  background-image: url(/layouts/TheImpact/push-ups-exercise-fitness-workout-people-sport.jpg);
-}
-
-.image4 {
-  background-image: url(/layouts/TheImpact/watermelon-summer-little-girl-eating-watermelon-food.jpg);
+@media screen and (min-width: 70em) {
+  .header {
+    position: absolute;
+    width: 33%;
+    height: 0;
+    padding-bottom: 16.6666%;
+    padding-top: 16.6666%;
+  }
+  .quote {
+    position: absolute;
+    right: 0;
+    width: 33.3333%;
+    height: 0;
+    margin-top: -33%;
+    margin-bottom: 0;
+    padding: 16.66% 1.5rem;
+  }
 }

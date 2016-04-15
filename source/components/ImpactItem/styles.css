@@ -1,0 +1,100 @@
+.root {
+  position: relative;
+  z-index: 1;
+}
+
+.rootAlternate {
+  composes: root;
+}
+
+.imageContainer {
+  composes: px-contain from '../../traits/spacing.css';
+  line-height: 0;
+}
+
+.image {
+  composes: shadow-3 from '../../traits/shadows.css';
+}
+
+.main {
+  composes: light on-primary from '../../traits/colors.css';
+  composes: p-1 from '../../traits/spacing.css';
+  position: relative;
+}
+
+.amount {
+  composes: light on-primary from '../../traits/colors.css';
+  composes: mb-1half ml-half p-quarter from '../../traits/spacing.css';
+  composes: scale-xl bold from '../../traits/type.css';
+}
+
+.title {
+  composes: bold scale-lg from '../../traits/type.css';
+  composes: mb-1 from '../../traits/spacing.css';
+}
+
+.image {
+  line-height: 0;
+}
+
+@media screen and (max-width: 44em) {
+  :global(.hideSmall) {
+    display: none;
+  }
+  .imageContainer {
+    margin-bottom: -5.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .image {
+    width: 100%;
+    max-width: 400px;
+  }
+  .amount {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 44em) {
+  .rootAlternate {
+    direction: rtl;
+  }
+  .imageContainer,
+  .main {
+    display: table-cell;
+    direction: ltr;
+    width: 50%;
+  }
+  .imageContainer {
+    padding: 0;
+  }
+  .image {
+    box-shadow: none;
+    width: 100%;
+  }
+  .main {
+    vertical-align: bottom;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .content {
+    font-size: 0.833rem;
+  }
+  .amount {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 70em) {
+  .root {
+    direction: rtl;
+    width: 66.6666%;
+  }
+  .rootAlternate {
+    margin-left: 33.3333%;
+  }
+}

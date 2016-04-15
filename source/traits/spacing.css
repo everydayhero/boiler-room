@@ -2,9 +2,8 @@
   --rhythm: 1.5;
 }
 
-.mx-nhalf {
-  margin-left: calc(var(--rhythm) * -.5rem);
-  margin-right: calc(var(--rhythm) * -.5rem);
+.mt-n2 {
+  margin-top: calc(var(--rhythm) * -2rem);
 }
 
 .mx-n1 {
@@ -14,6 +13,11 @@
 
 .mt-n1half {
   margin-top: calc(var(--rhythm) * -1.5rem);
+}
+
+.mx-nhalf {
+  margin-left: calc(var(--rhythm) * -.5rem);
+  margin-right: calc(var(--rhythm) * -.5rem);
 }
 
 .ml-quarter {
@@ -30,6 +34,15 @@
 
 .ml-half {
   margin-left: calc(var(--rhythm) * .5rem);
+}
+
+.mr-half {
+  margin-right: calc(var(--rhythm) * .5rem);
+}
+
+.my-1 {
+  margin-top: calc(var(--rhythm) * 1rem);
+  margin-bottom: calc(var(--rhythm) * 1rem);
 }
 
 .mb-1 {
@@ -116,6 +129,10 @@
 
 .pt-2 {
   padding-top: calc(var(--rhythm) * 2rem);
+}
+
+.pb-2 {
+  padding-bottom: calc(var(--rhythm) * 2rem);
 }
 
 .py-2 {

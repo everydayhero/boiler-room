@@ -1,0 +1,34 @@
+{
+  title: 'The Impact',
+  intro: 'Every dollar raised empowers girls around the world to live healthy, full, meaningful lives.',
+  cards: [
+    {
+      amount: '100',
+      title: 'Give access to clean water and sanitation.',
+      content: '$100 can give six girls access to clean water for a year. Girls are more than twice as likely as boys to travel far distances to fetch drinking water. Globally, girls and women spend an estimated 200 million hours every single day collecting water.',
+      image: '/layouts/TheImpact/100.jpg'
+    },
+    {
+      amount: '250',
+      title: 'Empower girls and young women through education.',
+      content: '$250 can provide a family with training and livestock so they can earn the income needed to pay for their daughter’s school fees and supplies. This amount equips them with books, paper and other learning materials and provides for their tuition and other school expenses.',
+      image: '/layouts/TheImpact/250.jpg'
+    },
+    {
+      amount: '500',
+      title: 'Educate and inspire girls to live healthy lives.',
+      content: '$500 can provide training for enough coaches for 100 girls. Coaches spend 2 days a week with girls ages 8-14 for 10 weeks teaching them life skills through fun, engaging lessons that celebrate the joy of movement and running.',
+      image: '/layouts/TheImpact/500.jpg'
+    },
+    {
+      amount: '1000',
+      title: 'Nourish their bodies and their souls.',
+      content: '$1000 can provide a nutritious breakfast and lunch to 100 girls for one week. Malnutrition is an underlying cause in nearly half of all child deaths in countries experiencing food crisis.',
+      image: '/layouts/TheImpact/1000.jpg'
+    }
+  ],
+  quote: {
+    text: 'Girls are the most powerful force for change on the planet.',
+    cite: 'Girl Effect'
+  }
+}
