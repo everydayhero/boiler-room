@@ -8,7 +8,7 @@
 }
 
 .title {
-  composes: scale-lg uppercase bold from '../../traits/type.css';
+  composes: scale-xl uppercase bold from '../../traits/type.css';
 }
 
 .subtitle {
