@@ -1,3 +1,43 @@
 .root {
-  
+  composes: px-contain py-2 from '../../traits/spacing.css';
+  composes: light on-dark from '../../traits/colors.css';
+}
+
+.footerContainer {
+  text-align: center;
+}
+
+.edh {
+  font-style: italic;
+}
+
+.footerMenu {
+  display: inline-block;
+}
+
+.footerListItem {
+  composes: px-half from '../../traits/spacing.css';
+  text-decoration: none;
+}
+
+.footerListItem:first-child {
+    border-right: none;
+  }
+
+@media screen and (min-width: 31.25em) {
+  .footerListItem {
+    float: left;
+  }
+
+  .footerListItem:first-child {
+    border-right: 2px solid #fff;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #F0177B;
 }

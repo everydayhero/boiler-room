@@ -7,8 +7,8 @@
     link: '#the-impact',
     title: 'The Impact'
   },
-  sponsors: {
-    link: '#sponsors',
-    title: 'Sponsors'
+  contact: {
+    link: '#contact',
+    title: 'Contact'
   }
 }

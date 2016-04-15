@@ -1,3 +1,23 @@
 .root {
-  
+  composes: px-contain py-2 from '../../traits/spacing.css';
+}
+
+.contact {
+  text-align: center;
+}
+
+.title {
+  composes: dark from '../../traits/colors.css';
+  composes: bold from '../../traits/type.css';
+  composes: mb-quarter from '../../traits/spacing.css';
+}
+
+.email {
+  composes: primary from '../../traits/colors.css';
+  composes: mb-quarter from '../../traits/spacing.css';
+}
+
+.phone {
+  composes: dark from '../../traits/colors.css';
+  composes: mb-quarter from '../../traits/spacing.css';
 }
