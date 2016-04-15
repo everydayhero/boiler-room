@@ -9,9 +9,7 @@
 }
 
 .content {
-  composes: pb-1 pt-1half from '../../traits/spacing.css';
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  composes: pt-1half from '../../traits/spacing.css';
 }
 
 .panels {
@@ -47,25 +45,26 @@
   .title {
     padding-top: 1.5rem;
   }
+  .content {
+    padding-bottom: 3rem;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
   .panels {
     padding-right: 1.5rem;
   }
   .item {
     background-color: #fff;
   }
-  .content {
-    padding-bottom: 1.5rem;
-  }
 }
 
 @media screen and (min-width: 62.5em) {
   .root {
-    margin-top: -5rem;
+    margin-top: -5.25rem;
   }
   .panels {
+    padding-bottom: 1.5rem;
     background-color: #f4f4f4;
-  }
-  .panels {
     margin-left: -.75rem;
     margin-right: -.75rem;
   }
