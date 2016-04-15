@@ -5,10 +5,16 @@ import styles from './styles.css'
 
 const { client: { basePath } } = config
 
-export default (props) => (
-  <Link
-    { ...props }
-    className={styles.root}
-    to={`${basePath}${props.to}`}
-  />
-)
+export default ({
+  to,
+  ...props
+}) => {
+  // Allow on page hash links to use the default anchor
+  return (to.indexOf('#') === 0)
+    ? <a {...props} href={to} className={styles.root} />
+    : (<Link
+      {...props}
+      className={styles.root}
+      to={`${basePath}${to}`}/>
+    )
+}

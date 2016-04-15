@@ -27,7 +27,7 @@ class TheImpact extends Component {
       activeTab
     } = this.state
     return (
-      <div className={styles.root}>
+      <div className={styles.root} id='the-impact'>
         <div className={styles.header}>
           <h2 className={styles.title}>{title}</h2>
           <p>{intro}</p>

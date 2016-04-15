@@ -5,7 +5,7 @@ import styles from './styles.css'
 export default ({
   ...props
 }) => (
-  <div {...props} className={styles.root}>
+  <div {...props} id='about' className={styles.root}>
     <h2 className={styles.title}>About</h2>
     <div className={styles.body}>
       <div className={styles.content}>

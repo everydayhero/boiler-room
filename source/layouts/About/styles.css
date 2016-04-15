@@ -1,5 +1,5 @@
 .root {
-  composes: px-contain my-2 from '../../traits/spacing.css';
+  composes: px-contain py-2 from '../../traits/spacing.css';
 }
 
 .title {
