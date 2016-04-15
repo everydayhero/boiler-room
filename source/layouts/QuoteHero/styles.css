@@ -1,3 +1,17 @@
 .root {
-  
+  composes: px-contain py-2 from '../../traits/spacing.css';
+  composes: light on-dark from '../../traits/colors.css';
+  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  background-image: url('/layouts/QuoteHero/background-girl-bubbles.jpg');
+  background-size: cover;
+  background-position: right center;
+}
+
+.heroQuote {
+  composes: max-length from '../../traits/type.css';
+}
+
+.quote {
+  composes: scale-xl from '../../traits/type.css';
+  composes: my-2 from '../../traits/spacing.css';
 }

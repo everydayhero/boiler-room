@@ -7,11 +7,10 @@ export default ({
 }) => (
   <div {...props} className={styles.root}>
     <div className={ styles.footerContainer }>
-        <p>Fundraising powered by</p>
-        <img src=""/>
+        <p className={ styles.edh }>Fundraising powered by <img src="/layouts/Footer/EDH-Logo-Footer.png"/></p>
       <ul className={ styles.footerMenu }>
-        <li>Privacy Policy</li>
-        <li>Terms & Conditions</li>
+        <li className={ styles.footerListItem }><a href="https://everydayhero.com/au/terms/?no_redirect">Privacy Policy</a></li>
+        <li className={ styles.footerListItem }><a href="https://everydayhero.com/au/terms/privacy/?no_redirect">Terms & Conditions</a></li>
       </ul>
     </div>
   </div>
