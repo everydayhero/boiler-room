@@ -14,20 +14,34 @@
 
 .form {
   composes: mb-quarter from '../../traits/spacing.css';
-  display: flex;
+  display: table;
+  table-layout: fixed;
 }
 
 .input {
   composes: solid-2 from '../../traits/borders.css';
   composes: border-primary from '../../traits/colors.css';
   composes: p-quarter from '../../traits/spacing.css';
-  flex: 1;
+  display: table-cell;
+  width: 100%;
 }
 
-.submit {
+.input:focus {
+  background-color: #fff;
+  color: #333;
+}
+
+.formButton {
+  display: table-cell;
+  widows: 100%;
+}
+
+.button {
   composes: uppercase bold from '../../traits/type.css';
   composes: light on-primary from '../../traits/colors.css';
   composes: px-half from '../../traits/spacing.css';
+  height: 100%;
+  white-space: nowrap;
 }
 
 .description {
