@@ -45,6 +45,7 @@
 
 .button {
   composes: py-quarter px-half ml-half from '../../traits/spacing.css';
+  composes: scale-sm from '../../traits/type.css';
   border: 2px solid;
   text-decoration: none;
   transition: all .25s ease-out;
@@ -56,4 +57,10 @@
 .button:active {
   border-color: transparent;
   background-color: #F0177B;
+}
+
+@media screen and (min-width: 31.25em) {
+  .button {
+    font-size: 1rem;
+  }
 }
