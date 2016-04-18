@@ -24,9 +24,9 @@ class BringYourBff extends Component {
     const {
       shareMessage
     } = this.state
-    const shareTitle = encodeURIComponent('If Girls Ran The World')
-    const shareUrl = encodeURIComponent('http://ifgirlsrantheworld.com')
-    const emailBody = encodeURIComponent(`${shareMessage}\r\n${shareUrl}`)
+    const shareTitle = 'If Girls Ran The World'
+    const shareUrl = 'http://ifgirlsrantheworld.com'
+    const emailBody = `${shareMessage} Check out ${shareUrl}`
     const shareLinks = {
       email: `mailto:?subject=${shareTitle}&body=${emailBody}`,
       facebook: `http://www.facebook.com/sharer.php?u=${shareUrl}`,
