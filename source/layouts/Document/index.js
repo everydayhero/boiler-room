@@ -7,6 +7,8 @@ const Document = ({ title, description, content }) => (
       <title>{title}</title>
       <meta name='description' content={description} />
       <meta name='viewport' content='width=device-width, initial-scale=1.0'/>
+      <link rel='icon' type='image/x-icon' href='/layouts/Document/favicon.ico' />
+      <link rel='apple-touch-icon' href='/layouts/Document/favicon.png' />
       <script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js' />
       <script src='https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.2/es5-shim.min.js' />
       <script src='https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.2/es5-sham.min.js' />

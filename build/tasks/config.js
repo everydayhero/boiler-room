@@ -12,10 +12,10 @@ module.exports = {
   IMAGES: [
     '**/*.png',
     '**/*.jpg',
-    '**/*.gif'
+    '**/*.gif',
+    '**/*.ico'
   ],
   DATA: [
     '**/*.json'
   ]
 }
-
