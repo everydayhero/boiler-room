@@ -51,6 +51,7 @@
   composes: px-half from '../../traits/spacing.css';
   composes: darken-bg-interaction from "../../traits/shadows.css";
   width: 100%;
+  cursor: pointer;
   text-align: center;
   white-space: nowrap;
   transition: .25s all ease-out;
