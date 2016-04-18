@@ -1,4 +1,5 @@
 import React from 'react'
+import DocumentTitle from 'react-document-title'
 
 import Icons from '../../components/Icons'
 import Header from '../Header'
@@ -8,12 +9,15 @@ import styles from './styles.css'
 
 export default ({
   children,
+  title,
   ...props
 }) => (
-  <div className={styles.root}>
-    <Icons />
-    <Header { ...props } />
-      {children}
-    <Footer { ...props } />
-  </div>
+  <DocumentTitle title={title}>
+    <div className={styles.root}>
+      <Icons />
+      <Header { ...props } />
+        {children}
+      <Footer { ...props } />
+    </div>
+  </DocumentTitle>
 )

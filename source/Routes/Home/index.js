@@ -10,6 +10,7 @@ import impactContent from '../../content/theImpact.json'
 
 export default () => (
   <HomeLayout
+    title={'If Girls Ran the World | October 1-31'}
     hero={heroContent}
     email={emailContent}
     hiw={hiwContent}

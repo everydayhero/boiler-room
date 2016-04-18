@@ -9,6 +9,7 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import Document from './layouts/Document'
 import Routes from './Routes'
 import store from './store'
+import { leadText as description } from './content/hero.json'
 
 if (typeof document !== 'undefined') {
   const WebFont = require('webfontloader')
@@ -50,7 +51,9 @@ export default function staticRender (route, callback) {
           </Provider>
         )
         const document = '<!DOCTYPE html>' + renderToStaticMarkup(
-          <Document title={DocumentTitle.rewind()} content={content} />
+          <Document title={DocumentTitle.rewind()}
+            description={description}
+            content={content} />
         )
         callback(null, document)
       }
