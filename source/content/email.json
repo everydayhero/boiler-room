@@ -3,5 +3,6 @@
   label: 'Email',
   placeholder: 'Enter your email',
   buttonText: 'Notify Me',
-  desctiption: 'Sign up to get early access'
+  description: 'Registration opens in June.',
+  descriptionHighlight: 'Sign up to get on our VIP list for early access.'
 }

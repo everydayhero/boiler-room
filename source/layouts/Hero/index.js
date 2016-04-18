@@ -2,7 +2,6 @@ import React, { PropTypes } from 'react'
 
 import Logo from '../../components/Logo'
 import ScrollingHeading from '../../components/ScrollingHeading'
-import EmailCTA from '../../components/EmailCTA'
 import styles from './styles.css'
 
 const Hero = ({
@@ -19,7 +18,7 @@ const Hero = ({
       <ScrollingHeading headings={scrollingHeadings}/>
       <div className={styles.heroText}>{leadText}</div>
       <div className={styles.email}>
-        <EmailCTA {...email} />
+        <a href='#email-final-cta' className={styles.emailButton}>Join the movement</a>
       </div>
     </div>
   </div>

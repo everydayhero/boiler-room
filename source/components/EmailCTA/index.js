@@ -7,7 +7,8 @@ export default ({
   label,
   placeholder,
   buttonText,
-  desctiption
+  description,
+  descriptionHighlight
 }) => (
   <div className={styles.root}>
     <h2 className={styles.title}>{title}</h2>
@@ -18,6 +19,6 @@ export default ({
         <button className={styles.button}>{buttonText}</button>
       </div>
     </form>
-    <p className={styles.description}>{desctiption}</p>
+    <p className={styles.description}>{description} <span className={styles.descriptionHighlight}>{descriptionHighlight}</span></p>
   </div>
 )

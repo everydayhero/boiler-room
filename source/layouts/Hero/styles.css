@@ -36,6 +36,14 @@
   max-width: 24em;
 }
 
+.emailButton {
+  composes: px-half py-quarter from "../../traits/spacing.css";
+  composes: bold from "../../traits/type.css";
+  composes: light on-primary from "../../traits/colors.css";
+  composes: darken-bg-interaction from "../../traits/shadows.css";
+  transition: .25s all ease-out;
+}
+
 @media screen and (max-width: 31.25em) {
   .top {
     position: relative;
@@ -61,6 +69,6 @@
 
 @media screen and (min-width: 62.5em) {
   .root {
-    padding-bottom: 5rem;
+    padding-bottom: 7.5rem;
   }
 }
