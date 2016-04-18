@@ -6,7 +6,7 @@ import EmailCTA from '../../components/EmailCTA'
 export default ({
   email
 }) => (
-  <div className={styles.root} id='email-final-cta'>
+  <div className={styles.root} id='join-the-movement'>
     <div className={styles.email}>
       <EmailCTA {...email}/>
     </div>
