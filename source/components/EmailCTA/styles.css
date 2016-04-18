@@ -27,7 +27,6 @@
   composes: solid-2 from '../../traits/borders.css';
   composes: border-primary from '../../traits/colors.css';
   composes: p-quarter from '../../traits/spacing.css';
-  height: 2.25rem;
   display: table-cell;
   width: 100%;
 }
@@ -35,6 +34,11 @@
 .input:focus {
   background-color: #fff;
   color: #333;
+}
+
+.input,
+.button {
+  height: 2.25rem;
 }
 
 .formButton {
@@ -46,7 +50,6 @@
   composes: light on-primary from '../../traits/colors.css';
   composes: px-half from '../../traits/spacing.css';
   composes: darken-bg-interaction from "../../traits/shadows.css";
-  height: 100%;
   width: 100%;
   text-align: center;
   white-space: nowrap;
