@@ -14,12 +14,12 @@
 
 .panels {
   composes: px-contain from '../../traits/spacing.css';
-  display: flex;
-  align-items: stretch;
+  display: table;
 }
 
 .item {
   width: 25%;
+  display: table-cell;
 }
 
 @media screen and (max-width: 31.25em) {
