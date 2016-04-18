@@ -1,6 +1,7 @@
 .root {
   composes: px-contain py-2 from '../../traits/spacing.css';
   composes: light on-dark from '../../traits/colors.css';
+  composes: scale-sm from '../../traits/type.css';
 }
 
 .footerContainer {
@@ -8,28 +9,24 @@
 }
 
 .edh {
+  composes: mb-half from '../../traits/spacing.css';
   font-style: italic;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.footerMenu {
-  display: inline-block;
+.edhLogo {
+  composes: ml-half from '../../traits/spacing.css';
 }
 
 .footerListItem {
   composes: px-half from '../../traits/spacing.css';
   text-decoration: none;
+  display: inline-block;
 }
 
 .footerListItem:first-child {
-    border-right: none;
-  }
-
-@media screen and (min-width: 31.25em) {
-  .footerListItem {
-    float: left;
-  }
-
-  .footerListItem:first-child {
-    border-right: 2px solid #fff;
-  }
+  border-right: 2px solid #fff;
 }

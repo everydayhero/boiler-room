@@ -12,8 +12,8 @@ export default ({
         <li><a className={styles.link} href='mailto:hello@everydayhero.com'>
           hello@everydayhero.com
         </a></li>
-      <li><a className={styles.link} href='tel:213-293-1133'>
-           (213) 293-1133
+        <li><a className={styles.link} href='tel:213-293-1133'>
+          (213) 293-1133
         </a></li>
       </ul>
       {/* <p className={ styles.phone }>9209834729</p> */}
