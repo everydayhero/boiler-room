@@ -9,9 +9,14 @@
 
 .heroQuote {
   composes: max-length from '../../traits/type.css';
+  composes: my-2 from '../../traits/spacing.css';
 }
 
 .quote {
-  composes: scale-xl from '../../traits/type.css';
-  composes: my-2 from '../../traits/spacing.css';
+  composes: scale-xl bold from '../../traits/type.css';
+  composes: mb-1 from '../../traits/spacing.css';
+}
+
+.author {
+  composes: uppercase scale-sm from '../../traits/type.css';
 }
