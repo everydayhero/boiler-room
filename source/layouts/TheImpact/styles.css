@@ -37,9 +37,10 @@
 }
 
 .quoteText {
-  composes: scale-xl bold from '../../traits/type.css';
+  composes: scale-xxl decorative from '../../traits/type.css';
   composes: mb-half from '../../traits/spacing.css';
   composes: primary from '../../traits/colors.css';
+  line-height: 1.25;
 }
 
 .quoteCite {

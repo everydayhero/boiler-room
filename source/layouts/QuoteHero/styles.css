@@ -13,8 +13,9 @@
 }
 
 .quote {
-  composes: scale-xl bold from '../../traits/type.css';
+  composes: scale-xxl decorative from '../../traits/type.css';
   composes: mb-1 from '../../traits/spacing.css';
+  line-height: 1.25;
 }
 
 .author {

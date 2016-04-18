@@ -51,3 +51,12 @@
 .align-right {
   text-align: right;
 }
+
+.sansserif {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.decorative {
+  font-family: "pupcat", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
+  letter-spacing: .05em;
+}

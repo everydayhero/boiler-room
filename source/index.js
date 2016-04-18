@@ -16,6 +16,9 @@ if (typeof document !== 'undefined') {
     google: {
       families: ['Montserrat']
     },
+    typekit: {
+      id: 'qwy4scr'
+    },
     timeout: 2000
   })
   match(
