@@ -12,12 +12,12 @@
   composes: mb-quarter from '../../traits/spacing.css';
 }
 
-.email {
+.link {
   composes: primary from '../../traits/colors.css';
   composes: mb-quarter from '../../traits/spacing.css';
 }
 
-.phone {
-  composes: dark from '../../traits/colors.css';
-  composes: mb-quarter from '../../traits/spacing.css';
+.link:hover,
+.link:focus {
+  filter: brightness(80%);
 }

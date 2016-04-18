@@ -8,9 +8,14 @@ export default ({
   <div {...props} id='contact' className={styles.root}>
     <div className={styles.contact}>
       <h1 className={styles.title}>Get in Touch</h1>
-      <p><a className={styles.email} href='mailto:hello@everydayhero.com'>
-        hello@everydayhero.com
-      </a></p>
+      <ul>
+        <li><a className={styles.link} href='mailto:hello@everydayhero.com'>
+          hello@everydayhero.com
+        </a></li>
+      <li><a className={styles.link} href='tel:213-293-1133'>
+           (213) 293-1133
+        </a></li>
+      </ul>
       {/* <p className={ styles.phone }>9209834729</p> */}
     </div>
   </div>
