@@ -6,4 +6,11 @@
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
+  transition: color .25s ease-out;
+}
+
+.root:hover,
+.root:focus,
+.root:active {
+  color: #F0177B;
 }
