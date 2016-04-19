@@ -27,14 +27,28 @@
     background-image: url(/layouts/Hero/running-girl.jpg);
     background-position: left center;
   }
+  .content {
+    scroll-snap-type: mandatory;
+    /* older spec implementation */
+    scroll-snap-destination: 0% 83%;
+    scroll-snap-points-x: repeat(83%);
+  }
   .panels {
-    width: 360%;
+    width: 350%;
+    padding-right: 4.5rem;
   }
 }
 
 @media screen and (min-width: 31.25em) and (max-width: 62.5em) {
+  .content {
+    scroll-snap-type: mandatory;
+    /* older spec implementation */
+    scroll-snap-destination: 0% 80%;
+    scroll-snap-points-x: repeat(80%);
+  }
   .panels {
     width: 180%;
+    padding-right: 1.5rem;
   }
 }
 
@@ -49,9 +63,6 @@
     padding-bottom: 3rem;
     overflow: auto;
     -webkit-overflow-scrolling: touch;
-  }
-  .panels {
-    padding-right: 1.5rem;
   }
   .item {
     background-color: #fff;
