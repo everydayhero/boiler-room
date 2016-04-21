@@ -52,6 +52,14 @@
   text-align: right;
 }
 
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
 .sansserif {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
 }

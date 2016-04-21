@@ -4,22 +4,22 @@
     {
       icon: 'check',
       title: 'Register',
-      content: 'Choose a cause and commit to a running and fundraising goal. Receive your World Famous welcome kit. Smile and get ready for your adventure.'
+      content: 'Choose a cause and commit to a running and fundraising goal. Smile and get ready for your adventure.'
     },
     {
       icon: 'sync',
       title: 'Connect',
-      content: 'Connect your fitness app so you can see all that you’re giving. Track your distance, time, and calories burned. And, know that your individual effort adds to our collective progress.'
+      content: 'Connect your fitness app so your individual effort will add to our collective progress around the world.'
     },
     {
       icon: 'heart',
       title: 'Fundraise',
-      content: 'Update your supporter page and share it with friends, family, and social network to raise funds for your cause. The funds your raise empower girls around the world.'
+      content: 'Update your supporter page and share it with friends, family, and social network. The funds your raise empower girls around the world.'
     },
     {
       icon: 'trophy',
       title: 'Run',
-      content: 'From October 1 – 31, get out and run. Run daily to win cool prizes and unlock fun rewards. Share your runs on social to build awareness for your cause and inspire others to join the movement.'
+      content: 'From October 1 – 31, get out and run. Run daily to win cool prizes and unlock fun rewards. Share your runs on social and inspire others to join the movement.'
     }
   ]
 }

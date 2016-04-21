@@ -40,16 +40,18 @@
 }
 
 .buttons {
-  composes: align-right from '../../traits/type.css';
+  composes: align-left from '../../traits/type.css';
 }
 
 .button {
-  composes: py-quarter px-half ml-half from '../../traits/spacing.css';
+  composes: py-quarter px-half mr-half my-1 from '../../traits/spacing.css';
   composes: scale-sm from '../../traits/type.css';
-  border: 2px solid;
-  text-decoration: none;
-  transition: all .25s ease-out;
   display: inline-block;
+  composes: px-half py-quarter from "../../traits/spacing.css";
+  composes: bold from "../../traits/type.css";
+  composes: light on-primary from "../../traits/colors.css";
+  composes: darken-bg-interaction from "../../traits/shadows.css";
+  transition: .25s all ease-out;
 }
 
 .button:hover,

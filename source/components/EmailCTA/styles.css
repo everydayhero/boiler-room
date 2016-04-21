@@ -3,7 +3,7 @@
 }
 
 .title {
-  composes: uppercase bold from '../../traits/type.css';
+  composes: align-center uppercase bold from '../../traits/type.css';
   composes: primary from '../../traits/colors.css';
   composes: mb-quarter from '../../traits/spacing.css';
 }
