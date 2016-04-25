@@ -6,3 +6,4 @@ module.exports = (browserSync) => (callback) => {
   })
   devServer(callback)
 }
+

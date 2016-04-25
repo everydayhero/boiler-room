@@ -1,22 +1,25 @@
 import React from 'react'
-import { Route, IndexRoute } from 'react-router'
+import { IndexRoute, Route } from 'react-router'
 
-import { context } from '../config'
+import Page, { fetchPageContent } from './Page'
+import FourOhFour from './FourOhFour'
 
-import SimpleContent, { fetchContent } from './SimpleContent'
-
-export default (
+export default (store) => (
   <Route
-    path={`${context.basePath}/`}
+    path={`${process.env.BASE_PATH || '/'}`}
     component={({ children }) => children}>
     <IndexRoute
-      component={SimpleContent}
-      onEnter={fetchContent}
+      onEnter={fetchPageContent(store)}
+      component={Page}
+    />
+    <Route
+      path='404'
+      component={FourOhFour}
     />
     <Route
       path='*'
-      component={SimpleContent}
-      onEnter={fetchContent}
+      onEnter={fetchPageContent(store)}
+      component={Page}
     />
   </Route>
 )

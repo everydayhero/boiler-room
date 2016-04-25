@@ -8,8 +8,11 @@ const DEST_DIR = config.DEST_DIR
 const CSS = config.CSS
 const JS = config.JS
 const IMAGES = config.IMAGES
+const FONTS = config.FONTS
+const PDFS = config.PDFS
+const VIDEOS = config.VIDEOS
 
-const REVABLE = [].concat(JS, CSS, IMAGES).map(
+const REVABLE = [].concat(JS, CSS, IMAGES, FONTS, PDFS, VIDEOS).map(
   (asset) => path.join(DEV_DIR, asset)
 )
 

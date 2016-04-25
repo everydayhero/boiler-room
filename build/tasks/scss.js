@@ -11,3 +11,4 @@ module.exports = () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest(DEV_DIR))
 }
+

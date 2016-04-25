@@ -11,3 +11,4 @@ module.exports = () => {
 
   return buildStatic(DEST_DIR, routes, app)
 }
+

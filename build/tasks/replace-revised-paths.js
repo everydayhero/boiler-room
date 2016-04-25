@@ -2,7 +2,6 @@ const gulp = require('gulp')
 const revReplace = require('gulp-rev-replace')
 const path = require('path')
 
-const environment = require('../../config/environment')
 const config = require('./config')
 const DEST_DIR = config.DEST_DIR
 const SERVER_APP_DIR = config.SERVER_APP_DIR
@@ -10,12 +9,14 @@ const CSS = config.CSS
 const JS = config.JS
 const DATA = config.DATA
 
-const revReplaceOptions = (manifest) => ({
-  manifest: manifest,
-  replaceInExtensions: ['.js', '.css', '.json'],
-  modifyUnreved: (name) => `/${name}`,
-  modifyReved: (name) => `${environment.client.host}${environment.client.basePath}/${name}`
-})
+const revReplaceOptions = (manifest) => (
+  {
+    manifest: manifest,
+    replaceInExtensions: ['.js', '.css', '.json'],
+    modifyUnreved: (name) => `/${name}`,
+    modifyReved: (name) => `${process.env.BASE_PATH || '/'}${name}`
+  }
+)
 
 const REV_REPLACEABLE_ASSETS = [].concat(JS, CSS, DATA).map(
   (asset) => path.join(DEST_DIR, asset)
