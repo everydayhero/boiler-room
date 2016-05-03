@@ -17,8 +17,8 @@
 }
 
 .image {
-  max-width: 12.5rem;
   margin: 0 auto;
+  max-width: 400px;
 }
 
 .aboutBold {
@@ -35,9 +35,11 @@
   }
   .content {
     padding-right: 1.5rem;
-    width: 65%;
+    width: 50%;
   }
   .image {
     margin-right: 0;
+    max-width: 1200px;
+    width: 50%;
   }
 }

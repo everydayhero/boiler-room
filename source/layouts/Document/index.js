@@ -4,10 +4,10 @@ import styles from './styles.css'
 const Document = ({ title, description, content }) => (
   <html className={styles.html}>
     <head>
-      <meta charSet="utf-8" />
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title>{title}</title>
+      <meta charSet='utf-8' />
+      <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+      <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta name='description' content={description} />
       <meta property='og:url' content='http://ifgirlsrantheworld.com' />
       <meta property='og:title' content={title} />
