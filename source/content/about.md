@@ -2,8 +2,11 @@
 title: About
 ---
 
-**From October 1-31**, participants run their own neighborhoods track their miles using fitness tracking apps like [Strava](https://strava.com) or [Map My Fitness](http://www.mapmyfitness.com/) during the month long virtual challenge.
+Studies show that when women are supported and empowered, all of society benefits.
 
-Runners can choose a featured charity or choose the cause that’s closest to their heart. Individuals seek support from friends or family to collectively raise $1,500,000 for charity.
+So, this October, join us as we collectively and virtually run around the world raising funds and awareness to empower girls globally.  Whether you run once or everyday, raise $10 or $10,000, your time, effort, energy and voice will change lives and build communities all over the world.
 
-**Although worlds apart, we are in this together. Virtually, anything is possible.**
+Run wherever and whenever and track your miles [Strava](https://strava.com) or [Map My Fitness](http://www.mapmyfitness.com/) during the month long virtual challenge to add to our collective progress.  Share your story with friends and family to raise funds for the cause that means the most to you.
+
+**Although worlds apart, we’re all in this together.  Virtually, anything is possible.**
+

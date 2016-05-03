@@ -15,8 +15,8 @@ const config = {
       'basePath': ''
     },
     'client': {
-      'host': 'http://everydayhero.github.io',
-      'basePath': '/if-girls-ran-the-world'
+      'host': 'http://www.ifgirlsrantheworld.com',
+      'basePath': '/'
     }
   },
   'development': {
