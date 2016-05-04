@@ -12,9 +12,9 @@
   },
   "scripts": {
     "build:setup": "rm -rf .dev/* dist/* && mkdir -p dist .dev",
-    "build:prod": "npm run build:setup && NODE_ENV=production gulp build",
-    "build:staging": "npm run build:setup && NODE_ENV=staging gulp build",
-    "dev": "gulp dev",
+    "build:prod": "npm run build:setup && ENV_FILE=.env.production gulp build",
+    "build:staging": "npm run build:setup && ENV_FILE=.env.staging gulp build",
+    "dev": "ENV_FILE=.env.development gulp dev",
     "lint": "standard",
     "test": "npm run lint && mocha --compilers js:babel-register,css:css-modules-require-hook --recursive source/**/__tests__/*-test.js",
     "deploy:staging": "npm run build:staging && gh-pages -d dist"
@@ -71,6 +71,7 @@
     "mkdirp": "^0.5.1",
     "mocha": "^2.3.4",
     "mocha-jsdom": "^1.0.0",
+    "node-env-file": "^0.1.8",
     "node-static": "^0.7.7",
     "nodemon": "^1.8.1",
     "postcss-cssnext": "^2.4.0",

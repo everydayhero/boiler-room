@@ -3,7 +3,7 @@ const browserifyinc = require('browserify-incremental')
 const buffer = require('vinyl-buffer')
 const cssModulesify = require('css-modulesify')
 const cssNext = require('postcss-cssnext')
-const envify = require('envify/custom')
+const envify = require('envify')
 const es3ify = require('es3ify')
 const gulp = require('gulp')
 const gutil = require('gulp-util')
@@ -33,9 +33,7 @@ const clientBundler = browserifyinc(Object.assign({}, BROWSERIFY_OPTS, {
   cache: {},
   packageCache: {},
 }))
-clientBundler.transform(envify({
-  NODE_ENV: process.env.NODE_ENV
-}))
+clientBundler.transform(envify)
 clientBundler.plugin(cssModulesify, CSS_MODULES_OPTS)
 
 const serverBundler = browserifyinc(Object.assign({}, BROWSERIFY_OPTS, {
