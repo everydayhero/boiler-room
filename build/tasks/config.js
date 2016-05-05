@@ -14,6 +14,10 @@ module.exports = {
     '**/*.jpg',
     '**/*.gif'
   ],
+  CONTENT: [
+    'content/**/*.md',
+    'content/**/*.json'
+  ],
   DATA: [
     '**/*.json'
   ]
