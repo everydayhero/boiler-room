@@ -10,9 +10,23 @@ module.exports = {
     '**/*.css'
   ],
   IMAGES: [
+    '**/*.svg',
     '**/*.png',
     '**/*.jpg',
     '**/*.gif'
+  ],
+  VIDEOS: [
+    '**/*.mp4',
+    '**/*.ogv',
+    '**/*.webm'
+  ],
+  PDFS: [
+    '**/*.pdf'
+  ],
+  FONTS: [
+    '**/*.ttf',
+    '**/*.eot',
+    '**/*.woff'
   ],
   CONTENT: [
     'content/**/*.md',
