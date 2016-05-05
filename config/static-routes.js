@@ -2,5 +2,6 @@ module.exports = [
   '/',
   '/build',
   '/build/assets',
-  '/deploying'
+  '/deploying',
+  '/404'
 ]
