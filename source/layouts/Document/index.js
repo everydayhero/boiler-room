@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({ title, content }) => (
+export default ({ title, content, state }) => (
   <html>
     <head>
       <title>{title}</title>
@@ -17,6 +17,13 @@ export default ({ title, content }) => (
         id='mount'
         dangerouslySetInnerHTML={{
           __html: content
+        }}
+      />
+      <script
+        id='initial-state'
+        type='application/json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(state)
         }}
       />
       <script src='/main.js' />
