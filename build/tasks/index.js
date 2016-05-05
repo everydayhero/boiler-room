@@ -31,6 +31,23 @@ gulp.task('generate-static', ['revreplace:server-bundle', 'revreplace:assets'], 
 const serve = require('./serve')(browserSync)
 gulp.task('serve', ['bundle:server-app'], serve)
 
+const createDeployTask = require('./deploy')
+
+const deployTargets = (process.env.S3_TARGETS || '')
+  .split(',')
+  .map((t) => t.trim())
+const deployTasks = deployTargets.map((t) => {
+  const taskName = `deploy:${t}`
+  gulp.task(taskName, createDeployTask({
+    bucket: t,
+    key: process.env.S3_KEY,
+    secret: process.env.S3_SECRET
+  }))
+  return taskName
+})
+
+gulp.task('deploy:prod', deployTasks)
+
 const config = require('./config')
 const SOURCE_DIR = config.SOURCE_DIR
 const CSS = config.CSS
