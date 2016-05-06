@@ -6,17 +6,18 @@ const browserSync = require('browser-sync').create()
 const bundle = require('./bundle')
 gulp.task('bundle:client-app', bundle.client)
 gulp.task('bundle:server-app', bundle.server)
-gulp.task('bundle:all', ['bundle:client-app', 'bundle:server-app'])
+gulp.task('bundle:all', ['bundle:client-app', 'bundle:server-app'], () => {
+  browserSync.reload()
+})
 
 const scss = require('./scss')
 gulp.task('sass', scss)
 
 const content = require('./content')
-gulp.task('content:dev', content.dev)
-gulp.task('content:prod', content.prod)
+gulp.task('content', content)
 
 const revision = require('./revision')
-gulp.task('revision', ['bundle:all', 'sass', 'static-assets', 'content:prod'], revision)
+gulp.task('revision', ['bundle:all', 'sass', 'static-assets', 'content'], revision)
 
 const staticAssets = require('./static-assets')
 gulp.task('static-assets', staticAssets)
@@ -30,6 +31,23 @@ gulp.task('generate-static', ['revreplace:server-bundle', 'revreplace:assets'], 
 
 const serve = require('./serve')(browserSync)
 gulp.task('serve', ['bundle:server-app'], serve)
+
+const createDeployTask = require('./deploy')
+
+const deployTargets = (process.env.S3_TARGETS || '')
+  .split(',')
+  .map((t) => t.trim())
+const deployTasks = deployTargets.map((t) => {
+  const taskName = `deploy:${t}`
+  gulp.task(taskName, createDeployTask({
+    bucket: t,
+    key: process.env.S3_KEY,
+    secret: process.env.S3_SECRET
+  }))
+  return taskName
+})
+
+gulp.task('deploy:prod', deployTasks)
 
 const config = require('./config')
 const SOURCE_DIR = config.SOURCE_DIR
@@ -45,12 +63,16 @@ const STATIC_ASSETS = [].concat(IMAGES).map(
   (asset) => path.join(SOURCE_DIR, asset)
 )
 
-gulp.task('watch:bundle', ['bundle:client-app', 'bundle:server-app'], () => {
-  return gulp.watch(BUNDLEABLE_ASSETS, ['bundle:client-app', 'bundle:server-app'])
+gulp.task('watch:bundle', ['bundle:all'], () => {
+  return gulp.watch(BUNDLEABLE_ASSETS, ['bundle:all'])
 })
 
-gulp.task('watch:content', ['content:dev'], () => {
-  return gulp.watch(path.join(SOURCE_DIR, 'content/**/*.md'), ['content:dev'])
+const CONTENT_SOURCES = ['content/**/*.md', 'content/**/*.json'].map((source) => (
+  path.join(SOURCE_DIR, source)
+))
+
+gulp.task('watch:content', ['content'], () => {
+  return gulp.watch(CONTENT_SOURCES, ['content'])
 })
 
 gulp.task('watch:sass', ['sass'], () => {
