@@ -3,7 +3,7 @@
 }
 
 .body {
-  composes: on-grey from '../../traits/colors.css';
+  composes: on-light from '../../traits/colors.css';
   composes: sansserif from '../../traits/type.css';
   line-height: 1.5;
   margin: 0;

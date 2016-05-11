@@ -44,6 +44,10 @@
   font-weight: 700;
 }
 
+.x-bold {
+  font-weight: 900;
+}
+
 .uppercase {
   text-transform: uppercase;
 }

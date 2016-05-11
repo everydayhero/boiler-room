@@ -58,9 +58,9 @@
 }
 
 .description {
-  composes: scale-sm from '../../traits/type.css';
+  composes: scale-sm align-center from '../../traits/type.css';
 }
 
 .descriptionHighlight {
-  composes: primary from '../../traits/colors.css';
+  composes: x-bold from '../../traits/type.css';
 }
