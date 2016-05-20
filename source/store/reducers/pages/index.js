@@ -1,5 +1,11 @@
 import { merge } from 'lodash/object'
 
+const deserializePage = ({
+  items = []
+} = {}) => ({
+  ...items[0].fields
+})
+
 const fetchPage = (pages, { route }) => {
   return merge({}, pages, {
     ...pages.pages,
@@ -24,7 +30,7 @@ const receivePageSuccess = (pages, { route, content = '' }) => {
     ...pages,
     [route]: {
       status: 'fetched',
-      content
+      content: deserializePage(content)
     }
   })
 }

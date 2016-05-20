@@ -3,4 +3,5 @@ dist
 browserify-cache.json
 .dev
 .server
+.env
 npm-debug.log

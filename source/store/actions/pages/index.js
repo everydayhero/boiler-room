@@ -8,14 +8,19 @@ export const fetchPage = (dispatch) => (route) => {
     route
   })
 
-  return fetchLocal(`content${resourcePath}/index.json`)
-    .then((json) => {
-      receivePageSuccess(dispatch)(route, json)
-    })
-    .catch((err) => {
-      receivePageFailure(dispatch)(route, err)
-      return Promise.reject(err)
-    })
+  return global.fetch(`https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/entries?content_type=page&fields.slug=${route}`, {
+    headers: {
+      'Authorization': `Bearer ${process.env.CONTENTFUL_API_TOKEN}`
+    }
+  }).then(
+    (response) => response.json()
+  ).then((json) => {
+    receivePageSuccess(dispatch)(route, json)
+  })
+  .catch((err) => {
+    receivePageFailure(dispatch)(route, err)
+    return Promise.reject(err)
+  })
 }
 
 export const receivePageFailure = (dispatch) => (route, error) => {

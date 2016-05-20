@@ -21,7 +21,7 @@ export const fetchPageContent = ({
 export default connect(
   ({ pages }) => ({ pages })
 )(({ params: { splat }, pages }) => {
-  const { content: { index: { title, body } } } = pages[splat || 'home']
+  const { content: { title, body } } = pages[splat || 'home']
 
   return (
     <PageLayout
