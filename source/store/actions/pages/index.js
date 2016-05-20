@@ -1,6 +1,6 @@
 import fetchLocal from '../../../utils/fetchLocal'
 
-export const fetchPage = (dispatch) => (route) => {
+export const fetchPage = (dispatch) => (route, type = 'page') => {
   const resourcePath = route === 'home' ? '' : `/${route}`
 
   dispatch({
@@ -8,7 +8,7 @@ export const fetchPage = (dispatch) => (route) => {
     route
   })
 
-  return global.fetch(`https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/entries?content_type=page&fields.slug=${route}`, {
+  return global.fetch(`https://cdn.contentful.com/spaces/${process.env.CONTENTFUL_SPACE_ID}/entries?content_type=${type}&fields.slug=${route}`, {
     headers: {
       'Authorization': `Bearer ${process.env.CONTENTFUL_API_TOKEN}`
     }

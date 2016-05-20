@@ -2,15 +2,25 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import PageLayout from '../../layouts/Page'
+import ThankYouLayout from '../../layouts/ThankYou'
 
 import { fetchPage } from '../../store/actions/pages'
+import routes from '../../../config/static-routes'
+
+const routeDetails = (route) => {
+  const type = routes[`/${route || ''}`]
+  route = route || 'home'
+  return { route, type }
+}
 
 export const fetchPageContent = ({
   subscribe,
   getState,
   dispatch
 }) => ({ params: { splat } }, replace, callback) => {
-  fetchPage(dispatch)(splat || 'home')
+  const { route, type } = routeDetails(splat)
+
+  fetchPage(dispatch)(route, type)
     .then(() => {
       callback()
     }).catch(() => {
@@ -21,12 +31,19 @@ export const fetchPageContent = ({
 export default connect(
   ({ pages }) => ({ pages })
 )(({ params: { splat }, pages }) => {
-  const { content: { title, body } } = pages[splat || 'home']
+  const { route, type } = routeDetails(splat)
+  const { content } = pages[route]
+
+  const layouts = {
+    page: PageLayout,
+    thankyou: ThankYouLayout
+  }
+
+  const Layout = layouts[type]
 
   return (
-    <PageLayout
-      title={title}
-      body={body}
+    <Layout
+      {...content}
     />
   )
 })

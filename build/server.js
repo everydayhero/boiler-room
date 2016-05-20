@@ -12,7 +12,7 @@ const server = express()
 
 server.use(express.static(BASE))
 
-routes.forEach((route) => {
+Object.keys(routes).forEach((route) => {
   server.get(route, (req, res) => {
     const reactAppPath = require.resolve('../.server/main')
     delete require.cache[reactAppPath]

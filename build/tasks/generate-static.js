@@ -9,5 +9,5 @@ module.exports = () => {
   const routes = require('../../config/static-routes')
   const app = require(path.join('../../', SERVER_APP_DIR, 'main.js')).default
 
-  return buildStatic(DEST_DIR, routes, app)
+  return buildStatic(DEST_DIR, Object.keys(routes), app)
 }
