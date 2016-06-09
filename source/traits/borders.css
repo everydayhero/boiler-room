@@ -2,3 +2,11 @@
   border-style: solid;
   border-width: 2px;
 }
+
+.solid-pink {
+  border: solid 2px #F0177B;
+}
+
+.solid-dark {
+  border: solid 4px #000;
+}

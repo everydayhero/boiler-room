@@ -17,9 +17,6 @@ const Hero = ({
     <div className={styles.bottom}>
       <ScrollingHeading headings={scrollingHeadings}/>
       <div className={styles.heroText}>{leadText}</div>
-      <div className={styles.email}>
-        <a href='#join-the-movement' className={styles.emailButton}>Join the movement</a>
-      </div>
     </div>
   </div>
 )

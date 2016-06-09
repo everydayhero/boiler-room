@@ -1,7 +1,6 @@
 import React from 'react'
 
-import HowItWorksPanel from '../../components/HowItWorksPanel'
-import HowItWorksTitle from '../../components/HowItWorksTitle'
+import RoleModelsPanel from '../../components/HowItWorksPanel'
 import styles from './styles.css'
 
 export default ({
@@ -10,7 +9,6 @@ export default ({
 }) => (
   <div className={styles.root}>
     <div className={styles.fancyBox}>
-      <HowItWorksTitle />
     </div>
     <div className={styles.content}>
       <div className={styles.panels}>
@@ -18,7 +16,7 @@ export default ({
           <div
             key={key}
             className={styles.item}>
-            <HowItWorksPanel invert={(key % 2) !== 0} {...panel}/>
+            <RoleModelsPanel invert={(key % 2) !== 0} {...panel}/>
           </div>
         ))}
       </div>

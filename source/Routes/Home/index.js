@@ -4,6 +4,7 @@ import HomeLayout from '../../layouts/Home'
 import heroContent from '../../content/hero.json'
 import emailContent from '../../content/email.json'
 import hiwContent from '../../content/howItWorks.json'
+import rolemodelsContent from '../../content/roleModels.json'
 import bffContent from '../../content/bringYourBff.json'
 import impactContent from '../../content/theImpact.json'
 // TODO: Import content here
@@ -14,6 +15,7 @@ export default () => (
     hero={heroContent}
     email={emailContent}
     hiw={hiwContent}
+    rolemodels={rolemodelsContent}
     bff={bffContent}
     impact={impactContent}
     />

@@ -97,6 +97,11 @@
   padding-right: calc(var(--rhythm) * .5rem);
 }
 
+.py-half {
+  padding-top: calc(var(--rhythm) * .5rem);
+  padding-bottom: calc(var(--rhythm) * .5rem);
+}
+
 .p-1 {
   padding: calc(var(--rhythm) * 1rem);
 }

@@ -1,0 +1,25 @@
+{
+  title: 'Role Models',
+  panels: [
+    {
+      icon: 'check',
+      title: 'Register',
+      content: 'Choose a cause and commit to a running and fundraising goal. Smile and get ready for your adventure.'
+    },
+    {
+      icon: 'sync',
+      title: 'Connect',
+      content: 'Connect your fitness app so your individual effort will add to our collective progress around the world.'
+    },
+    {
+      icon: 'heart',
+      title: 'Fundraise',
+      content: 'Update your supporter page and share it with your friends, family, and social network. The funds you raise empower girls around the world.'
+    },
+    {
+      icon: 'trophy',
+      title: 'Run',
+      content: 'From October 1 – 31, get out and run. Run daily to win cool prizes and unlock fun rewards. Share your runs on social and inspire others to join the movement.'
+    }
+  ]
+}
