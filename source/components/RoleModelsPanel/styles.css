@@ -1,9 +1,10 @@
 .root {
   composes: pt-2 pb-1 px-half from '../../traits/spacing.css';
+  composes: align-center from '../../traits/type.css';
   position: relative;
 }
 
-.iconDefault {
+.imageDefault {
   composes: solid-dark from '../../traits/borders.css';
   composes: mb-half mt-n1half from '../../traits/spacing.css';
   composes: scale-xxl from '../../traits/type.css';
@@ -15,15 +16,14 @@
   top: 0;
 }
 
-.icon {
-  composes: iconDefault;
-  composes: light on-primary from '../../traits/colors.css';
+.image {
+  border-radius: 50%;
 }
 
-.iconInverted {
+/* .iconInverted {
   composes: iconDefault;
   composes: primary on-light from '../../traits/colors.css';
-}
+} */
 
 .title {
   composes: uppercase bold from '../../traits/type.css';

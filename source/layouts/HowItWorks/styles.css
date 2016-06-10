@@ -27,10 +27,6 @@
 }
 
 @media screen and (max-width: 31.25em) {
-  .root {
-    background-image: url(/layouts/Hero/running-girl.jpg);
-    background-position: left center;
-  }
   .content {
     scroll-snap-type: mandatory;
     /* older spec implementation */
@@ -52,7 +48,10 @@
   }
   .panels {
     width: 180%;
-    padding-right: 1.5rem;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
   }
 }
 
