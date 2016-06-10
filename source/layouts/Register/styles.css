@@ -1,0 +1,54 @@
+.root {
+  composes: px-contain py-2 from '../../traits/spacing.css';
+}
+
+.title {
+  composes: scale-xxl uppercase align-center from '../../traits/type.css';
+  composes: mb-1 from '../../traits/spacing.css';
+}
+
+.intro {
+  composes: align-center max-length from '../../traits/type.css';
+  composes: mb-1 from '../../traits/spacing.css';
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.primaryList {
+  composes: mx-nhalf from '../../traits/spacing.css';
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.primaryItem {
+  composes: px-half my-half from '../../traits/spacing.css';
+  width: 50%;
+}
+
+.image {
+  composes: shadow-3 from '../../traits/shadows.css';
+  display: block;
+}
+
+.primaryLink {
+  display: block;
+  cursor: pointer;
+  transition: transform .15s ease-out;
+}
+
+.primaryLink:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 31.25em) {
+  .primaryItem {
+    width: 33.3333%;
+  }
+}
+
+@media screen and (min-width: 53.75em) {
+  .primaryItem {
+    width: 20%;
+  }
+}

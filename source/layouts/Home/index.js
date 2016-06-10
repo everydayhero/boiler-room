@@ -6,7 +6,7 @@ import HowItWorks from '../HowItWorks'
 import About from '../About'
 import BringYourBff from '../BringYourBff'
 import TheImpact from '../TheImpact'
-import EmailFinalCTA from '../EmailFinalCTA'
+import Register from '../Register'
 import QuoteHero from '../QuoteHero'
 import Partners from '../Partners'
 
@@ -17,6 +17,7 @@ const Home = ({
   hiw = {},
   bff = {},
   impact = {},
+  charities = {},
   partners = {}
 }) => (
   <Main title={title}>
@@ -25,7 +26,7 @@ const Home = ({
     <About />
     <BringYourBff {...bff} />
     <TheImpact {...impact} />
-    <EmailFinalCTA email={email} />
+    <Register charities={charities} />
     <Partners partners={partners} />
     <QuoteHero />
   </Main>
@@ -39,6 +40,7 @@ Home.propTypes = {
   bff: PropTypes.object,
   impact: PropTypes.object,
   about: PropTypes.object,
+  charities: PropTypes.object,
   partners: PropTypes.array
 }
 
