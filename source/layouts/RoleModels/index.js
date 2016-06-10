@@ -19,7 +19,7 @@ export default ({
           <div
             key={key}
             className={styles.item}>
-            <RoleModelsPanel invert={(key % 2) !== 0} {...panel}/>
+            <RoleModelsPanel {...panel}/>
           </div>
         ))}
       </div>

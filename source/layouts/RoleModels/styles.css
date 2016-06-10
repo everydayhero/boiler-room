@@ -31,6 +31,7 @@
 }
 
 .content {
+  composes: pb-1 from '../../traits/spacing.css';
   overflow: auto;
   clear: both;
   -webkit-overflow-scrolling: touch;
@@ -41,14 +42,15 @@
 }
 
 .panels {
-  display: table;
+  display: flex;
+  flex-shrink: 0;
   background-color: #f4f4f4;
-  width: 2300px;
+  width: 112rem;
 }
 
 .item {
-  width: calc( 100% / 7 );
-  display: table-cell;
+  width: calc(100%/7);
+  max-width: 16rem;
 }
 
 @media screen and (min-width: 41.25em) {
@@ -69,5 +71,3 @@
     width: 200%;
   } */
 }
-
-
