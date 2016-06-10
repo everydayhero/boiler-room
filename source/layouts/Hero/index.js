@@ -17,9 +17,9 @@ const Hero = ({
     <div className={styles.bottom}>
       <ScrollingHeading headings={scrollingHeadings}/>
       <div className={styles.heroText}>{leadText}</div>
-        <div className={styles.register}>
-          <a className={styles.registerButton} href="">Register Now</a>
-        </div>
+      <div className={styles.register}>
+        <a className={styles.registerButton} href='#register'>Register Now</a>
+      </div>
     </div>
   </div>
 )
