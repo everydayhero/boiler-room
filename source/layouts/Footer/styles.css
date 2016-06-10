@@ -1,6 +1,6 @@
 .root {
   composes: px-contain py-2 from '../../traits/spacing.css';
-  composes: light on-dark from '../../traits/colors.css';
+  composes: dark on-light from '../../traits/colors.css';
   composes: scale-sm from '../../traits/type.css';
 }
 
@@ -18,17 +18,15 @@
 }
 
 .edhLogo {
-  composes: ml-half from '../../traits/spacing.css';
+  composes: px-half from '../../traits/spacing.css';
+  max-width: 12rem;
 }
 
 .footerListItem {
   composes: px-half from '../../traits/spacing.css';
+  composes: uppercase from '../../traits/type.css';
   text-decoration: none;
   display: inline-block;
-}
-
-.footerListItem:first-child {
-  border-right: 2px solid #fff;
 }
 
 .link:hover,

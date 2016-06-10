@@ -8,7 +8,7 @@ import BringYourBff from '../BringYourBff'
 import TheImpact from '../TheImpact'
 import EmailFinalCTA from '../EmailFinalCTA'
 import QuoteHero from '../QuoteHero'
-import Contact from '../Contact'
+import Footer from '../Footer'
 
 const Home = ({
   title,
@@ -26,7 +26,6 @@ const Home = ({
     <TheImpact {...impact} />
     <EmailFinalCTA email={email} />
     <QuoteHero />
-    <Contact />
   </Main>
 )
 
