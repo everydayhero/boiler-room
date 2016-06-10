@@ -1,21 +1,38 @@
 .root {
+  composes: on-grey from '../../traits/colors.css';
   position: relative;
-  background-image: url(/layouts/HowItWorks/igrtw-world-simple.png);
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .fancyBox {
-  composes: px-contain mb-1half from '../../traits/spacing.css';
-  composes: scale-xl align-center uppercase from '../../traits/type.css';
+  composes: px-contain from '../../traits/spacing.css';
+  composes: align-left from '../../traits/type.css';
   composes: dark from '../../traits/colors.css';
-  padding-top: 7.25rem;
+  padding-top: 3.25rem;
+}
+
+.title {
+  composes: scale-xl uppercase from '../../traits/type.css';
+  composes: mb-1 from '../../traits/spacing.css';
+}
+
+.intro {
+  composes: pr-1 from '../../traits/spacing.css';
+  float: none;
+  width: 100%;
+}
+
+.tagline {
+  composes: decorative scale-xxl from '../../traits/type.css';
+  composes: primary from '../../traits/colors.css';
+  composes: pt-1 from '../../traits/spacing.css';
+  line-height: 1.5;
+  float: none;
+  width: 100%
 }
 
 .content {
-  composes: pt-1half from '../../traits/spacing.css';
-  padding-bottom: 3rem;
   overflow: auto;
+  clear: both;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: mandatory;
   /* older spec implementation */
@@ -24,76 +41,33 @@
 }
 
 .panels {
-  composes: px-contain from '../../traits/spacing.css';
   display: table;
-  padding-bottom: 1.5rem;
   background-color: #f4f4f4;
-  margin-left: -.75rem;
-  margin-right: -.75rem;
-  width: 150%;
-  padding-right: 4.5rem;
+  width: 2300px;
 }
 
 .item {
-  width: 25%;
+  width: calc( 100% / 7 );
   display: table-cell;
 }
 
-/* @media screen and (max-width: 31.25em) {
-  .root {
-    background-image: url(/layouts/Hero/running-girl.jpg);
-    background-position: left center;
+@media screen and (min-width: 41.25em) {
+  .intro {
+    float: left;
+    width: 70%;
   }
-  .content {
-    scroll-snap-type: mandatory;
-    older spec implementation
-    scroll-snap-destination: 0% 83%;
-    scroll-snap-points-x: repeat(83%);
-  }
-  .panels {
-    width: 180%;
-    padding-right: 4.5rem;
-  }
-} */
 
-/* @media screen and (min-width: 31.25em) and (max-width: 62.5em) {
-  .content {
-    scroll-snap-type: mandatory;
-    older spec implementation
-    scroll-snap-destination: 0% 80%;
-    scroll-snap-points-x: repeat(80%);
-  }
-  .panels {
-    width: 180%;
-    padding-right: 1.5rem;
+  .tagline {
+    float: left;
+    width: 30%;
+    padding: 0 1.5rem;
   }
 }
-
-@media screen and (max-width: 62.5em) {
-  .root {
-
-  }
-  .title {
-    padding-top: 1.5rem;
-  }
-  .content {
-    padding-bottom: 3rem;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-  .item {
-    background-color: #fff;
-  }
-}
-
-
-
 
 @media screen and (min-width: 62.5em) {
-  .panels {
-    padding-bottom: 1.5rem;
-    background-color: #f4f4f4;
-    margin-left: -.75rem;
-    margin-right: -.75rem;
-  }
-} */
+  /* .panels {
+    width: 200%;
+  } */
+}
+
+
