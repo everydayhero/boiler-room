@@ -5,13 +5,13 @@
       "icon": "check",
       "title": "Register",
       "content": "Choose a cause and commit to a running and fundraising goal. Smile and get ready for your adventure.",
-      "link": "Register Now"
+      "link": "<a href=\"#register\">Register Now</a>"
     },
     {
       "icon": "sync",
       "title": "Connect",
       "content": "Connect your fitness app so your individual effort will add to our collective progress around the world.",
-      "link": "Connect with Strava or Map My Fitness"
+      "link": "Connect with <a href=\"http://strava.com\">Strava</a> or <a href=\"http://mapmyfitness.com\">Map My Fitness</a>"
     },
     {
       "icon": "heart",

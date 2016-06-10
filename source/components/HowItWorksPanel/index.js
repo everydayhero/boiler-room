@@ -17,6 +17,6 @@ export default ({
     </div>
     <h3 className={styles.title}>{title}</h3>
     <p className={styles.content}>{content}</p>
-    <p className={styles.content}>{link}</p>
+    <p className={styles.content} dangerouslySetInnerHTML={{__html: link}} />
   </div>
 )

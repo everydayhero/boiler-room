@@ -32,4 +32,9 @@
 
 .content {
   composes: scale-sm from '../../traits/type.css';
+  margin-top: 1.125rem;
+}
+
+.content > a {
+  color: #F0177B;
 }
