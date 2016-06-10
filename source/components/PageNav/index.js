@@ -7,18 +7,20 @@ const PageNav = ({
   nav
 }) => (
   <div className={styles.root}>
-    <ul className={styles.mainNav}>
-      {Object.keys(nav).map((item, key) => (
-        <li className={styles.item} key={key}>
-          <NavLink to={nav[item].link}>{nav[item].title}</NavLink>
-        </li>
-      ))}
-    </ul>
-    <ul className={styles.menuButtons}>
-      <li className={styles.btnItem}><a className={styles.btnFill} href="">Register</a></li>
-      <li className={styles.btnItem}><a className={styles.btnFill} href="">Donate</a></li>
-      <li className={styles.btnItem}><a className={styles.btnOutline} href="">Login</a></li>
-    </ul>
+    <div className={styles.contain}>
+      <ul className={styles.nav}>
+        {Object.keys(nav).map((item, key) => (
+          <li className={styles.item} key={key}>
+            <NavLink to={nav[item].link}>{nav[item].title}</NavLink>
+          </li>
+        ))}
+      </ul>
+      <ul className={styles.cta}>
+        <li className={styles.item}><a className={styles.link} href=''>Donate</a></li>
+        <li className={styles.item}><a className={styles.link} href=''>Login</a></li>
+        <li className={styles.item}><a className={styles.button} href=''>Register</a></li>
+      </ul>
+    </div>
   </div>
 )
 
