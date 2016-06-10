@@ -25,8 +25,8 @@ const Home = ({
     <HowItWorks {...hiw} />
     <About />
     <RoleModels {...rolemodels} />
-    <BringYourBff {...bff} />
     <TheImpact {...impact} />
+    <BringYourBff {...bff} />
     <EmailFinalCTA email={email} />
     <QuoteHero />
     <Contact />

@@ -3,6 +3,7 @@ import React, { PropTypes } from 'react'
 import styles from './styles.css'
 
 const BringYourBff = ({
+  image,
   title,
   subtitle,
   placeholder
@@ -17,13 +18,18 @@ const BringYourBff = ({
   }
   return (
     <div className={styles.root}>
-      <h2 className={styles.title}>{title}</h2>
-      <h3 className={styles.subtitle}>{subtitle}</h3>
-      <div className={styles.share}>
-        <div className={styles.buttons}>
-          <a href={shareLinks.email} className={styles.button}>Email</a>
-          <a href={shareLinks.twitter} target='_blank' className={styles.button}>Twitter</a>
-          <a href={shareLinks.facebook} target='_blank' className={styles.button}>Facebook</a>
+      <div className={styles.imgWrap}>
+        <img src={image} className={styles.image}/>
+      </div>
+      <div className={styles.contentWrap}>
+        <h2 className={styles.title}>{title}</h2>
+        <h3 className={styles.subtitle}>{subtitle}</h3>
+        <div className={styles.share}>
+          <div className={styles.buttons}>
+            <a href={shareLinks.email} className={styles.button}>Email</a>
+            <a href={shareLinks.twitter} target='_blank' className={styles.button}>Twitter</a>
+            <a href={shareLinks.facebook} target='_blank' className={styles.button}>Facebook</a>
+          </div>
         </div>
       </div>
     </div>
