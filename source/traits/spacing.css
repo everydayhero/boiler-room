@@ -40,6 +40,11 @@
   margin-right: calc(var(--rhythm) * .5rem);
 }
 
+.my-half {
+  margin-top: calc(var(--rhythm) * .5rem);
+  margin-bottom: calc(var(--rhythm) * .5rem);
+}
+
 .my-1 {
   margin-top: calc(var(--rhythm) * 1rem);
   margin-bottom: calc(var(--rhythm) * 1rem);

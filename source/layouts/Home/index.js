@@ -8,7 +8,7 @@ import BringYourBff from '../BringYourBff'
 import TheImpact from '../TheImpact'
 import EmailFinalCTA from '../EmailFinalCTA'
 import QuoteHero from '../QuoteHero'
-import Footer from '../Footer'
+import Partners from '../Partners'
 
 const Home = ({
   title,
@@ -16,7 +16,8 @@ const Home = ({
   email = {},
   hiw = {},
   bff = {},
-  impact = {}
+  impact = {},
+  partners = {}
 }) => (
   <Main title={title}>
     <Hero {...hero} email={email} />
@@ -25,6 +26,7 @@ const Home = ({
     <BringYourBff {...bff} />
     <TheImpact {...impact} />
     <EmailFinalCTA email={email} />
+    <Partners partners={partners} />
     <QuoteHero />
   </Main>
 )
@@ -36,7 +38,8 @@ Home.propTypes = {
   hiw: PropTypes.object,
   bff: PropTypes.object,
   impact: PropTypes.object,
-  about: PropTypes.object
+  about: PropTypes.object,
+  partners: PropTypes.array
 }
 
 export default Home

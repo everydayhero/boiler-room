@@ -6,7 +6,7 @@ import emailContent from '../../content/email.json'
 import hiwContent from '../../content/howItWorks.json'
 import bffContent from '../../content/bringYourBff.json'
 import impactContent from '../../content/theImpact.json'
-// TODO: Import content here
+import partnersContent from '../../content/partners.json'
 
 export default () => (
   <HomeLayout
@@ -16,5 +16,6 @@ export default () => (
     hiw={hiwContent}
     bff={bffContent}
     impact={impactContent}
+    partners={partnersContent}
     />
 )
