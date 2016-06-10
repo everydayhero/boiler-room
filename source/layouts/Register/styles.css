@@ -1,5 +1,8 @@
 .root {
-  composes: px-contain py-2 from '../../traits/spacing.css';
+  composes: px-contain py-3 from '../../traits/spacing.css';
+  background-image: url(/layouts/HowItWorks/igrtw-world-simple.png);
+  background-repeat: no-repeat;
+  background-position: -40rem center;
 }
 
 .title {
@@ -10,6 +13,7 @@
 .intro {
   composes: align-center max-length from '../../traits/type.css';
   composes: mb-1 from '../../traits/spacing.css';
+  text-shadow: 0 0 20px rgba(255,255,255,1);
   margin-left: auto;
   margin-right: auto;
 }
@@ -39,6 +43,22 @@
 
 .primaryLink:hover {
   transform: scale(1.1);
+}
+
+.footerText {
+  composes: pt-1 from '../../traits/spacing.css';
+  composes: max-length align-center from '../../traits/type.css';
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footerTitle {
+  composes: mb-half from '../../traits/spacing.css';
+  composes: bold from '../../traits/type.css';
+}
+
+.footerText a {
+  color: #F0177B;
 }
 
 @media screen and (min-width: 31.25em) {

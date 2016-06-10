@@ -1,12 +1,13 @@
 import React from 'react'
 
+import RegisterTitle from '../../components/RegisterTitle'
 import styles from './styles.css'
 
 export default ({
   charities = {}
 }) => (
   <div className={styles.root} id='register'>
-    <h2 className={styles.title}>Choose a Charity & Register</h2>
+    <RegisterTitle />
     <p className={styles.intro}>Choose from one of our charity partners below and commit to a distance and fundraising goal.  Then invite your friends to join you and get ready to run the world.</p>
     <ul className={styles.primaryList}>
       {charities.primary.map((charity, i) => (
@@ -17,5 +18,9 @@ export default ({
         </li>
       ))}
     </ul>
+    <div className={styles.footerText}>
+      <h3 className={styles.footerTitle}>Don't see the cause that’s closest to your heart?</h3>
+      <p><a href='#'>Find the cause</a> that means the most to you. Still can’t find your cause?  Email us at <a href='mailto:hello@everydayhero.com'>hello@everydayhero.com</a></p>
+    </div>
   </div>
 )
