@@ -1,8 +1,7 @@
 .root {
-  composes: px-contain py-3 from '../../traits/spacing.css';
+  composes: px-contain py-2 from '../../traits/spacing.css';
   composes: dark on-grey from '../../traits/colors.css';
   box-sizing: border-box;
-  display: flex;
 }
 
 .imgWrap, .contentWrap {
@@ -59,7 +58,7 @@
 }
 
 .button {
-  composes: py-quarter px-half mr-half from '../../traits/spacing.css';
+  composes: py-quarter px-half mr-half mb-half from '../../traits/spacing.css';
   composes: scale-sm from '../../traits/type.css';
   display: inline-block;
   composes: bold from "../../traits/type.css";
@@ -76,6 +75,11 @@
 }
 
 @media screen and (min-width: 31.25em) {
+  .root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .button {
     font-size: 1rem;
   }
