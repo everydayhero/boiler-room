@@ -12,7 +12,7 @@ steps:
 
   - name: ":shipit: Ship It - Staging"
     command: docker-compose run --rm build bin/deploy $ENVIRONMENT
-    branches: ec-build-pipeline
+    branches: master staging/*
     env:
       ENVIRONMENT: staging
     agents:
@@ -22,7 +22,7 @@ steps:
 
   - name: ":shipit: Ship It - Production"
     command: docker-compose run --rm build bin/deploy $ENVIRONMENT
-    branches: ec-build-pipeline
+    branches: master
     env:
       ENVIRONMENT: prod
     agents:
