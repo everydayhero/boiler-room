@@ -17,11 +17,12 @@ routes.forEach((route) => {
     const reactAppPath = require.resolve('../.server/main')
     delete require.cache[reactAppPath]
     require(reactAppPath).default(route, (err, html) => {
-      if (err) { return console.log(err) }
+      if (err) { return res.send(`<h1 style="color:red">${err.message}</h1>\n<p>${err.stack}</p>`) }
       res.send(html)
     })
   })
 })
 
-module.exports = (callback) =>
+module.exports = (callback) => (
   http.createServer(server).listen(8080, callback)
+)
