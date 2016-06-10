@@ -6,6 +6,7 @@ import HowItWorks from '../HowItWorks'
 import About from '../About'
 import RoleModels from '../RoleModels'
 import BringYourBff from '../BringYourBff'
+import Callout from '../Callout'
 import TheImpact from '../TheImpact'
 import Register from '../Register'
 import QuoteHero from '../QuoteHero'
@@ -30,6 +31,7 @@ const Home = ({
     <TheImpact {...impact} />
     <Register charities={charities} />
     <BringYourBff {...bff} />
+    <Callout />
     <Partners partners={partners} />
     <QuoteHero />
   </Main>

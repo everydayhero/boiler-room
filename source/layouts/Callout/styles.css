@@ -1,0 +1,5 @@
+.root {
+  composes: px-contain py-2 from '../../traits/spacing.css';
+  composes: light on-primary from '../../traits/colors.css';
+  composes: scale-xl uppercase bold align-center from '../../traits/type.css';
+}
