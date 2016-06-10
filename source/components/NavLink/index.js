@@ -1,9 +1,6 @@
 import { Link } from 'react-router'
 import React from 'react'
-import config from '../../../config/environment'
 import styles from './styles.css'
-
-const { client: { basePath } } = config
 
 export default ({
   to,
@@ -15,6 +12,6 @@ export default ({
     : (<Link
       {...props}
       className={styles.root}
-      to={`${basePath}${to}`}/>
+      to={`${process.env.BASE_URL || ''}${to}`}/>
     )
 }

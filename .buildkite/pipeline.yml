@@ -1,21 +1,29 @@
 ---
-env:
-  BUILDKITE_DOCKER_COMPOSE_CONTAINER: build
-  BUILDKITE_DOCKER_COMPOSE_FILE: docker-compose.buildkite.yml
 steps:
-  - wait
-
-  - name: "Test It"
-    command: "npm install && npm test"
 
   - wait
 
-  - name: ":nodejs: Build It"
-    command: "npm run build:prod"
-    artifact_paths: "dist/**/*"
+  - name: ":nodejs: Test It"
+    command: docker-compose run --rm build bin/test
+    agents:
+      queue: native
 
   - wait
 
-  - name: ":shipit: Ship It"
-    command: "buildkite-agent artifact download 'dist/**/*' ."
-    branches: master
+  - name: ":shipit: Ship It - Staging"
+    command: docker-compose run --rm build bin/deploy $ENVIRONMENT
+    branches: ec-build-pipeline
+    env:
+      ENVIRONMENT: staging
+    agents:
+      queue: native
+
+  - manual
+
+  - name: ":shipit: Ship It - Production"
+    command: docker-compose run --rm build bin/deploy $ENVIRONMENT
+    branches: ec-build-pipeline
+    env:
+      ENVIRONMENT: prod
+    agents:
+      queue: native

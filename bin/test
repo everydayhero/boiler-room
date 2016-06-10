@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -eu pipefail
+
+npm install
+npm test
+npm run build:staging

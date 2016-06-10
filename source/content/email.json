@@ -1,8 +1,8 @@
 {
-  title: 'Join the movement',
-  label: 'Email',
-  placeholder: 'Enter your email',
-  buttonText: 'Notify Me',
-  description: 'Registration opens in June.',
-  descriptionHighlight: 'Sign up to get on our VIP list for early access.'
+  "title": "Join the movement",
+  "label": "Email",
+  "placeholder": "Enter your email",
+  "buttonText": "Notify Me",
+  "description": "Registration opens in June.",
+  "descriptionHighlight": "Sign up to get on our VIP list for early access."
 }

@@ -1,14 +1,14 @@
 {
-  about: {
-    link: '#about',
-    title: 'About'
+  "about": {
+    "link": "#about",
+    "title": "About"
   },
-  theImpact: {
-    link: '#the-impact',
-    title: 'The Impact'
+  "theImpact": {
+    "link": "#the-impact",
+    "title": "The Impact"
   },
-  contact: {
-    link: '#contact',
-    title: 'Contact'
+  "contact": {
+    "link": "#contact",
+    "title": "Contact"
   }
 }
