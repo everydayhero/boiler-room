@@ -1,6 +1,5 @@
 .root {
   composes: light from "../../traits/colors.css";
-  composes: pt-2 pb-1 from "../../traits/spacing.css";
 }
 
 .logo {
