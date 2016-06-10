@@ -102,6 +102,11 @@
   padding-right: calc(var(--rhythm) * .5rem);
 }
 
+.py-half {
+  padding-top: calc(var(--rhythm) * .5rem);
+  padding-bottom: calc(var(--rhythm) * .5rem);
+}
+
 .p-1 {
   padding: calc(var(--rhythm) * 1rem);
 }
@@ -116,8 +121,17 @@
   padding-right: calc(var(--rhythm) * 1rem);
 }
 
+.px-1half {
+  padding-left: calc(var(--rhythm) * 1.5rem);
+  padding-right: calc(var(--rhythm) * 1.5rem);
+}
+
 .pt-1 {
   padding-top: calc(var(--rhythm) * 1rem);
+}
+
+.pb-half {
+  padding-bottom: calc(var(--rhythm) * .5rem);
 }
 
 .pb-1 {

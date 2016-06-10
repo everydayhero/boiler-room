@@ -1,0 +1,24 @@
+.root {
+  composes: pt-1 pb-1 px-1 from '../../traits/spacing.css';
+  composes: align-center from '../../traits/type.css';
+  position: relative;
+}
+
+.image {
+  composes: solid-dark from '../../traits/borders.css';
+  border-radius: 50%;
+}
+
+.title {
+  composes: uppercase bold from '../../traits/type.css';
+  composes: mb-half from '../../traits/spacing.css';
+}
+
+.subHeading {
+  composes: scale-sm from '../../traits/type.css';
+  composes: pb-half from '../../traits/spacing.css';
+}
+
+.content {
+  composes: scale-sm italics from '../../traits/type.css';
+}

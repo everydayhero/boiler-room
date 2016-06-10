@@ -1,6 +1,7 @@
 import React from 'react'
 
 import HowItWorksPanel from '../../components/HowItWorksPanel'
+import HowItWorksTitle from '../../components/HowItWorksTitle'
 import styles from './styles.css'
 
 export default ({
@@ -8,7 +9,9 @@ export default ({
   panels
 }) => (
   <div className={styles.root}>
-    <h1 className={styles.title}>{title}</h1>
+    <div className={styles.fancyBox}>
+      <HowItWorksTitle />
+    </div>
     <div className={styles.content}>
       <div className={styles.panels}>
         {panels.map((panel, key) => (

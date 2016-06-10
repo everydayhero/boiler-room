@@ -4,12 +4,14 @@
     {
       "icon": "check",
       "title": "Register",
-      "content": "Choose a cause and commit to a running and fundraising goal. Smile and get ready for your adventure."
+      "content": "Choose a cause and commit to a running and fundraising goal. Smile and get ready for your adventure.",
+      "link": "Register Now"
     },
     {
       "icon": "sync",
       "title": "Connect",
-      "content": "Connect your fitness app so your individual effort will add to our collective progress around the world."
+      "content": "Connect your fitness app so your individual effort will add to our collective progress around the world.",
+      "link": "Connect with Strava or Map My Fitness"
     },
     {
       "icon": "heart",

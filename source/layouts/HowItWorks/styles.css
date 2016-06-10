@@ -1,11 +1,15 @@
 .root {
   position: relative;
+  background-image: url(/layouts/HowItWorks/igrtw-world-simple.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.title {
-  composes: px-contain mb-half from '../../traits/spacing.css';
-  composes: scale-xl uppercase from '../../traits/type.css';
-  composes: light from '../../traits/colors.css';
+.fancyBox {
+  composes: px-contain mb-1half from '../../traits/spacing.css';
+  composes: scale-xl align-center uppercase from '../../traits/type.css';
+  composes: dark from '../../traits/colors.css';
+  padding-top: 7.25rem;
 }
 
 .content {
@@ -23,10 +27,6 @@
 }
 
 @media screen and (max-width: 31.25em) {
-  .root {
-    background-image: url(/layouts/Hero/running-girl.jpg);
-    background-position: left center;
-  }
   .content {
     scroll-snap-type: mandatory;
     /* older spec implementation */
@@ -48,13 +48,16 @@
   }
   .panels {
     width: 180%;
-    padding-right: 1.5rem;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 1.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
   }
 }
 
 @media screen and (max-width: 62.5em) {
   .root {
-    background-color: #333;
+
   }
   .title {
     padding-top: 1.5rem;
@@ -70,9 +73,6 @@
 }
 
 @media screen and (min-width: 62.5em) {
-  .root {
-    margin-top: -5.25rem;
-  }
   .panels {
     padding-bottom: 1.5rem;
     background-color: #f4f4f4;

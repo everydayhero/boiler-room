@@ -1,6 +1,7 @@
 .root {
   composes: px-contain mx-nhalf from "../../traits/spacing.css";
-  composes: text-over-image from '../../traits/shadows.css';
+  composes: on-light from '../../traits/colors.css';
+  composes: scale-sm from "../../traits/type.css";
   position: fixed;
   top: 0;
   left: 0;
@@ -8,20 +9,43 @@
   z-index: 100;
 }
 
+.base {
+  composes: solid-pink from '../../traits/borders.css';
+  composes: px-half py-quarter from '../../traits/spacing.css';
+}
+
+.mainNav {
+  float: left;
+}
+
 .item {
   display: inline-block;
 }
 
-
-@media screen and (min-width: 31.25em) {
-  .root {
-    padding-top: .75rem;
-    position: absolute;
-  }
+.btnItem {
+  composes: px-quarter from '../../traits/spacing.css';
+  display: inline-block;
 }
 
-@media screen and (max-width: 31.25em) {
+.menuButtons {
+  composes: py-half from '../../traits/spacing.css';
+  float: right;
+}
+
+.btnFill {
+  composes: on-primary light from '../../traits/colors.css';
+  composes: base;
+}
+
+.btnOutline {
+  composes: primary from '../../traits/colors.css';
+  composes: base;
+}
+
+
+@media screen and (min-width: 41.25em) {
   .root {
-    background-color: rgba(0,0,0,.5);
+    padding: .75rem 1.5rem;
+    position: absolute;
   }
 }

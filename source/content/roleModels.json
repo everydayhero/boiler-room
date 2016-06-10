@@ -1,0 +1,47 @@
+{
+  "title": "Role Models",
+  "panels": [
+    {
+      "image": "../components/RoleModelsPanel/img/renee.jpg",
+      "name": "Renee Metivier",
+      "subheading": "Professional long-distance runner, entrepreneur, and all around optimist",
+      "content": "“My goal is to make people realize they are capable of so much more than they realize and to follow their dreams! You really can do or be anything you want to be!”"
+    },
+    {
+      "image": "../components/RoleModelsPanel/img/clara.jpg",
+      "name": "Clara Peterson",
+      "subheading": "Professional Athlete, Mom, 2016 Olympic Hopeful",
+      "content": "“I run because it’s who I am, and because it’s what I’ve always done and it’s what I always want to do.”"
+    },
+    {
+      "image": "../components/RoleModelsPanel/img/gia.jpg",
+      "name": "Gia Alvarez",
+      "subheading": "Mother of twins, wife, coach, philanthropist, and marathon runner",
+      "content": "“Deep Breath. Long Run. Big Hug. Repeat.”"
+    },
+    {
+      "image": "../components/RoleModelsPanel/img/cammy.jpg",
+      "name": "Cammy Nelson",
+      "subheading": "Author, public speaker, and founder of Brave Like Me",
+      "content": "“I believe real, bold confidence comes from simple acts of every day bravery. It’s about taking one step at a time.”"
+    },
+    {
+      "image": "../components/RoleModelsPanel/img/amanda.jpg",
+      "name": "Amanda Napolitano",
+      "subheading": "Wife, Mom, Marathoner, Race Director and Philanthropist",
+      "content": "“It is possible to change the world. To empower all women. Together. And you'd be surprised who benefits most in the end.”"
+    },
+    {
+      "image": "../components/RoleModelsPanel/img/catherine.jpg",
+      "name": "Catherine LaCour",
+      "subheading": "Marketing Executive, Avid Runner, Philanthropist",
+      "content": "“Connecting and empowering girls worldwide to achieve their full economic potential by increasing opportunities for them to pursue an education is critical to achieving wide-scale gender equity around the world.”"
+    },
+    {
+      "image": "../components/RoleModelsPanel/img/georgia.jpg",
+      "name": "Georgia Cleland",
+      "subheading": "Blood Cancer Survivor of AL.L. since 1986, runner, do gooder",
+      "content": "“When it comes to doing an athletic activity, the most important thing is to have fun with it!”"
+    }
+  ]
+}

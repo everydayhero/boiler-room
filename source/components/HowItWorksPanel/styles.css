@@ -4,7 +4,7 @@
 }
 
 .iconDefault {
-  composes: shadow-3 from '../../traits/shadows.css';
+  composes: solid-dark from '../../traits/borders.css';
   composes: mb-half mt-n1half from '../../traits/spacing.css';
   composes: scale-xxl from '../../traits/type.css';
   padding: .75em;

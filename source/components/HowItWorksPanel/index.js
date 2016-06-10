@@ -7,6 +7,7 @@ export default ({
   icon,
   title,
   content,
+  link,
   invert,
   ...props
 }) => (
@@ -16,5 +17,6 @@ export default ({
     </div>
     <h3 className={styles.title}>{title}</h3>
     <p className={styles.content}>{content}</p>
+    <p className={styles.content}>{link}</p>
   </div>
 )

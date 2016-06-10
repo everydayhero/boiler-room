@@ -1,0 +1,73 @@
+.root {
+  composes: on-grey from '../../traits/colors.css';
+  position: relative;
+}
+
+.fancyBox {
+  composes: px-contain from '../../traits/spacing.css';
+  composes: align-left from '../../traits/type.css';
+  composes: dark from '../../traits/colors.css';
+  padding-top: 3.25rem;
+}
+
+.title {
+  composes: scale-xl uppercase from '../../traits/type.css';
+  composes: mb-1 from '../../traits/spacing.css';
+}
+
+.intro {
+  composes: pr-1 from '../../traits/spacing.css';
+  float: none;
+  width: 100%;
+}
+
+.tagline {
+  composes: decorative scale-xxl from '../../traits/type.css';
+  composes: primary from '../../traits/colors.css';
+  composes: pt-1 from '../../traits/spacing.css';
+  line-height: 1.5;
+  float: none;
+  width: 100%
+}
+
+.content {
+  overflow: auto;
+  clear: both;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: mandatory;
+  /* older spec implementation */
+  scroll-snap-destination: 0% 80%;
+  scroll-snap-points-x: repeat(80%);
+}
+
+.panels {
+  display: table;
+  background-color: #f4f4f4;
+  width: 2300px;
+}
+
+.item {
+  width: calc( 100% / 7 );
+  display: table-cell;
+}
+
+@media screen and (min-width: 41.25em) {
+  .intro {
+    float: left;
+    width: 70%;
+  }
+
+  .tagline {
+    float: left;
+    width: 30%;
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (min-width: 62.5em) {
+  /* .panels {
+    width: 200%;
+  } */
+}
+
+

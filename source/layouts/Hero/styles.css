@@ -32,11 +32,11 @@
   composes: mb-1 from "../../traits/spacing.css";
 }
 
-.email {
+.register {
   max-width: 24em;
 }
 
-.emailButton {
+.registerButton {
   composes: px-half py-quarter from "../../traits/spacing.css";
   composes: bold from "../../traits/type.css";
   composes: light on-primary from "../../traits/colors.css";
@@ -58,7 +58,7 @@
 
 @media screen and (min-width: 31.25em) {
   .root {
-    padding-top: .75rem;
+    padding-top: 2.75rem;
     padding-bottom: 1.5rem;
     position: relative;
   }
