@@ -18,7 +18,7 @@
 }
 
 .top {
-  composes: px-contain py-2 from "../../traits/spacing.css";
+  composes: px-contain pb-2 pt-4 from "../../traits/spacing.css";
 }
 
 .bottom {

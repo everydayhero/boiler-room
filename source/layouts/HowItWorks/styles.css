@@ -17,7 +17,7 @@
 }
 
 .panels {
-  composes: px-contain from '../../traits/spacing.css';
+  margin-left: 1.5rem;
   display: table;
 }
 
@@ -35,7 +35,7 @@
   }
   .panels {
     width: 350%;
-    padding-right: 4.5rem;
+    box-shadow: 0 0 10px rgba(0,0,0,.3);
   }
 }
 
@@ -78,5 +78,7 @@
     background-color: #f4f4f4;
     margin-left: -.75rem;
     margin-right: -.75rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }

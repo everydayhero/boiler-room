@@ -76,3 +76,18 @@
   font-family: "pupcat", "Montserrat", "Helvetica Neue", Helvetica, sans-serif;
   letter-spacing: .05em;
 }
+
+.link {
+  composes: primary from './colors.css';
+  cursor: pointer;
+  opacity: .8;
+}
+
+.link:hover,
+.link:focus {
+  opacity: 1;
+}
+
+.link:active {
+  color: inherit;
+}
