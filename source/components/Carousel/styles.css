@@ -1,0 +1,60 @@
+.root {
+  position: relative;
+}
+
+.scroller {
+  overflow: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: mandatory;
+}
+
+.wrapper {
+  display: flex;
+  flex-shrink: 0;
+  background-color: #f4f4f4;
+  min-width: 100%;
+}
+
+.button {
+  composes: primary on-light from '../../traits/colors.css';
+  composes: p-half from '../../traits/spacing.css';
+  composes: shadow-3 from '../../traits/shadows.css';
+  opacity: .6;
+  border-radius: 3rem;
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3rem;
+  height: 3rem;
+  transition: opacity .2s ease-out;
+}
+
+.button:hover {
+  opacity: .9;
+}
+
+.buttonPrevious {
+  composes: button;
+  left: .75rem;
+}
+
+.buttonNext {
+  composes: button;
+  right: .75rem;
+}
+
+.icon {
+  fill: transparent;
+  stroke: currentColor;
+  stroke-miterlimit: 10;
+  stroke-width: 3px
+}
+
+@media screen and (min-width: 62.5em) {
+  .scroller {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
