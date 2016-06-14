@@ -42,6 +42,7 @@
 }
 
 .panels {
+  composes: ml-half from '../../traits/spacing.css';
   display: flex;
   flex-shrink: 0;
   background-color: #f4f4f4;

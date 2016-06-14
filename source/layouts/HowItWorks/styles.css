@@ -6,10 +6,10 @@
 }
 
 .fancyBox {
-  composes: px-contain mb-1half from '../../traits/spacing.css';
+  composes: px-contain mb-1 from '../../traits/spacing.css';
   composes: scale-xl align-center uppercase from '../../traits/type.css';
   composes: dark from '../../traits/colors.css';
-  padding-top: 7.25rem;
+  padding-top: 4.25rem;
 }
 
 .content {

@@ -64,7 +64,7 @@
   background-color: #F0177B;
 }
 
-@media screen and (min-width: 41.25em) {
+@media screen and (min-width: 48.25em) {
   .contain {
     padding: 0.75rem 0;
     width: 100%;
@@ -87,6 +87,19 @@
   opacity: .9;
 }
 
+.navButton:before {
+  content:'\f0c9';
+  font-family: 'FontAwesome' ;
+  padding-right: .5rem;
+}
+
+
+.navButtonActive:before {
+  content: '\f00d';
+  font-family: 'FontAwesome' ;
+  padding-right: .5rem;
+}
+
 .navButtonActive {
   composes: navButton;
   composes: light on-primary from '../../traits/colors.css'
@@ -104,7 +117,7 @@
   composes: navItems;
 }
 
-@media (max-width: 41.25em) {
+@media (max-width: 48.25em) {
   .navItems {
     position: absolute;
     top: 100%;
@@ -127,7 +140,7 @@
   }
 }
 
-@media (min-width: 41.25em) {
+@media (min-width: 48.25em) {
   .navButton,
   .navButtonActive {
     display: none;

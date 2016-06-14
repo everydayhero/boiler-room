@@ -15,7 +15,7 @@
   color: #F0177B;
 }
 
-@media screen and (min-width: 41.25em) {
+@media screen and (min-width: 48.25em) {
   .root {
     color: #333;
   }
