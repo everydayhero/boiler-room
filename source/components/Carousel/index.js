@@ -45,7 +45,7 @@ export default class extends Component {
             WebkitScrollSnapPointsX: `repeat(${itemWidth + widthUnit})`,
             msScrollSnapPointsX: `repeat(${itemWidth + widthUnit})`
           }}
-          ref={(c) => this._scroller = c}>
+          ref={(c) => { this._scroller = c }}>
           <div className={styles.wrapper}
             style={{
               width: items.length * itemWidth + widthUnit
