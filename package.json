@@ -37,7 +37,11 @@
     "globals": [
       "context",
       "describe",
-      "it"
+      "it",
+      "$"
+    ],
+    "ignore": [
+      "source/jquery.socialfeed.js"
     ]
   },
   "devDependencies": {
@@ -52,8 +56,10 @@
     "browserify-incremental": "^3.0.1",
     "chai": "^3.4.1",
     "chai-enzyme": "^0.2.2",
+    "codebird": "^2.6.0",
     "css-modules-require-hook": "^2.1.0",
     "css-modulesify": "^0.16.1",
+    "edh-widgets": "github:everydayhero/react-widgets",
     "envify": "^3.4.0",
     "enzyme": "^1.4.0",
     "es3ify": "github:bradparker/es3ify#v0.2.1",
@@ -95,6 +101,8 @@
     "serve-static": "^1.10.0",
     "standard": "^6.0.8",
     "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "xhr2": "^0.1.3",
+    "xmlhttprequest": "^1.8.0"
   }
 }

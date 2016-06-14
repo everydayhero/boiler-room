@@ -8,7 +8,7 @@ export default ({
   title,
   panels
 }) => (
-  <div className={styles.root}>
+  <div className={styles.root} id='role-models'>
     <div className={styles.header}>
       <h2 className={styles.title}>Role Models</h2>
       <div className={styles.lead}>

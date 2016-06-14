@@ -1,5 +1,5 @@
 .root {
-  composes: dark from "../../traits/colors.css";
+  composes: light from "../../traits/colors.css";
   composes: px-half py-quarter from "../../traits/spacing.css";
   composes: scale-sm from "../../traits/type.css";
   font-weight: 700;
@@ -13,4 +13,10 @@
 .root:focus,
 .root:active {
   color: #F0177B;
+}
+
+@media screen and (min-width: 48.25em) {
+  .root {
+    color: #333;
+  }
 }

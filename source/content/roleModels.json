@@ -10,7 +10,7 @@
     {
       "image": "../components/RoleModelsPanel/img/clara.jpg",
       "name": "Clara Peterson",
-      "subheading": "Professional Athlete, Mom, 2016 Olympic Hopeful",
+      "subheading": "Professional athlete, mom, 2016 olympic hopeful",
       "content": "“I run because it’s who I am, and because it’s what I’ve always done and it’s what I always want to do.”"
     },
     {
@@ -28,20 +28,14 @@
     {
       "image": "../components/RoleModelsPanel/img/amanda.jpg",
       "name": "Amanda Napolitano",
-      "subheading": "Wife, Mom, Marathoner, Race Director and Philanthropist",
+      "subheading": "Wife, mom, marathoner, race director and philanthropist",
       "content": "“It is possible to change the world. To empower all women. Together. And you'd be surprised who benefits most in the end.”"
     },
     {
       "image": "../components/RoleModelsPanel/img/catherine.jpg",
       "name": "Catherine LaCour",
-      "subheading": "Marketing Executive, Avid Runner, Philanthropist",
+      "subheading": "Marketing executive, avid runner, philanthropist",
       "content": "“Connecting and empowering girls worldwide to achieve their full economic potential by increasing opportunities for them to pursue an education is critical to achieving wide-scale gender equity around the world.”"
-    },
-    {
-      "image": "../components/RoleModelsPanel/img/georgia.jpg",
-      "name": "Georgia Cleland",
-      "subheading": "Blood Cancer Survivor of AL.L. since 1986, runner, do gooder",
-      "content": "“When it comes to doing an athletic activity, the most important thing is to have fun with it!”"
     }
   ]
 }

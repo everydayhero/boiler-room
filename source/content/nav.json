@@ -3,12 +3,16 @@
     "link": "#about",
     "title": "About"
   },
+  "rolemodels": {
+    "link": "#role-models",
+    "title": "Role Models"
+  },
   "theImpact": {
     "link": "#the-impact",
     "title": "The Impact"
   },
-  "contact": {
-    "link": "#contact",
-    "title": "Contact"
+  "charityPartners": {
+    "link": "#register",
+    "title": "Charity Partners"
   }
 }

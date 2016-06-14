@@ -6,8 +6,9 @@
 
 .heading {
   opacity: 0;
+  line-height: 1.25;
   animation-name: fade-in-out;
-  animation-duration: 9s;
+  animation-duration: 15s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -24,12 +25,12 @@
 
 .heading-2 {
   composes: heading;
-  animation-delay: 3s;
+  animation-delay: 5s;
 }
 
 .heading-3 {
   composes: heading;
-  animation-delay: 6s;
+  animation-delay: 10s;
 }
 
 @keyframes fade-in-out {
