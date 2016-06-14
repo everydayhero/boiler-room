@@ -37,7 +37,11 @@
     "globals": [
       "context",
       "describe",
-      "it"
+      "it",
+      "$"
+    ],
+    "ignore": [
+      "source/jquery.socialfeed.js"
     ]
   },
   "devDependencies": {

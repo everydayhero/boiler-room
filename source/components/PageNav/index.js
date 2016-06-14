@@ -5,7 +5,7 @@ import PageSearchModal from 'edh-widgets/src/components/search/PageSearchModal'
 import styles from './styles.css'
 
 class PageNav extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {
       navActive: false,
@@ -20,12 +20,12 @@ class PageNav extends React.Component {
     })
   }
 
-  render() {
+  render () {
     const {
       nav = {}
     } = this.props
     const {
-      navActive,
+      navActive
     } = this.state
     const navButtonClasses = navActive
       ? styles.navButtonActive
@@ -51,18 +51,18 @@ class PageNav extends React.Component {
             </ul>
           </div>
           <ul className={styles.cta}>
-            <li className={styles.item}><a className={styles.linkDonate} href="#" onClick={ () => (this.setState({ pageSearchActive: true })) }>Donate</a></li>
+            <li className={styles.item}><a className={styles.linkDonate} href='#' onClick={() => (this.setState({ pageSearchActive: true }))}>Donate</a></li>
             <li className={styles.item}><a className={styles.link} href='https://everydayhero.com/us/sign-in'>Login</a></li>
             <li className={styles.item}><a className={styles.button} href='#register'>Register</a></li>
           </ul>
         </div>
-        { this.state.pageSearchActive
+        {this.state.pageSearchActive
           ? <PageSearchModal
-              campaignUid="au-20211"
-              country="us"
-              i18n={ { title:'Search for a supporter' } }
-              renderIcon={ false }
-              onClose={ () => { this.setState({ pageSearchActive: false }) } }
+            campaignUid='au-20211'
+            country='us'
+            i18n={{ title: 'Search for a supporter' }}
+            renderIcon={false}
+            onClose={() => { this.setState({ pageSearchActive: false }) }}
             />
           : null
         }

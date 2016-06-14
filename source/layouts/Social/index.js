@@ -8,7 +8,7 @@ export default class extends React.Component {
   componentDidMount () {
     if (typeof $ !== 'undefined') {
       createSocialFeed($, window, document, Codebird)
-      $(document).ready(function() {
+      $(document).ready(function () {
         $('.social-slides').socialfeed({
           // INSTAGRAM
           instagram: {
@@ -27,18 +27,18 @@ export default class extends React.Component {
           },
 
           // TWITTER
-          twitter:{
+          twitter: {
             accounts: ['@ifgirlsranworld', '#ifgirlsranworld'],
             limit: 6,
             consumer_key: 'qqt2l8cISaxtOxJmb9CPCMHim',
-            consumer_secret: 'VYLXujP4VYzN82u0hQFcqEuKgkdNjCChRKM8Md8vuXLbbMs2Nz',
-           },
+            consumer_secret: 'VYLXujP4VYzN82u0hQFcqEuKgkdNjCChRKM8Md8vuXLbbMs2Nz'
+          },
 
           // GENERAL SETTINGS
           length: 160,
           show_media: true,
           media_min_width: 100,
-          touch:true,
+          touch: true,
           update_period: 360000,
           template_html: `
             <li class="social-feed-element {{? !it.moderation_passed}}hidden{{?}}" dt-create="{{=it.dt_create}}" social-feed-id="{{=it.id}}">
@@ -69,7 +69,7 @@ export default class extends React.Component {
           <h2 className={styles.title}>#ifgirlsrantheworld</h2>
         </div>
         <div className={styles.social}>
-          <ul className="social-slides" />
+          <ul className='social-slides' />
         </div>
       </div>
     )
