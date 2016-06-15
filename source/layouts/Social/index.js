@@ -12,11 +12,10 @@ export default class extends React.Component {
         $('.social-slides').socialfeed({
           // INSTAGRAM
           instagram: {
-            accounts: ['@ifgirlsranworld'],
+            accounts: ['&3210007659'],
             limit: 6,
-            client_id: 'acd13292bf4b40e38e167103193ff7dc',
-            user_id: '261563079',
-            access_token: '261563079.d8d1d50.8f153b56f09941cd997fe2b9b75786dd'
+            client_id: 'e164c123a5964362a04627fac37e3b0e',
+            access_token: '3210007659.1677ed0.f33efaca3b274ba9b17c6ec2451d85e5'
           },
 
           // FACEBOOK
@@ -69,7 +68,7 @@ export default class extends React.Component {
           <h2 className={styles.title}>#ifgirlsrantheworld</h2>
         </div>
         <div className={styles.social}>
-          <ul className='social-slides' />
+          <ul className='social-slides'/>
         </div>
       </div>
     )
