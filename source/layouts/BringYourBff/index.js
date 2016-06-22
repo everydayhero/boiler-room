@@ -19,7 +19,7 @@ const BringYourBff = ({
   return (
     <div className={styles.root}>
       <div className={styles.imgWrap}>
-        <img src={image} className={styles.image}/>
+        <img src={image} className={styles.image} />
       </div>
       <div className={styles.contentWrap}>
         <h2 className={styles.title}>{title}</h2>

@@ -68,7 +68,7 @@ export default class extends React.Component {
           <h2 className={styles.title}>#ifgirlsrantheworld</h2>
         </div>
         <div className={styles.social}>
-          <ul className='social-slides'/>
+          <ul className='social-slides' />
         </div>
       </div>
     )

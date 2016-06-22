@@ -3,13 +3,12 @@
   composes: on-light from '../../traits/colors.css';
   composes: shadow-3 from '../../traits/shadows.css';
   composes: scale-sm from "../../traits/type.css";
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 100;
-  max-width: 1400px;
-  max-width: 87.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width:101%;
   margin: 0 auto;
 }
 
@@ -43,8 +42,8 @@
 }
 
 .link {
-  composes: px-half py-quarter from '../../traits/spacing.css';
   composes: primary from '../../traits/colors.css';
+  padding: .2rem .75rem;
   opacity: .8;
   transition: opacity .2s ease-out;
 }
@@ -56,7 +55,6 @@
 .button {
   composes: link;
   composes: solid-pink from '../../traits/borders.css';
-  composes: ml-half from '../../traits/spacing.css';
 }
 
 .button:hover {
@@ -66,7 +64,7 @@
 
 @media screen and (min-width: 48.25em) {
   .contain {
-    padding: 0.75rem 0;
+    padding: 0.5rem 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -80,7 +78,7 @@
 
 .navButton {
   composes: link from '../../traits/type.css';
-  composes: p-1 ml-n1 from '../../traits/spacing.css';
+  composes: px-1 py-half ml-n1 from '../../traits/spacing.css';
   transition: .15s all ease-out;
   position: relative;
   z-index: 1;
@@ -151,6 +149,12 @@
   }
   .navItems > * + * {
     margin-left: calc(1.5 * .5rem);
+  }
+}
+
+@media (min-width: 80em) {
+  .root {
+    width: 1345px;
   }
 }
 
