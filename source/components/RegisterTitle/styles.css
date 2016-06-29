@@ -1,6 +1,8 @@
 .title {
     composes: mb-1 from '../../traits/spacing.css';
-    max-width: 30rem;
+    max-width: 570px;
+    width: 570px;
+    height: 60px;
     margin-left: auto;
     margin-right: auto;
     display: block;

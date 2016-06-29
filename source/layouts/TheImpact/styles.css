@@ -34,6 +34,7 @@
 
 .quote {
   composes: px-contain py-2 from '../../traits/spacing.css';
+  background: #eee;
 }
 
 .quoteText {
@@ -80,5 +81,6 @@
     margin-top: -46%;
     margin-bottom: 0;
     padding: 16.66% 1.5rem;
+    background: #fff;
   }
 }

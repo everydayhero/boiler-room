@@ -11,7 +11,7 @@ export default ({
     <ul className={styles.list}>
       {partners.map((partner, i) => (
         <li className={styles.item} key={i}>
-          <a href={partner.link}>
+          <a href={partner.link} target='_blank'>
             <img className={styles.image} src={partner.image} alt={partner.title} />
           </a>
         </li>

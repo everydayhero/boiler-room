@@ -12,15 +12,15 @@ export default ({
     <ul className={styles.primaryList}>
       {charities.primary.map((charity, i) => (
         <li className={styles.primaryItem} key={i}>
-          <a href={charity.link} className={styles.primaryLink}>
-            <img src={charity.image} alt={charity.title} className={styles.image}/>
+          <a href={charity.link} target='_blank' className={styles.primaryLink}>
+            <img src={charity.image} alt={charity.title} className={styles.image} />
           </a>
         </li>
       ))}
     </ul>
     <div className={styles.footerText}>
       <h3 className={styles.footerTitle}>Don't see the cause that’s closest to your heart?</h3>
-      <p><a href='https://ifgirlsrantheworld.eventbrite.com'>Register here</a> and then search for the cause that means the most to you. Still can’t find your cause?  Email us at <a href='mailto:hello@everydayhero.com'>hello@everydayhero.com</a></p>
+      <p><a href='https://ifgirlsrantheworld.eventbrite.com' target='_blank'>Register here</a> and then search for the cause that means the most to you. Still can’t find your cause?  Email us at <a href='mailto:hello@everydayhero.com'>hello@everydayhero.com</a></p>
     </div>
   </div>
 )
