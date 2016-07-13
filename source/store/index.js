@@ -1,8 +1,20 @@
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import createLogger from 'redux-logger'
 import reducers from './reducers'
 
 export const configureStore = (initialState) => {
-  return createStore(reducers, initialState)
+  if (process.env.NODE_ENV !== 'production') {
+    return createStore(
+      reducers,
+      initialState,
+      applyMiddleware(createLogger({ logger: console }))
+    )
+  } else {
+    return createStore(
+      reducers,
+      initialState
+    )
+  }
 }
 
-export default configureStore({ pages: {} })
+export default configureStore({ landingPages: {} })

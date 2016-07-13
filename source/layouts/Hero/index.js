@@ -5,9 +5,8 @@ import ScrollingHeading from '../../components/ScrollingHeading'
 import styles from './styles.css'
 
 const Hero = ({
-  scrollingHeadings,
-  leadText,
-  email
+  scrollingHeadings = [],
+  leadText = ''
 }) => (
   <div className={styles.root}>
     <div className={styles.top}>
@@ -16,7 +15,8 @@ const Hero = ({
     </div>
     <div className={styles.bottom}>
       <ScrollingHeading headings={scrollingHeadings}/>
-      <div className={styles.heroText}>{leadText}</div>
+      <div className={styles.heroText}
+        dangerouslySetInnerHTML={{__html: leadText}} />
       <div className={styles.register}>
         <a className={styles.registerButton} href='#register'>Register Now</a>
       </div>
@@ -26,8 +26,7 @@ const Hero = ({
 
 Hero.propTypes = {
   scrollingHeadings: PropTypes.array,
-  leadText: PropTypes.string,
-  email: PropTypes.object
+  leadText: PropTypes.string
 }
 
 export default Hero

@@ -14,42 +14,38 @@ import QuoteHero from '../QuoteHero'
 import Partners from '../Partners'
 
 const Home = ({
-  title,
-  hero = {},
-  email = {},
-  hiw = {},
-  rolemodels = {},
-  bff = {},
-  impact = {},
-  charities = {},
-  partners = {}
-}) => (
-  <Main title={title}>
-    <Hero {...hero} />
-    <HowItWorks {...hiw} />
-    <About />
-    <RoleModels {...rolemodels} />
-    <TheImpact {...impact} />
-    <Register charities={charities} />
-    <BringYourBff {...bff} />
-    <Social />
-    <Callout />
-    <Partners partners={partners} />
-    <QuoteHero />
-  </Main>
-)
+  title = '',
+  content = {}
+}) => {
+  const {
+    scrollingHeadings = [],
+    heroText = '',
+    howItWorks = [],
+    about = '',
+    bringYourBff = {},
+    bringYourBffImage = ''
+  } = content
+  console.log(bringYourBffImage)
+  return (
+    <Main title={title}>
+      <Hero leadText={heroText} scrollingHeadings={scrollingHeadings}/>
+      <HowItWorks panels={howItWorks} />
+      <About content={about} />
+      {/*<RoleModels {...rolemodels} />
+      <TheImpact {...impact} />
+      <Register charities={charities} /> */}
+      <BringYourBff {...bringYourBff} image={bringYourBffImage} />
+      <Social />
+      <Callout />
+      {/*<Partners partners={partners} />*/}
+      <QuoteHero />
+    </Main>
+  )
+}
 
 Home.propTypes = {
   title: PropTypes.string,
-  hero: PropTypes.object,
-  email: PropTypes.object,
-  hiw: PropTypes.object,
-  rolemodels: PropTypes.object,
-  bff: PropTypes.object,
-  impact: PropTypes.object,
-  about: PropTypes.object,
-  charities: PropTypes.object,
-  partners: PropTypes.array
+  content: PropTypes.object
 }
 
 export default Home

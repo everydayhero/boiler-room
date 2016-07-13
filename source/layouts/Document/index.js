@@ -1,7 +1,12 @@
 import React, { PropTypes } from 'react'
 import styles from './styles.css'
 
-const Document = ({ title, description, content }) => (
+const Document = ({
+  title,
+  description,
+  content,
+  state = {}
+}) => (
   <html className={styles.html}>
     <head>
       <title>{title}</title>
@@ -25,9 +30,16 @@ const Document = ({ title, description, content }) => (
     </head>
     <body className={styles.body}>
       <main
-        id='mount'
+        id='app'
         dangerouslySetInnerHTML={{
           __html: content
+        }}
+      />
+      <script
+        id='initial-state'
+        type='application/json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(state)
         }}
       />
       <script src='https://code.jquery.com/jquery-2.2.2.min.js' />
@@ -41,7 +53,8 @@ const Document = ({ title, description, content }) => (
 Document.propTypes = {
   title: PropTypes.string,
   description: PropTypes.string,
-  content: PropTypes.string
+  content: PropTypes.string,
+  state: PropTypes.object
 }
 
 export default Document

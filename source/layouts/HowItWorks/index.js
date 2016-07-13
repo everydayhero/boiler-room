@@ -5,7 +5,6 @@ import HowItWorksTitle from '../../components/HowItWorksTitle'
 import styles from './styles.css'
 
 export default ({
-  title,
   panels
 }) => (
   <div className={styles.root}>
