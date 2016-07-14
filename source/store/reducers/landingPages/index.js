@@ -10,14 +10,24 @@ const deserializeResponse = (response = {}) => {
 
   return {
     hero: {
-      headings: response.getGroup('home.headings')
+      headings: response.getGroup('landing-page.scrollingHeadings')
         .toArray()
-        .map((headings) => headings.getText('heading')),
-      lead: response.getText('home.lead'),
-      cta: response.getText('home.ctaText')
+        .map((headings) => ([
+          headings.getText('heading1'),
+          headings.getText('heading2')
+        ])),
+      lead: response.getText('landing-page.lead'),
+      cta: response.getText('landing-page.ctaText')
     },
     howItWorks: {
-      heading: response.getText('home.hiwHeading')
+      heading: response.getText('landing-page.hiwHeading'),
+      panels: response.getGroup('landing-page.panels')
+        .toArray()
+        .map((panel) => ({
+          heading: panel.getText('panelHeading'),
+          icon: panel.getText('panelIcon'),
+          content: panel.getStructuredText('panelContent').asHtml({linkResolver}) || ''
+        }))
     }
   }
 }
@@ -37,7 +47,6 @@ const receiveLandingPageFailure = (landingPages, { route, error = '' }) => {
 }
 
 const receiveLandingPageSuccess = (landingPages, { route, content = {} }) => {
-  console.log(content)
   return {
     ...landingPages,
     data: updateOrAddPage(landingPages.data, {

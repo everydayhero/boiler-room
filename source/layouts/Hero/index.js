@@ -5,8 +5,9 @@ import ScrollingHeading from '../../components/ScrollingHeading'
 import styles from './styles.css'
 
 const Hero = ({
-  scrollingHeadings = [],
-  leadText = ''
+  headings = [],
+  lead = '',
+  cta = ''
 }) => (
   <div className={styles.root}>
     <div className={styles.top}>
@@ -14,11 +15,11 @@ const Hero = ({
       <Logo />
     </div>
     <div className={styles.bottom}>
-      <ScrollingHeading headings={scrollingHeadings}/>
+      <ScrollingHeading headings={headings}/>
       <div className={styles.heroText}
-        dangerouslySetInnerHTML={{__html: leadText}} />
+        dangerouslySetInnerHTML={{__html: lead}} />
       <div className={styles.register}>
-        <a className={styles.registerButton} href='#register'>Register Now</a>
+        <a className={styles.registerButton} href='#register'>{cta}</a>
       </div>
     </div>
   </div>

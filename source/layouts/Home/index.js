@@ -18,23 +18,22 @@ const Home = ({
   content = {}
 }) => {
   const {
-    scrollingHeadings = [],
-    heroText = '',
-    howItWorks = [],
-    about = '',
-    bringYourBff = {},
-    bringYourBffImage = ''
+    hero = {},
+    howItWorks = {}
+    // about = '',
+    // bringYourBff = {},
+    // bringYourBffImage = ''
   } = content
-  console.log(bringYourBffImage)
+  // console.log(bringYourBffImage)
   return (
     <Main title={title}>
-      <Hero leadText={heroText} scrollingHeadings={scrollingHeadings}/>
-      <HowItWorks panels={howItWorks} />
-      <About content={about} />
+      <Hero {...hero} />
+      <HowItWorks {...howItWorks} />
+      {/*<About content={about} />*/}
       {/*<RoleModels {...rolemodels} />
       <TheImpact {...impact} />
       <Register charities={charities} /> */}
-      <BringYourBff {...bringYourBff} image={bringYourBffImage} />
+      {/*<BringYourBff {...bringYourBff} image={bringYourBffImage} />*/}
       <Social />
       <Callout />
       {/*<Partners partners={partners} />*/}

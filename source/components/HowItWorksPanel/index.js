@@ -5,9 +5,8 @@ import styles from './styles.css'
 
 export default ({
   icon,
-  title,
+  heading,
   content,
-  link,
   invert,
   ...props
 }) => (
@@ -15,8 +14,7 @@ export default ({
     <div className={invert ? styles.iconInverted : styles.icon}>
       <Icon name={icon} />
     </div>
-    <h3 className={styles.title}>{title}</h3>
-    <p className={styles.content}>{content}</p>
-    <p className={styles.content} dangerouslySetInnerHTML={{__html: link}} />
+    <h3 className={styles.title}>{heading}</h3>
+    <div className={styles.content} dangerouslySetInnerHTML={{__html: content}} />
   </div>
 )

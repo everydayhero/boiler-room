@@ -5,11 +5,12 @@ import HowItWorksTitle from '../../components/HowItWorksTitle'
 import styles from './styles.css'
 
 export default ({
+  heading,
   panels
 }) => (
   <div className={styles.root}>
     <div className={styles.fancyBox}>
-      <HowItWorksTitle />
+      <HowItWorksTitle text={heading} />
     </div>
     <div className={styles.content}>
       <div className={styles.panels}>
