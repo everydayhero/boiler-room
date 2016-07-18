@@ -5,6 +5,6 @@ import nav from '../../content/nav.json'
 
 export default () => (
   <header>
-    <PageNav nav={nav}/>
+    <PageNav nav={nav} />
   </header>
 )

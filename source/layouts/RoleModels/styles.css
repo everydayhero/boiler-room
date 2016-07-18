@@ -22,6 +22,7 @@
 .intro,
 .tagline {
   composes: mb-1 from '../../traits/spacing.css';
+  flex-shrink: 1;
 }
 
 .tagline {
@@ -32,6 +33,7 @@
 @media screen and (min-width: 41.25em) {
   .lead {
     display: flex;
+    flex-shrink: 1;
   }
   .tagline {
     flex-shrink: 0;

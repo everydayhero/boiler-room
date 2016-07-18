@@ -18,7 +18,7 @@ export default ({
           <div
             key={key}
             className={styles.item}>
-            <HowItWorksPanel invert={(key % 2) !== 0} {...panel}/>
+            <HowItWorksPanel invert={(key % 2) !== 0} {...panel} />
           </div>
         ))}
       </div>

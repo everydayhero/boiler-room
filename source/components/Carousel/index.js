@@ -29,14 +29,14 @@ export default class extends Component {
           onClick={this.handlePrevious}
           title='Previous'>
           <svg className={styles.icon} viewBox='0 0 32 32'>
-            <polyline points='20.3,5.4 9.7,16 20.1,26.5'/>
+            <polyline points='20.3,5.4 9.7,16 20.1,26.5' />
           </svg>
         </button>
         <button className={styles.buttonNext}
           onClick={this.handleNext}
           title='Next'>
           <svg className={styles.icon} viewBox='0 0 32 32'>
-            <polyline points='10.9,5.3 21.3,16.1 10.7,26.4'/>
+            <polyline points='10.9,5.3 21.3,16.1 10.7,26.4' />
           </svg>
         </button>
         <div className={styles.scroller}

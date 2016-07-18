@@ -6,6 +6,7 @@
 
 .footerContainer {
   text-align: center;
+  flex-shrink: 1;
 }
 
 .edh {
@@ -20,6 +21,8 @@
 .edhLogo {
   composes: px-half from '../../traits/spacing.css';
   max-width: 12rem;
+  width: 300px;
+  height: 54px;
 }
 
 .footerListItem {

@@ -15,8 +15,8 @@ export default ({
     <ul className={styles.primaryList}>
       {charities.primary.map((charity, i) => (
         <li className={styles.primaryItem} key={i}>
-          <a href={charity.link} className={styles.primaryLink}>
-            <img src={charity.image} alt={charity.title} className={styles.image}/>
+          <a href={charity.link} target='_blank' className={styles.primaryLink}>
+            <img src={charity.image} alt={charity.title} className={styles.image} />
           </a>
         </li>
       ))}

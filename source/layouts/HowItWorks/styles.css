@@ -10,6 +10,8 @@
   composes: scale-xl align-center uppercase from '../../traits/type.css';
   composes: dark from '../../traits/colors.css';
   padding-top: 4.25rem;
+  padding-bottom: 4.25rem;
+  height: 0;
 }
 
 .content {

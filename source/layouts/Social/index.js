@@ -14,7 +14,8 @@ export default class extends React.Component {
           instagram: {
             accounts: ['&3210007659'],
             limit: 6,
-            client_id: 'e164c123a5964362a04627fac37e3b0e',
+            user_id: 3210007659,
+            client_id: 'fe38eded758e4259b5df0583fc509293',
             access_token: '3210007659.1677ed0.f33efaca3b274ba9b17c6ec2451d85e5'
           },
 
@@ -68,7 +69,7 @@ export default class extends React.Component {
           <h2 className={styles.title}>#ifgirlsrantheworld</h2>
         </div>
         <div className={styles.social}>
-          <ul className='social-slides'/>
+          <ul className='social-slides' />
         </div>
       </div>
     )

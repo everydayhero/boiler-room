@@ -12,6 +12,6 @@ export default ({
     : (<Link
       {...props}
       className={styles.root}
-      to={`${process.env.BASE_URL || ''}${to}`}/>
+      to={`${process.env.BASE_URL || ''}${to}`} />
     )
 }
