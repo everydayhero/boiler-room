@@ -69,6 +69,19 @@ const deserializeResponse = (response = {}) => {
       lead: response.getText('landing-page.registerLead'),
       footer: response.getStructuredText('landing-page.registerFooterContent').asHtml({linkResolver}) || '',
       charities
+    },
+    partners: {
+      heading: response.getText('landing-page.partnersHeading'),
+      partners: response.getGroup('landing-page.partners')
+        .toArray()
+        .map((partner) => {
+          const url = partner.getLink('link')
+          return {
+            image: partner.getImage('image') ? partner.getImage('image').main : {},
+            title: partner.getText('title'),
+            link: url ? url.url(linkResolver) : null
+          }
+        })
     }
   }
 }

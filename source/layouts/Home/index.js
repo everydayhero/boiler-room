@@ -24,7 +24,8 @@ const Home = ({
     roleModels = {},
     impact = {},
     bff = {},
-    register = {}
+    register = {},
+    partners = {}
   } = content
   return (
     <Main title={title}>
@@ -37,7 +38,7 @@ const Home = ({
       <BringYourBff {...bff} />
       <Social />
       <Callout />
-      {/* <Partners partners={partners} /> */}
+      <Partners {...partners} />
       <QuoteHero />
     </Main>
   )
