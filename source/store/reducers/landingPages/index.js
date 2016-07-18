@@ -33,6 +33,19 @@ const deserializeResponse = (response = {}) => {
       heading: response.getText('landing-page.aboutHeading'),
       content: response.getStructuredText('landing-page.aboutContent').asHtml({linkResolver}) || '',
       image: response.getImage('landing-page.aboutImage') ? response.getImage('landing-page.aboutImage').main : {}
+    },
+    roleModels: {
+      heading: response.getText('landing-page.rmHeading'),
+      lead: response.getText('landing-page.rmLead'),
+      quote: response.getText('landing-page.rmQuote'),
+      panels: response.getGroup('landing-page.roleModels')
+        .toArray()
+        .map((roleModel) => ({
+          image: roleModel.getImage('image') ? roleModel.getImage('image').main : {},
+          name: roleModel.getText('name'),
+          intro: roleModel.getText('intro'),
+          quote: roleModel.getText('quote')
+        }))
     }
   }
 }

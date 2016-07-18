@@ -21,6 +21,7 @@ const Home = ({
     hero = {},
     howItWorks = {},
     about = '',
+    roleModels = {},
     // bringYourBff = {},
     // bringYourBffImage = ''
   } = content
@@ -29,8 +30,8 @@ const Home = ({
     <Main title={title}>
       <Hero {...hero} />
       <HowItWorks {...howItWorks} />
-      {/*<RoleModels {...rolemodels} />
       <About {...about} />
+      <RoleModels {...roleModels} />
       <TheImpact {...impact} />
       <Register charities={charities} /> */}
       {/*<BringYourBff {...bringYourBff} image={bringYourBffImage} />*/}
