@@ -41,7 +41,7 @@ class TheImpact extends Component {
                   onClick={this.handleTabChange.bind(this, key)}
                   className={(activeTab === (key + 1))
                     ? styles.tabButtonActive : styles.tabButton}>
-                  ${item.amount}
+                  ${item.dollars}
                 </button>
               </li>
             ))}
