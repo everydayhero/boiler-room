@@ -19,8 +19,8 @@ const Home = ({
 }) => {
   const {
     hero = {},
-    howItWorks = {}
-    // about = '',
+    howItWorks = {},
+    about = '',
     // bringYourBff = {},
     // bringYourBffImage = ''
   } = content
@@ -29,8 +29,8 @@ const Home = ({
     <Main title={title}>
       <Hero {...hero} />
       <HowItWorks {...howItWorks} />
-      {/*<About content={about} />*/}
       {/*<RoleModels {...rolemodels} />
+      <About {...about} />
       <TheImpact {...impact} />
       <Register charities={charities} /> */}
       {/*<BringYourBff {...bringYourBff} image={bringYourBffImage} />*/}

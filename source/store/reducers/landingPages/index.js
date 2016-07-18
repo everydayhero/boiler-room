@@ -28,6 +28,11 @@ const deserializeResponse = (response = {}) => {
           icon: panel.getText('panelIcon'),
           content: panel.getStructuredText('panelContent').asHtml({linkResolver}) || ''
         }))
+    },
+    about: {
+      heading: response.getText('landing-page.aboutHeading'),
+      content: response.getStructuredText('landing-page.aboutContent').asHtml({linkResolver}) || '',
+      image: response.getImage('landing-page.aboutImage') ? response.getImage('landing-page.aboutImage').main : {}
     }
   }
 }
