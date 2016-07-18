@@ -56,8 +56,8 @@ class TheImpact extends Component {
           </div>
         </div>
         <blockquote className={styles.quote}>
-          <div className={styles.quoteText}>{quote.text}</div>
-          <div className={styles.quoteCite}>{quote.cite}</div>
+          <div className={styles.quoteText}>{quote}</div>
+          <div className={styles.quoteCite}>{cite}</div>
         </blockquote>
       </div>
     )
