@@ -15,15 +15,16 @@ import Partners from '../Partners'
 
 const Home = ({
   title = '',
-  content = {},
-  bff = {}
+  content = {}
 }) => {
   const {
     hero = {},
     howItWorks = {},
     about = '',
     roleModels = {},
-    impact = {}
+    impact = {},
+    bff = {},
+    register = {}
   } = content
   return (
     <Main title={title}>
@@ -32,7 +33,7 @@ const Home = ({
       <About {...about} />
       <RoleModels {...roleModels} />
       <TheImpact {...impact} />
-      {/* <Register charities={charities} /> */}
+      <Register {...register} />
       <BringYourBff {...bff} />
       <Social />
       <Callout />

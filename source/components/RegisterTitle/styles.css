@@ -1,20 +1,21 @@
 .title {
-    composes: mb-1 from '../../traits/spacing.css';
-    max-width: 30rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+  composes: mb-1 from '../../traits/spacing.css';
+  max-width: 30rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .st0 {
-    fill:#FFFFFF;
-    stroke:#000000;
-    stroke-width:4;
-    stroke-miterlimit:10;
+  fill:#FFFFFF;
+  stroke:#000000;
+  stroke-width:4;
+  stroke-miterlimit:10;
 }
 
 .st1 {
-    font-family:'Montserrat';
-    font-size:28px;
-    font-weight: 700;
+  composes: uppercase from '../../traits/type.css';
+  font-family:'Montserrat';
+  font-size:28px;
+  font-weight: 700;
 }
