@@ -4,6 +4,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 
 import HomeLayout from '../../layouts/Home'
+import bff from '../../content/bringYourBff.json'
 
 import { fetchLandingPage } from '../../store/actions/landingPages'
 
@@ -55,6 +56,7 @@ const Home = ({
     <HomeLayout
       title={title}
       content={content}
+      bff={bff}
       />
   )
 }
