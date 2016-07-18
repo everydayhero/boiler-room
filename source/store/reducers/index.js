@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux'
 
-import pages from './pages'
+import landingPages from './landingPages'
 
-export default combineReducers({ pages })
+export default combineReducers({
+  landingPages
+})

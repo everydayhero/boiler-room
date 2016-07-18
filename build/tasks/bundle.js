@@ -4,9 +4,11 @@ const babelify = require('babelify')
 const browserifyinc = require('browserify-incremental')
 const buffer = require('vinyl-buffer')
 const cssModulesify = require('css-modulesify')
+const cssVariables = require('../../source/traits/variables.json')
 const envify = require('envify')
 const es3ify = require('es3ify')
 const uglify = require('gulp-uglify')
+const markdownify = require('markdownify')
 const gulp = require('gulp')
 const gutil = require('gulp-util')
 const insertGlobals = require('insert-module-globals')
@@ -22,20 +24,30 @@ const PROD = process.env.NODE_ENV === 'production'
 
 const BROWSERIFY_OPTS = {
   entries: [path.join(SOURCE_DIR, 'index.js')],
-  transform: [babelify, es3ify],
+  transform: [markdownify, babelify, es3ify],
   standalone: 'app',
-  debug: !PROD
+  debug: process.env.NODE_ENV !== 'production'
 }
 
 const CSS_MODULES_OPTS = {
   output: path.join(DEV_DIR, 'main.css'),
   generateScopedName: require('../css-modules-scope-generator'),
-  after: ['postcss-cssnext']
+  after: ['postcss-import', 'postcss-cssnext'],
+  'postcss-import': {
+    path: './node_modules'
+  },
+  'postcss-cssnext': {
+    features: {
+      customProperties: {
+        variables: cssVariables
+      }
+    }
+  }
 }
 
 const clientBundler = browserifyinc(Object.assign({}, BROWSERIFY_OPTS, {
   cache: {},
-  packageCache: {},
+  packageCache: {}
 }))
 clientBundler.transform(envify)
 clientBundler.plugin(cssModulesify, CSS_MODULES_OPTS)

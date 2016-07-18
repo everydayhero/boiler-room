@@ -14,7 +14,7 @@
   margin-right: -1.5rem;
 }
 
-.title {
+.heading {
   composes: scale-xl uppercase from '../../traits/type.css';
   composes: mb-1 from '../../traits/spacing.css';
 }

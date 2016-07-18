@@ -1,25 +1,66 @@
+import find from 'lodash/find'
+import { provideHooks } from 'redial'
 import React from 'react'
+import { connect } from 'react-redux'
 
 import HomeLayout from '../../layouts/Home'
-import heroContent from '../../content/hero.json'
-import emailContent from '../../content/email.json'
-import hiwContent from '../../content/howItWorks.json'
-import rolemodelsContent from '../../content/roleModels.json'
-import bffContent from '../../content/bringYourBff.json'
-import impactContent from '../../content/theImpact.json'
-import charitiesContent from '../../content/charities.json'
-import partnersContent from '../../content/partners.json'
 
-export default () => (
-  <HomeLayout
-    title={'If Girls Ran the World | October 1-31'}
-    hero={heroContent}
-    email={emailContent}
-    hiw={hiwContent}
-    rolemodels={rolemodelsContent}
-    bff={bffContent}
-    impact={impactContent}
-    charities={charitiesContent}
-    partners={partnersContent}
-    />
+import { fetchLandingPage } from '../../store/actions/landingPages'
+
+const isFetched = ({ status } = {}) => status === 'fetched'
+
+const unlessFetched = (resource = {}, fetcher) => (
+  isFetched(resource)
+    ? Promise.resolve()
+    : fetcher()
 )
+
+export const fetchHomePageContent = ({
+  dispatch,
+  landingPages = {}
+}) => {
+  const homePage = find(landingPages.data, (p) => p.route === 'home')
+  return new Promise((resolve, reject) => {
+    Promise.all([
+      unlessFetched(homePage, () => fetchLandingPage(dispatch)('home'))
+    ]).then(resolve, reject)
+  })
+}
+
+const hooks = {
+  fetch: ({
+    dispatch,
+    landingPages
+  }) => (
+    fetchHomePageContent({
+      dispatch,
+      landingPages
+    })
+  )
+}
+
+const mapStateToProps = ({
+  landingPages = {}
+}) => ({
+  landingPages: landingPages.data
+})
+
+const Home = ({
+  landingPages = {},
+  location = {}
+}) => {
+  const { content = {} } = landingPages.find((h) => h.route === 'home') || {}
+  const title = 'If Girls Ran the World | October 1-31'
+  return (
+    <HomeLayout
+      title={title}
+      content={content}
+      />
+  )
+}
+
+const HomeWithHooks = provideHooks(hooks)(Home)
+
+export default connect(
+  mapStateToProps
+)(HomeWithHooks)

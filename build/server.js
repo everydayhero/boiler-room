@@ -12,17 +12,27 @@ const server = express()
 
 server.use(express.static(BASE))
 
-routes.forEach((route) => {
-  server.get(route, (req, res) => {
-    const reactAppPath = require.resolve('../.server/main')
-    delete require.cache[reactAppPath]
-    require(reactAppPath).default(route, (err, html) => {
-      if (err) { return res.send(`<h1 style="color:red">${err.message}</h1>\n<p>${err.stack}</p>`) }
-      res.send(html)
-    })
-  })
-})
+const prefetchRoutes = () => {
+  const reactAppPath = require.resolve('../.server/main')
+  const reactApp = require(reactAppPath).default
 
-module.exports = (callback) => (
-  http.createServer(server).listen(8080, callback)
-)
+  return reactApp.prefetchedStore()
+    .then((store) => {
+      reactApp.generatedRoutes(store).concat(routes).forEach((route) => {
+        server.get(route, (req, res) => {
+          delete require.cache[reactAppPath]
+          reactApp.app(route, store, (err, html) => {
+            if (err) { return res.send(`<h1 style="color:red">${err.message}</h1>\n<p>${err.stack}</p>`) }
+            res.send(html)
+          })
+        })
+      })
+    })
+}
+
+module.exports = (callback) => {
+  prefetchRoutes()
+    .then(() => {
+      http.createServer(server).listen(8080, callback)
+    })
+}

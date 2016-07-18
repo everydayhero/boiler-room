@@ -9,7 +9,7 @@ const BringYourBff = ({
   placeholder
 }) => {
   const shareTitle = 'If Girls Ran The World'
-  const shareUrl = 'http://ifgirlsrantheworld.com'
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : 'http://ifgirlsrantheworld.com'
   const emailBody = `${placeholder} Check out ${shareUrl}`
   const shareLinks = {
     email: `mailto:?subject=${shareTitle}&body=${emailBody}`,
@@ -37,6 +37,7 @@ const BringYourBff = ({
 }
 
 BringYourBff.propTypes = {
+  image: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   placeholder: PropTypes.string

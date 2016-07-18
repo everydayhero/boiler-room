@@ -3,10 +3,10 @@ import React from 'react'
 import styles from './styles.css'
 
 export default ({
-  amount,
-  title,
-  content,
-  image,
+  dollars = '',
+  heading = '',
+  content = '',
+  image = {},
   active,
   alternate
 }) => {
@@ -17,11 +17,11 @@ export default ({
   return (
     <div className={classes}>
       <div className={styles.imageContainer}>
-        <img className={styles.image} src={image} alt={title} />
+        <img className={styles.image} src={image.url} alt={heading} />
       </div>
       <div className={styles.main}>
-        <div className={styles.amount}>${amount}</div>
-        <h3 className={styles.title}>{title}</h3>
+        <div className={styles.amount}>${dollars}</div>
+        <h3 className={styles.title}>{heading}</h3>
         <p className={styles.content}>{content}</p>
       </div>
     </div>

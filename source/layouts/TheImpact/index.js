@@ -18,10 +18,11 @@ class TheImpact extends Component {
   }
   render () {
     const {
-      title,
-      intro,
-      cards,
-      quote
+      heading,
+      lead,
+      items,
+      quote,
+      cite
     } = this.props
     const {
       activeTab
@@ -29,25 +30,25 @@ class TheImpact extends Component {
     return (
       <div className={styles.root} id='the-impact'>
         <div className={styles.header}>
-          <h2 className={styles.title}>{title}</h2>
-          <p>{intro}</p>
+          <h2 className={styles.title}>{heading}</h2>
+          <p>{lead}</p>
         </div>
         <div>
           <ul className={styles.tabs}>
-            {cards.map((card, key) => (
+            {items.map((item, key) => (
               <li className={styles.tabItem} key={key}>
                 <button
                   onClick={this.handleTabChange.bind(this, key)}
                   className={(activeTab === (key + 1))
                     ? styles.tabButtonActive : styles.tabButton}>
-                  ${card.amount}
+                  ${item.dollars}
                 </button>
               </li>
             ))}
           </ul>
           <div>
-            {cards.map((card, key) => (
-              <ImpactItem {...card}
+            {items.map((item, key) => (
+              <ImpactItem {...item}
                 alternate={key % 2 === 0}
                 active={activeTab === (key + 1)}
                 key={key} />
@@ -55,8 +56,8 @@ class TheImpact extends Component {
           </div>
         </div>
         <blockquote className={styles.quote}>
-          <div className={styles.quoteText}>{quote.text}</div>
-          <div className={styles.quoteCite}>{quote.cite}</div>
+          <div className={styles.quoteText}>{quote}</div>
+          <div className={styles.quoteCite}>{cite}</div>
         </blockquote>
       </div>
     )

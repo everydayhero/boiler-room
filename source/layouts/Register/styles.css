@@ -45,19 +45,19 @@
   transform: scale(1.1);
 }
 
-.footerText {
+.footer {
   composes: pt-1 from '../../traits/spacing.css';
   composes: max-length align-center from '../../traits/type.css';
   margin-left: auto;
   margin-right: auto;
 }
 
-.footerTitle {
-  composes: mb-half from '../../traits/spacing.css';
-  composes: bold from '../../traits/type.css';
+.footer > h3 {
+  margin-bottom: .75rem;
+  font-weight: bold;
 }
 
-.footerText a {
+.footer a {
   color: #F0177B;
 }
 

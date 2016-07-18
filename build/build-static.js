@@ -8,7 +8,7 @@ const handleError = (error, reject) => {
   return reject(error)
 }
 
-module.exports = function buildStatic (destDir, routes, reactApp) {
+module.exports = function buildStatic (destDir, routes, store, reactApp) {
   return new Promise((resolve, reject) => {
     let writing = 0
     let written = []
@@ -29,7 +29,7 @@ module.exports = function buildStatic (destDir, routes, reactApp) {
           'index.html'
         )
 
-        reactApp(`${process.env.BASE_PATH || '/'}${route}`, (err, content) => {
+        reactApp(`${process.env.BASE_PATH || '/'}${route.slice(1)}`, store, (err, content) => {
           if (err) {
             return handleError(err, reject)
           }

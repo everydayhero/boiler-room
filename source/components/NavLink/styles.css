@@ -5,18 +5,28 @@
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
-  display: inline-block;
   transition: color .25s ease-out;
 }
 
-.root:hover,
-.root:focus,
-.root:active {
-  color: #F0177B;
+@media screen and (max-width: 48.25em) {
+  .root {
+    display: block;
+  }
+  .root:hover,
+  .root:focus,
+  .root:active {
+    opacity: .6;
+  }
 }
 
 @media screen and (min-width: 48.25em) {
   .root {
     color: #333;
+    display: inline-block;
+  }
+  .root:hover,
+  .root:focus,
+  .root:active {
+    color: #F0177B;
   }
 }

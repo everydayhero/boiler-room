@@ -18,6 +18,14 @@
   composes: pt-1half from '../../traits/spacing.css';
 }
 
+.content p + p {
+  margin-top: 1.125rem;
+}
+
+.content a {
+  color: #F0177B;
+}
+
 .panels {
   margin-left: 1.5rem;
   display: table;
