@@ -124,16 +124,21 @@
     padding: calc(1.5 * .5rem) 0;
     background-color: #F0177B;
     opacity: 0;
+    visibility: hidden;
     z-index: -1;
     transition: .1s all ease-out;
   }
+  .navItem > * {
+    display: block;
+  }
   .navItemsActive {
+    visibility: visible;
     opacity: .9;
   }
-  .navItems > * {
+  .navItem {
     display: block;
     white-space: nowrap;
-    padding: calc(1.5 * .5rem);
+    padding: calc(1.5 * .25rem) calc(1.5 * .5rem);
     color: #FFF;
   }
 }
@@ -348,4 +353,3 @@
   font-weight: bold;
   margin-bottom: 0.25em;
 }
-
