@@ -30,7 +30,7 @@ const Document = ({
     </head>
     <body className={styles.body}>
       <main
-        id='app'
+        id='mount'
         dangerouslySetInnerHTML={{
           __html: content
         }}
