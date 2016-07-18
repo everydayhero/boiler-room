@@ -46,6 +46,20 @@ const deserializeResponse = (response = {}) => {
           intro: roleModel.getText('intro'),
           quote: roleModel.getText('quote')
         }))
+    },
+    impact: {
+      heading: response.getText('landing-page.impactHeading'),
+      lead: response.getText('landing-page.impactLead'),
+      quote: response.getText('landing-page.impactQuote'),
+      cite: response.getText('landing-page.impactQuoteCite'),
+      items: response.getGroup('landing-page.impactItems')
+        .toArray()
+        .map((item) => ({
+          image: item.getImage('image') ? item.getImage('image').main : {},
+          dollars: item.getText('dollars'),
+          heading: item.getText('heading'),
+          content: item.getText('content')
+        }))
     }
   }
 }

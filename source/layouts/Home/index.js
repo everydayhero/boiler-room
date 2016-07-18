@@ -22,10 +22,10 @@ const Home = ({
     howItWorks = {},
     about = '',
     roleModels = {},
+    impact = {}
     // bringYourBff = {},
     // bringYourBffImage = ''
   } = content
-  // console.log(bringYourBffImage)
   return (
     <Main title={title}>
       <Hero {...hero} />
@@ -33,11 +33,11 @@ const Home = ({
       <About {...about} />
       <RoleModels {...roleModels} />
       <TheImpact {...impact} />
-      <Register charities={charities} /> */}
-      {/*<BringYourBff {...bringYourBff} image={bringYourBffImage} />*/}
+      {/* <Register charities={charities} /> */}
+      {/* <BringYourBff {...bringYourBff} image={bringYourBffImage} /> */}
       <Social />
       <Callout />
-      {/*<Partners partners={partners} />*/}
+      {/* <Partners partners={partners} /> */}
       <QuoteHero />
     </Main>
   )
