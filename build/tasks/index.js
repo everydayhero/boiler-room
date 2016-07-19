@@ -10,9 +10,6 @@ gulp.task('bundle:all', ['bundle:client-app', 'bundle:server-app'], () => {
   browserSync.reload()
 })
 
-const iconFont = require('./icon-font')
-gulp.task('icon-font', iconFont)
-
 const scss = require('./scss')
 gulp.task('sass', scss)
 
@@ -23,7 +20,7 @@ const revision = require('./revision')
 gulp.task('revision', ['bundle:all', 'sass', 'static-assets', 'content'], revision)
 
 const staticAssets = require('./static-assets')
-gulp.task('static-assets', ['icon-font'], staticAssets)
+gulp.task('static-assets', staticAssets)
 
 const replaceRevised = require('./replace-revised-paths')
 gulp.task('revreplace:assets', ['revision'], replaceRevised.assets)
