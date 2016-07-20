@@ -1,7 +1,7 @@
 import React from 'react'
 
 import HowItWorksPanel from '../../components/HowItWorksPanel'
-import HowItWorksTitle from '../../components/HowItWorksTitle'
+import ArrowTitle from '../../components/ArrowTitle'
 import styles from './styles.css'
 
 export default ({
@@ -10,7 +10,7 @@ export default ({
 }) => (
   <div className={styles.root}>
     <div className={styles.fancyBox}>
-      <HowItWorksTitle text={heading} />
+      <ArrowTitle heading={heading} />
     </div>
     <div className={styles.content}>
       <div className={styles.panels}>

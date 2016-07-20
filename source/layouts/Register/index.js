@@ -1,6 +1,6 @@
 import React from 'react'
 
-import RegisterTitle from '../../components/RegisterTitle'
+import ArrowTitle from '../../components/ArrowTitle'
 import styles from './styles.css'
 
 export default ({
@@ -10,7 +10,7 @@ export default ({
   charities = {}
 }) => (
   <div className={styles.root} id='register'>
-    <RegisterTitle heading={heading} />
+    <ArrowTitle heading={heading} />
     <p className={styles.intro}>{lead}</p>
     <ul className={styles.primaryList}>
       {charities.primary.map((charity, i) => (
