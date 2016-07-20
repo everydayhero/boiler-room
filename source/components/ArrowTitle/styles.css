@@ -17,6 +17,7 @@
   composes: mr-n1 pr-1half from '../../traits/spacing.css';
   composes: sansserif bold uppercase scale-lg align-center from '../../traits/type.css';
   display: inline-flex;
+  align-items: center;
   position: relative;
   height: 3.6rem;
   line-height: 1;
