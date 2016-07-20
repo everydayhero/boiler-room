@@ -15,7 +15,7 @@ export default ({
     <ul className={styles.primaryList}>
       {charities.filter((c) => c.type === 'primary').reverse().map((charity, i) => (
         <li className={styles.primaryItem} key={i}>
-          <a href={charity.eventLink} target='_blank' className={styles.primaryLink}>
+          <a href={`/${charity.uid}`} className={styles.primaryLink}>
             <img src={charity.logo.url} alt={charity.title} className={styles.image} />
           </a>
         </li>
