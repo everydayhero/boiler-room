@@ -16,7 +16,7 @@ const deserializeCharities = (results = []) => {
       title: result.getText('charity.title') || undefined,
       logo: result.getImage('charity.logo')
         ? result.getImage('charity.logo').main
-        : undefined,
+        : { url: '' },
       eventLink: eventLink ? eventLink.url(linkResolver) : undefined,
       type: result.getText('charity.type') || 'secondary',
       about: {

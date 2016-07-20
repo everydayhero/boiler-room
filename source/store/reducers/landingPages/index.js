@@ -75,7 +75,7 @@ const deserializeResponse = (response = {}) => {
         .map((partner) => {
           const url = partner.getLink('link')
           return {
-            image: partner.getImage('image') ? partner.getImage('image').main : {},
+            image: partner.getImage('image') ? partner.getImage('image').main : { url: '' },
             title: partner.getText('title'),
             link: url ? url.url(linkResolver) : null
           }
