@@ -6,6 +6,7 @@ import { connect } from 'react-redux'
 import HomeLayout from '../../layouts/Home'
 
 import { fetchLandingPage } from '../../store/actions/landingPages'
+import { fetchCharities } from '../../store/actions/charities'
 
 const isFetched = ({ status } = {}) => status === 'fetched'
 
@@ -17,12 +18,14 @@ const unlessFetched = (resource = {}, fetcher) => (
 
 export const fetchHomePageContent = ({
   dispatch,
-  landingPages = {}
+  landingPages = {},
+  charities = {}
 }) => {
   const homePage = find(landingPages.data, (p) => p.route === 'home')
   return new Promise((resolve, reject) => {
     Promise.all([
-      unlessFetched(homePage, () => fetchLandingPage(dispatch)('home'))
+      unlessFetched(homePage, () => fetchLandingPage(dispatch)('home')),
+      unlessFetched(charities, () => fetchCharities(dispatch)())
     ]).then(resolve, reject)
   })
 }
@@ -30,31 +33,42 @@ export const fetchHomePageContent = ({
 const hooks = {
   fetch: ({
     dispatch,
-    landingPages
+    landingPages,
+    charities
   }) => (
     fetchHomePageContent({
       dispatch,
-      landingPages
+      landingPages,
+      charities
     })
   )
 }
 
 const mapStateToProps = ({
-  landingPages = {}
+  landingPages = [],
+  charities = []
 }) => ({
-  landingPages: landingPages.data
+  landingPages: landingPages.data,
+  charities: charities.data
 })
 
 const Home = ({
-  landingPages = {},
-  location = {}
+  landingPages = [],
+  charities = []
 }) => {
   const { content = {} } = landingPages.find((h) => h.route === 'home') || {}
+  const mergedContent = {
+    ...content,
+    register: {
+      ...content.register,
+      charities
+    }
+  }
   const title = 'If Girls Ran the World | October 1-31'
   return (
     <HomeLayout
       title={title}
-      content={content}
+      content={mergedContent}
       />
   )
 }

@@ -7,16 +7,16 @@ export default ({
   heading,
   lead,
   footer,
-  charities = {}
+  charities = []
 }) => (
   <div className={styles.root} id='register'>
     <ArrowTitle heading={heading} />
     <p className={styles.intro}>{lead}</p>
     <ul className={styles.primaryList}>
-      {charities.primary.map((charity, i) => (
+      {charities.filter((c) => c.type === 'primary').reverse().map((charity, i) => (
         <li className={styles.primaryItem} key={i}>
-          <a href={charity.link} target='_blank' className={styles.primaryLink}>
-            <img src={charity.image} alt={charity.title} className={styles.image} />
+          <a href={charity.eventLink} target='_blank' className={styles.primaryLink}>
+            <img src={charity.logo.url} alt={charity.title} className={styles.image} />
           </a>
         </li>
       ))}
