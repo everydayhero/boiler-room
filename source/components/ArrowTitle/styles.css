@@ -15,12 +15,9 @@
 .title {
   composes: arrow;
   composes: mr-n1 pr-1half from '../../traits/spacing.css';
-  composes: uppercase scale-lg from '../../traits/type.css';
+  composes: sansserif bold uppercase scale-lg align-center from '../../traits/type.css';
   display: inline-flex;
-  align-items: center;
   position: relative;
-  font-family:'Montserrat';
-  font-weight: 700;
   height: 3.6rem;
   line-height: 1;
   background-position: right;
