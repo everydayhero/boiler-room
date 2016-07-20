@@ -10,12 +10,13 @@ import styles from './styles.css'
 export default ({
   children,
   title,
+  charity,
   ...props
 }) => (
   <DocumentTitle title={title}>
     <div className={styles.root}>
       <Icons />
-      <Header { ...props } />
+      <Header { ...props } charity={charity} />
         {children}
       <Footer { ...props } />
     </div>
