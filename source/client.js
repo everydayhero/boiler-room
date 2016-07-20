@@ -28,12 +28,14 @@ export default () => {
       } = renderProps
 
       const {
-        landingPages
+        landingPages,
+        charities
       } = getState()
 
       const locals = {
         dispatch,
         landingPages,
+        charities,
         params
       }
 
