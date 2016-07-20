@@ -1,24 +1,27 @@
 .root {
   composes: on-dark from '../../traits/colors.css';
   composes: text-over-image from '../../traits/shadows.css';
-}
-
-.image {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
   background-image: url('/layouts/Hero/running-girl.jpg');
-  overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
-  z-index: 0;
 }
 
 .top {
   composes: px-contain pb-2 pt-4 from "../../traits/spacing.css";
+  display: flex;
+  justify-content: flex-start;
+}
+
+.top > * {
+  flex-shrink: 0;
+}
+
+.charityLogo {
+  composes: ml-1 from "../../traits/spacing.css";
+  width: 35%;
+  min-width: 90px;
+  max-width: 160px;
 }
 
 .bottom {
