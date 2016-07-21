@@ -17,6 +17,7 @@ const Home = ({
 }) => {
   const {
     title = 'Charity',
+    uid = '',
     logo = {},
     eventLink = {},
     hero = {},
@@ -36,7 +37,7 @@ const Home = ({
       <RoleModels {...roleModels} />
       <TheImpact {...impact} />
       <CharityRegister eventLink={eventLink} />
-      <BringYourBff {...bff} />
+      <BringYourBff {...bff} uid={uid} />
       <Callout />
       <Partners {...partners} />
       <QuoteHero />

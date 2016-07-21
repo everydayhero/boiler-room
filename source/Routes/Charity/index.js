@@ -23,7 +23,6 @@ export const fetchCharityContent = ({
   charities = {}
 }) => {
   const homePage = find(landingPages.data, (p) => p.route === 'home')
-
   return new Promise((resolve, reject) => {
     Promise.all([
       unlessFetched(homePage, () => fetchLandingPage(dispatch)('home')),
