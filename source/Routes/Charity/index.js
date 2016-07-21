@@ -1,23 +1,24 @@
-import find from 'lodash/find'
-import { provideHooks } from 'redial'
+import { find, defaultsDeep } from 'lodash'
 import React from 'react'
+import { provideHooks } from 'redial'
 import { connect } from 'react-redux'
 
-import HomeLayout from '../../layouts/Home'
+import CharityLayout from '../../layouts/Charity'
 
 import { fetchLandingPage } from '../../store/actions/landingPages'
 import { fetchCharities } from '../../store/actions/charities'
 
 const isFetched = ({ status } = {}) => status === 'fetched'
 
-const unlessFetched = (resource = {}, fetcher) => (
+const unlessFetched = (resource, fetcher) => (
   isFetched(resource)
     ? Promise.resolve()
     : fetcher()
 )
 
-export const fetchHomePageContent = ({
+export const fetchCharityContent = ({
   dispatch,
+  params = {},
   landingPages = {},
   charities = {}
 }) => {
@@ -33,11 +34,13 @@ export const fetchHomePageContent = ({
 const hooks = {
   fetch: ({
     dispatch,
+    params,
     landingPages,
     charities
   }) => (
-    fetchHomePageContent({
+    fetchCharityContent({
       dispatch,
+      params,
       landingPages,
       charities
     })
@@ -45,36 +48,29 @@ const hooks = {
 }
 
 const mapStateToProps = ({
-  landingPages = [],
-  charities = []
+  landingPages = {},
+  charities = {}
 }) => ({
   landingPages: landingPages.data,
   charities: charities.data
 })
 
-const Home = ({
-  landingPages = [],
-  charities = []
+const Charity = ({
+    landingPages = [],
+    charities = [],
+    params: { uid } = { uid: '' },
+    location: { query, hash } = { query: {}, hash: '' }
 }) => {
-  const { content = {} } = landingPages.find((h) => h.route === 'home') || {}
-  const mergedContent = {
-    ...content,
-    register: {
-      ...content.register,
-      charities
-    }
-  }
-  const title = 'If Girls Ran the World | October 1-31'
+  const { content: homeContent = {} } = landingPages.find((h) => h.route === 'home') || {}
+  const charityContent = charities.find((c) => c.uid === uid) || {}
+  const content = defaultsDeep({}, charityContent, homeContent)
   return (
-    <HomeLayout
-      title={title}
-      content={mergedContent}
+    <CharityLayout
+      content={content}
       />
   )
 }
 
-const HomeWithHooks = provideHooks(hooks)(Home)
+const CharityWithHooks = provideHooks(hooks)(Charity)
 
-export default connect(
-  mapStateToProps
-)(HomeWithHooks)
+export default connect(mapStateToProps)(CharityWithHooks)

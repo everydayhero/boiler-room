@@ -15,8 +15,17 @@ export default () => {
   const history = withScroll(browserHistory, (_prevLoc, { hash }) => (
     !hash
   ))
-
   const { dispatch, getState } = store
+  const WebFont = require('webfontloader')
+  WebFont.load({
+    google: {
+      families: ['Montserrat']
+    },
+    typekit: {
+      id: 'qwy4scr'
+    },
+    timeout: 2000
+  })
 
   history.listen((location) => {
     match({ routes, location }, (error, redirectLocation, renderProps) => {
@@ -28,12 +37,14 @@ export default () => {
       } = renderProps
 
       const {
-        landingPages
+        landingPages,
+        charities
       } = getState()
 
       const locals = {
         dispatch,
         landingPages,
+        charities,
         params
       }
 

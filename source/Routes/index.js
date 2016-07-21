@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
 import Home from './Home'
+import Charity from './Charity'
 import FourOhFour from './FourOhFour'
 
 export default (
@@ -10,6 +11,10 @@ export default (
     component={({ children }) => children}>
     <IndexRoute
       component={Home}
+    />
+    <Route
+      path=':uid'
+      component={Charity}
     />
     <Route
       path='*'

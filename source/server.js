@@ -6,18 +6,23 @@ import { renderToString, renderToStaticMarkup } from 'react-dom/server'
 import Document from './layouts/Document'
 import routes from './Routes'
 import { fetchLandingPage } from './store/actions/landingPages'
+import { fetchCharities } from './store/actions/charities'
 import { configureStore } from './store'
 import { trigger } from 'redial'
 
 const prefetchedStore = () => {
   const store = configureStore()
-  return fetchLandingPage(store.dispatch)('home')
-    .then(() => (store))
+  return Promise.all([
+    fetchCharities(store.dispatch)(),
+    fetchLandingPage(store.dispatch)('home')
+  ]).then(() => (store))
 }
 
-const generatedRoutes = (store) => {
-  return []
-}
+const generatedRoutes = (store) => (
+  store.getState().charities.data.map((charity) => (
+    `/${charity.uid}`
+  ))
+)
 
 const app = (route, store, callback) => {
   match(
@@ -33,7 +38,7 @@ const app = (route, store, callback) => {
         trigger('fetch', components, locals).then((res) => {
           const content = renderToString(
             <Provider store={store}>
-              <RouterContext { ...renderProps } />
+              <RouterContext {...renderProps} />
             </Provider>
           )
           const document = '<!DOCTYPE html>' + renderToStaticMarkup(

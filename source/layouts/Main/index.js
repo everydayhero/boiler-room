@@ -15,8 +15,8 @@ export default ({
   <DocumentTitle title={title}>
     <div className={styles.root}>
       <Icons />
-      <Header { ...props } />
-        {children}
+      <Header { ...props }/>
+      {children}
       <Footer { ...props } />
     </div>
   </DocumentTitle>

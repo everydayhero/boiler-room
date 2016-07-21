@@ -7,19 +7,26 @@ import styles from './styles.css'
 const Hero = ({
   headings = [],
   lead = '',
-  cta = ''
+  cta = '',
+  charityLogo,
+  charityTitle = '',
+  registerLink = '#register'
 }) => (
   <div className={styles.root}>
     <div className={styles.top}>
-      <div className={styles.image} />
       <Logo />
+      {charityLogo && (
+        <div className={styles.charityLogo}>
+          <img src={charityLogo.url} alt={charityTitle} />
+        </div>
+      )}
     </div>
     <div className={styles.bottom}>
-      <ScrollingHeading headings={headings}/>
+      <ScrollingHeading headings={headings} />
       <div className={styles.heroText}
         dangerouslySetInnerHTML={{__html: lead}} />
       <div className={styles.register}>
-        <a className={styles.registerButton} href='#register'>{cta}</a>
+        <a className={styles.registerButton} href={registerLink}>{cta}</a>
       </div>
     </div>
   </div>

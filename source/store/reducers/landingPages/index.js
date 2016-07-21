@@ -1,6 +1,5 @@
 import { updateOrAddResource } from '../../../utils/collectionHelpers'
 import bff from '../../../content/bringYourBff.json'
-import charities from '../../../content/charities.json'
 
 const updateOrAddPage = updateOrAddResource('route')
 
@@ -67,8 +66,7 @@ const deserializeResponse = (response = {}) => {
     register: {
       heading: response.getText('landing-page.registerHeading'),
       lead: response.getText('landing-page.registerLead'),
-      footer: response.getStructuredText('landing-page.registerFooterContent').asHtml({linkResolver}) || '',
-      charities
+      footer: response.getStructuredText('landing-page.registerFooterContent').asHtml({linkResolver}) || ''
     },
     partners: {
       heading: response.getText('landing-page.partnersHeading'),
@@ -77,7 +75,7 @@ const deserializeResponse = (response = {}) => {
         .map((partner) => {
           const url = partner.getLink('link')
           return {
-            image: partner.getImage('image') ? partner.getImage('image').main : {},
+            image: partner.getImage('image') ? partner.getImage('image').main : { url: '' },
             title: partner.getText('title'),
             link: url ? url.url(linkResolver) : null
           }

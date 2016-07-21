@@ -6,10 +6,12 @@ const BringYourBff = ({
   image,
   title,
   subtitle,
-  placeholder
+  placeholder,
+  uid = ''
 }) => {
   const shareTitle = 'If Girls Ran The World'
-  const shareUrl = typeof window !== 'undefined' ? window.location.href : 'http://ifgirlsrantheworld.com'
+  const baseUrl = process.env.BASE_URL || 'http://localhost:3000'
+  const shareUrl = `${baseUrl}${process.env.BASE_PATH || '/'}${uid}`
   const emailBody = `${placeholder} Check out ${shareUrl}`
   const shareLinks = {
     email: `mailto:?subject=${shareTitle}&body=${emailBody}`,
@@ -40,7 +42,8 @@ BringYourBff.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  uid: PropTypes.string
 }
 
 export default BringYourBff
