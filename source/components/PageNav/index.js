@@ -22,7 +22,8 @@ class PageNav extends React.Component {
 
   render () {
     const {
-      nav = {}
+      nav = {},
+      registerLink = '#register'
     } = this.props
     const {
       navActive
@@ -43,17 +44,17 @@ class PageNav extends React.Component {
               MENU
             </button>
             <ul className={navItemsClasses}>
-            {Object.keys(nav).map((item, key) => (
-              <li className={styles.navItem} key={key}>
-                <NavLink activeStyle={{ opacity: '.8' }} to={nav[item].link}>{nav[item].title}</NavLink>
-              </li>
-            ))}
+              {Object.keys(nav).map((item, key) => (
+                <li className={styles.navItem} key={key}>
+                  <NavLink activeStyle={{ opacity: '.8' }} to={nav[item].link}>{nav[item].title}</NavLink>
+                </li>
+              ))}
             </ul>
           </div>
           <ul className={styles.cta}>
             <li className={styles.item}><a className={styles.linkDonate} href='#' onClick={() => (this.setState({ pageSearchActive: true }))}>Donate</a></li>
             <li className={styles.item}><a className={styles.link} href='https://everydayhero.com/us/sign-in'>Login</a></li>
-            <li className={styles.item}><a className={styles.button} href='#register'>Register</a></li>
+            <li className={styles.item}><a className={styles.button} href={registerLink}>Register</a></li>
           </ul>
         </div>
         {this.state.pageSearchActive
@@ -75,4 +76,3 @@ PageNav.propTypes = {
 }
 
 export default PageNav
-

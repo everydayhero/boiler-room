@@ -9,7 +9,8 @@ const Hero = ({
   lead = '',
   cta = '',
   charityLogo,
-  charityTitle = ''
+  charityTitle = '',
+  registerLink = '#register'
 }) => (
   <div className={styles.root}>
     <div className={styles.top}>
@@ -25,7 +26,7 @@ const Hero = ({
       <div className={styles.heroText}
         dangerouslySetInnerHTML={{__html: lead}} />
       <div className={styles.register}>
-        <a className={styles.registerButton} href='#register'>{cta}</a>
+        <a className={styles.registerButton} href={registerLink}>{cta}</a>
       </div>
     </div>
   </div>

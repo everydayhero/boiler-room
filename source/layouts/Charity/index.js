@@ -29,8 +29,8 @@ const Home = ({
   } = content
   const pageTitle = `${title || 'Charity'} | If Girls Ran The World`
   return (
-    <Main title={pageTitle} charity>
-      <Hero {...hero} charityLogo={logo} charityTitle={title} />
+    <Main title={pageTitle} charity registerLink={eventLink}>
+      <Hero {...hero} charityLogo={logo} charityTitle={title} registerLink={eventLink} />
       <HowItWorks {...howItWorks} />
       <About {...about} />
       <RoleModels {...roleModels} />

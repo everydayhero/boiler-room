@@ -18,8 +18,8 @@ const unlessFetched = (resource, fetcher) => (
 
 export const fetchCharityContent = ({
   dispatch,
-  landingPages = {},
   params = {},
+  landingPages = {},
   charities = {}
 }) => {
   const homePage = find(landingPages.data, (p) => p.route === 'home')
@@ -36,11 +36,13 @@ const hooks = {
   fetch: ({
     dispatch,
     params,
+    landingPages,
     charities
   }) => (
     fetchCharityContent({
       dispatch,
       params,
+      landingPages,
       charities
     })
   )

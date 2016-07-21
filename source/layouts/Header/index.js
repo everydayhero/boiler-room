@@ -4,14 +4,15 @@ import PageNav from '../../components/PageNav'
 import nav from '../../content/nav.json'
 
 export default ({
-  charity
+  charity,
+  ...props
 }) => {
   if (charity) {
     delete nav['charityPartners']
   }
   return (
     <header>
-      <PageNav nav={nav} />
+      <PageNav nav={nav} {...props} />
     </header>
   )
 }
