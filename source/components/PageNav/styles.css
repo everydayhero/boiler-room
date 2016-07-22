@@ -41,19 +41,19 @@
   align-items: center;
 }
 
-.link {
+.ctaLink {
   composes: primary from '../../traits/colors.css';
   padding: .2rem .75rem;
   opacity: .8;
   transition: opacity .2s ease-out;
 }
 
-.link:hover {
+.ctaLink:hover {
   opacity: 1;
 }
 
 .button {
-  composes: link;
+  composes: ctaLink;
   composes: solid-pink from '../../traits/borders.css';
 }
 
@@ -162,6 +162,40 @@
     width: 1345px;
   }
 }
+
+.link {
+  composes: light from "../../traits/colors.css";
+  composes: px-half py-quarter from "../../traits/spacing.css";
+  composes: scale-sm from "../../traits/type.css";
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color .25s ease-out;
+}
+
+@media screen and (max-width: 48.25em) {
+  .link {
+    display: block;
+  }
+  .link:hover,
+  .link:focus,
+  .link:active {
+    opacity: .6;
+  }
+}
+
+@media screen and (min-width: 48.25em) {
+  .link {
+    color: #333;
+    display: inline-block;
+  }
+  .link:hover,
+  .link:focus,
+  .link:active {
+    color: #F0177B;
+  }
+}
+
 
 //Search Modal
 

@@ -7,6 +7,7 @@ import Document from './layouts/Document'
 import routes from './Routes'
 import { fetchLandingPage } from './store/actions/landingPages'
 import { fetchCharities } from './store/actions/charities'
+import { fetchPage } from './store/actions/pages'
 import { configureStore } from './store'
 import { trigger } from 'redial'
 
@@ -14,7 +15,8 @@ const prefetchedStore = () => {
   const store = configureStore()
   return Promise.all([
     fetchCharities(store.dispatch)(),
-    fetchLandingPage(store.dispatch)('home')
+    fetchLandingPage(store.dispatch)('home'),
+    fetchPage(store.dispatch)({ contentType: 'faqs', uid: 'faqs' })
   ]).then(() => (store))
 }
 

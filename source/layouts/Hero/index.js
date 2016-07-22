@@ -10,7 +10,7 @@ const Hero = ({
   cta = '',
   charityLogo,
   charityTitle = '',
-  registerLink = '#register'
+  registerLink = '/#register'
 }) => (
   <div className={styles.root}>
     <div className={styles.top}>

@@ -4,9 +4,14 @@ import { Router, browserHistory, match } from 'react-router'
 import { trigger } from 'redial'
 import { Provider } from 'react-redux'
 import { render } from 'react-dom'
+import { anchorate } from 'anchorate'
 
 import routes from './Routes'
 import { configureStore } from './store'
+
+const onUpdate = () => {
+  anchorate()
+}
 
 export default () => {
   const { document } = window
@@ -54,7 +59,7 @@ export default () => {
 
   render(
     <Provider store={store}>
-      <Router history={history} routes={routes} />
+      <Router history={history} routes={routes} onUpdate={onUpdate} />
     </Provider>,
     document.getElementById('mount')
   )

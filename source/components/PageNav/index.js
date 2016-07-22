@@ -23,7 +23,7 @@ class PageNav extends React.Component {
   render () {
     const {
       nav = {},
-      registerLink = '#register'
+      registerLink = '/#register'
     } = this.props
     const {
       navActive
@@ -46,15 +46,15 @@ class PageNav extends React.Component {
             <ul className={navItemsClasses}>
               {Object.keys(nav).map((item, key) => (
                 <li className={styles.navItem} key={key}>
-                  <NavLink activeStyle={{ opacity: '.8' }} to={nav[item].link}>{nav[item].title}</NavLink>
+                  <NavLink activeStyle={{ opacity: '.8' }} className={styles.link} to={nav[item].link}>{nav[item].title}</NavLink>
                 </li>
               ))}
             </ul>
           </div>
           <ul className={styles.cta}>
-            <li className={styles.item}><a className={styles.linkDonate} href='#' onClick={() => (this.setState({ pageSearchActive: true }))}>Donate</a></li>
-            <li className={styles.item}><a className={styles.link} href='https://everydayhero.com/us/sign-in'>Login</a></li>
-            <li className={styles.item}><a className={styles.button} href={registerLink}>Register</a></li>
+            <li className={styles.item}><button className={styles.linkDonate} onClick={() => (this.setState({ pageSearchActive: true }))}>Donate</button></li>
+            <li className={styles.item}><NavLink className={styles.ctaLink} to='https://everydayhero.com/us/sign-in'>Login</NavLink></li>
+            <li className={styles.item}><NavLink className={styles.button} to={registerLink}>Register</NavLink></li>
           </ul>
         </div>
         {this.state.pageSearchActive

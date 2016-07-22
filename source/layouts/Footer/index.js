@@ -1,5 +1,6 @@
 import React from 'react'
 
+import NavLink from '../../components/NavLink'
 import styles from './styles.css'
 
 export default ({
@@ -12,6 +13,9 @@ export default ({
         <img className={styles.edhLogo} src='/layouts/Footer/EDH-logo.svg' />
       </p>
       <ul className={styles.footerMenu}>
+        <li className={styles.footerListItem}>
+          <NavLink className={styles.link} to='/faqs'>FAQs</NavLink>
+        </li>
         <li className={styles.footerListItem}>
           <a className={styles.link} href='https://everydayhero.com/us/terms/privacy/?no_redirect' target='_blank'>Privacy Policy</a>
         </li>

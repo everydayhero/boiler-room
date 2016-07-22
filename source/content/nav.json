@@ -1,18 +1,18 @@
 {
   "about": {
-    "link": "#about",
+    "link": "/#about",
     "title": "About"
   },
   "rolemodels": {
-    "link": "#role-models",
+    "link": "/#role-models",
     "title": "Role Models"
   },
   "theImpact": {
-    "link": "#the-impact",
+    "link": "/#the-impact",
     "title": "The Impact"
   },
   "charityPartners": {
-    "link": "#register",
+    "link": "/#register",
     "title": "Charity Partners"
   }
 }

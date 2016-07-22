@@ -3,6 +3,7 @@ import { Route, IndexRoute } from 'react-router'
 
 import Home from './Home'
 import Charity from './Charity'
+import Faqs from './Faqs'
 import FourOhFour from './FourOhFour'
 
 export default (
@@ -11,6 +12,10 @@ export default (
     component={({ children }) => children}>
     <IndexRoute
       component={Home}
+    />
+    <Route
+      path='faqs'
+      component={Faqs}
     />
     <Route
       path=':uid'
